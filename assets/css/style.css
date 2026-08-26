@@ -198,6 +198,10 @@ a:hover {
   background: var(--color-white);
 }
 
+.news-section {
+  padding: 56px 0;
+}
+
 .section-soft {
   background: var(--color-soft);
 }
@@ -722,6 +726,10 @@ figcaption {
 
   .section {
     padding: 56px 0;
+  }
+
+  .news-section {
+    padding: 40px 0;
   }
 
   .screenshot-pair {
