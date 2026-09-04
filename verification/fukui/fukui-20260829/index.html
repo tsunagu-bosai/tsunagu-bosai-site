@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="2026年8月29日から30日に福井県で発生した記録的大雨について、公式一次資料をもとに気象・河川水位・避難対応・被害発生・復旧までの時間関係を暫定検証します。" />
+  <title>2026年8月29日〜30日 福井県 記録的大雨 暫定検証 | つなぐ防災</title>
+  <link rel="icon" href="../../../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../../assets/images/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/images/apple-touch-icon.png">
+  <link rel="canonical" href="https://tsunagubosai.jp/verification/fukui/fukui-20260829/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="つなぐ防災">
+  <meta property="og:title" content="2026年8月29日〜30日 福井県 記録的大雨 暫定検証">
+  <meta property="og:description" content="公式一次資料をもとに、気象・河川水位・避難情報・被害発生・復旧の時間関係と、次の災害への生かし方を検証します。">
+  <meta property="og:url" content="https://tsunagubosai.jp/verification/fukui/fukui-20260829/">
+  <meta property="og:image" content="https://tsunagubosai.jp/assets/images/tsunagubosai-ogp-20260831.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root{
+      --bg:#f5f7f9; --paper:#fff; --ink:#17202a; --muted:#5b6570; --line:#dbe2e8;
+      --accent:#0b5d7a; --accent-2:#113b52; --warn:#7a4c00; --warn-bg:#fff7df;
+      --danger:#8b1e24; --danger-bg:#fff0f0; --ok:#185c45; --ok-bg:#edf8f3;
+      --shadow:0 8px 28px rgba(20,35,50,.08); --radius:16px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.75}
+    a{color:var(--accent);text-decoration-thickness:.08em;text-underline-offset:.18em}
+    a:hover{text-decoration-thickness:.14em}
+    .wrap{width:min(1080px,calc(100% - 32px));margin:auto}
+    header{background:linear-gradient(135deg,#0c3a50,#0b5d7a);color:#fff;padding:64px 0 52px}
+    header .eyebrow{font-size:.88rem;letter-spacing:.08em;font-weight:700;opacity:.86}
+    h1{font-size:clamp(2rem,5vw,3.6rem);line-height:1.2;margin:.35em 0 .35em;letter-spacing:-.03em}
+    header p{max-width:780px;font-size:1.08rem;margin:0;opacity:.94}
+    .meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;font-size:.9rem}
+    .pill{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 11px;background:rgba(255,255,255,.08)}
+    nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav .wrap{display:flex;gap:22px;overflow:auto;padding:12px 0;white-space:nowrap;font-size:.9rem;font-weight:700}
+    nav a{text-decoration:none;color:#31414d}
+    main{padding:40px 0 72px}
+    section{margin:0 0 42px}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
+    h2{font-size:1.65rem;margin:0 0 18px;letter-spacing:-.02em}
+    h3{font-size:1.12rem;margin:1.8em 0 .5em}
+    .lead{font-size:1.08rem}
+    .notice{border-left:5px solid var(--warn);background:var(--warn-bg);padding:18px 20px;border-radius:10px;margin:18px 0}
+    .key{border-left-color:var(--accent);background:#edf7fb}
+    .danger{border-left-color:var(--danger);background:var(--danger-bg)}
+    .good{border-left-color:var(--ok);background:var(--ok-bg)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .metric{background:#f8fafb;border:1px solid var(--line);border-radius:12px;padding:16px}
+    .metric strong{display:block;font-size:1.65rem;line-height:1.1;color:var(--accent-2);margin-bottom:7px}
+    .metric span{font-size:.88rem;color:var(--muted)}
+    .timeline{position:relative;margin-top:18px}
+    .timeline:before{content:"";position:absolute;left:152px;top:8px;bottom:8px;width:2px;background:#ccd7df}
+    .event{display:grid;grid-template-columns:136px 1fr;gap:28px;position:relative;padding:0 0 22px}
+    .event time{font-weight:800;color:var(--accent-2);font-variant-numeric:tabular-nums;text-align:right}
+    .event .body{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+    .event .body:before{content:"";position:absolute;left:-23px;top:18px;width:11px;height:11px;background:var(--accent);border:3px solid var(--bg);border-radius:50%}
+    .event .title{font-weight:800;margin-bottom:2px}
+    .tag{display:inline-block;font-size:.72rem;font-weight:800;padding:2px 7px;border-radius:999px;background:#edf1f4;color:#42515c;margin-left:7px;vertical-align:.1em}
+    .tag.obs{background:#eaf4f8;color:#0b5d7a}.tag.river{background:#edf8f3;color:#185c45}.tag.alert{background:#fff1e6;color:#7d4300}.tag.action{background:#f2edfb;color:#57378b}
+    table{width:100%;border-collapse:collapse;font-size:.92rem}
+    th,td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+    th{background:#f7f9fa;color:#42515c}
+    .small{font-size:.88rem;color:var(--muted)}
+    .sources ol{padding-left:1.25em}.sources li{margin:.65em 0}
+    .status{font-weight:800}.status.pending{color:var(--warn)}
+    footer{border-top:1px solid var(--line);padding:30px 0 52px;color:var(--muted);font-size:.88rem}
+    code{background:#eef2f4;border-radius:5px;padding:.1em .35em}
+    @media(max-width:760px){header{padding:46px 0 40px}.grid{grid-template-columns:1fr}.card{padding:21px}.timeline:before{left:112px}.event{grid-template-columns:98px 1fr;gap:20px}.event .body:before{left:-18px}.wrap{width:min(100% - 22px,1080px)} table{font-size:.84rem} th,td{padding:9px 7px}}
+    @media print{nav{display:none}body{background:#fff}.card{box-shadow:none}header{background:#fff;color:#000;padding:20px 0;border-bottom:2px solid #000}.pill{border:1px solid #999}.event .body:before{border-color:#fff}}
+  </style>
+
+<style id="visual-upgrade-v03">
+  :root{
+    --ink:#172033; --muted:#5f6b7a; --paper:#ffffff; --soft:#f5f7fa;
+    --accent:#c44924; --accent-soft:#fff1eb; --warning:#9a6700; --warning-soft:#fff8db;
+    --info:#155e75; --info-soft:#ecfeff; --line:#d8dee8;
+  }
+  body{font-family:"Noto Sans JP","Yu Gothic","Meiryo",sans-serif;color:var(--ink);line-height:1.8}
+  h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.25;letter-spacing:.01em}
+  h2{font-size:clamp(1.55rem,3vw,2.15rem);margin-bottom:1.1rem}
+  h3{font-size:1.25rem}
+  .card{padding:clamp(1.4rem,4vw,2.5rem);margin-bottom:1.4rem}
+  .lead{font-size:clamp(1.15rem,2.4vw,1.45rem);line-height:1.8}
+  .hero-message{
+    margin:1.8rem 0;padding:1.5rem 1.7rem;border-left:7px solid var(--accent);
+    background:var(--accent-soft);border-radius:12px;
+  }
+  .hero-message .eyebrow{font-size:.82rem;font-weight:800;letter-spacing:.08em;color:var(--accent)}
+  .hero-message .big{display:block;font-size:clamp(1.55rem,4vw,2.5rem);font-weight:900;line-height:1.35;margin:.35rem 0}
+  .hero-message p{margin:.35rem 0 0;color:#4d342d}
+  .key-number{font-size:1.45em;font-weight:900;color:var(--accent);font-variant-numeric:tabular-nums}
+  .visual-title{font-size:.86rem;font-weight:800;color:var(--muted);letter-spacing:.05em;margin-bottom:.8rem}
+  .event-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem;margin:1.3rem 0 1.7rem}
+  .event-step{position:relative;padding:1rem .85rem;background:var(--soft);border:1px solid var(--line);border-radius:12px;min-height:125px}
+  .event-step:not(:last-child)::after{content:"→";position:absolute;right:-.62rem;top:42%;font-size:1.3rem;font-weight:900;color:#8792a2;z-index:2}
+  .event-step .date{font-size:.72rem;color:var(--muted);font-weight:700}
+  .event-step .clock{font-size:1.65rem;font-weight:900;line-height:1.15;margin:.15rem 0}
+  .event-step .label{font-weight:800;line-height:1.45}
+  .event-step.alert{background:var(--accent-soft);border:2px solid var(--accent)}
+  .event-step.alert .clock,.event-step.alert .label{color:var(--accent)}
+  .event-step.warning{background:var(--warning-soft);border-color:#e2bf5a}
+  .comparison{
+    display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:.8rem;margin:1.3rem 0
+  }
+  .comparison .box{padding:1.25rem;border-radius:14px;border:1px solid var(--line);background:var(--paper)}
+  .comparison .box strong{display:block;font-size:1.35rem}
+  .comparison .box.earlier{background:var(--accent-soft);border:2px solid var(--accent)}
+  .comparison .arrow{align-self:center;font-size:1.6rem;font-weight:900;color:var(--muted)}
+  .comparison .delta{font-size:clamp(1.5rem,3vw,2.15rem);font-weight:900;color:var(--accent)}
+  .takeaway{padding:1.2rem 1.35rem;border-radius:12px;background:var(--info-soft);border-left:6px solid var(--info);margin:1.2rem 0}
+  .takeaway strong{color:var(--info);font-size:1.12rem}
+  .status-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:1.1rem 0}
+  .status{padding:1rem;border-radius:12px;border:1px solid var(--line);background:var(--soft)}
+  .status b{display:block;margin-bottom:.25rem}
+  .status.ok b{color:#166534}.status.pending b{color:var(--warning)}.status.no b{color:#991b1b}
+  .timeline time{font-weight:900;font-variant-numeric:tabular-nums}
+  .timeline .item:nth-child(3) .body,
+  .timeline .item:nth-child(6) .body,
+  .timeline .item:nth-child(10) .body{border-left:4px solid var(--accent);padding-left:1rem}
+  table th{white-space:nowrap}
+  @media(max-width:760px){
+    .event-flow{grid-template-columns:1fr 1fr}
+    .event-step:not(:last-child)::after{display:none}
+    .comparison{grid-template-columns:1fr}.comparison .arrow{text-align:center;transform:rotate(90deg)}
+    .status-grid{grid-template-columns:1fr}
+  }
+</style>
+
+
+<style id="message-first-v04">
+  .hero-message{
+    background:linear-gradient(135deg,#fff6ef,#fff);
+    border-left:0;
+    border-top:1px solid #f0d5c8;
+    border-bottom:1px solid #f0d5c8;
+    padding:2rem clamp(1.2rem,4vw,2.4rem);
+    text-align:center;
+  }
+  .hero-message .eyebrow{
+    color:#6b7280;font-size:.78rem;letter-spacing:.12em;margin-bottom:.7rem
+  }
+  .hero-message .big{
+    max-width:950px;margin:.2rem auto .8rem;
+    font-size:clamp(1.7rem,4.4vw,3rem);
+    line-height:1.35;color:#172033
+  }
+  .hero-message .big .fact-red{color:#b42318}
+  .hero-message .big .fact-orange{color:#c2410c}
+  .hero-message p{max-width:820px;margin:auto;color:#596273;font-size:.95rem}
+
+  .finding-banner{
+    margin:1.4rem 0 1.8rem;padding:1.2rem 1.3rem;
+    background:#172033;color:#fff;border-radius:14px;
+    display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:center
+  }
+  .finding-banner .badge{
+    background:#ef4444;color:#fff;font-weight:900;border-radius:999px;
+    padding:.45rem .8rem;white-space:nowrap
+  }
+  .finding-banner .message{
+    font-size:clamp(1.08rem,2.2vw,1.45rem);font-weight:850;line-height:1.5
+  }
+
+  .grid{grid-template-columns:repeat(3,1fr);gap:1rem}
+  .metric{
+    position:relative;overflow:hidden;padding:1.25rem 1.1rem 1.1rem;
+    min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;
+    background:#f8fafc;border:1px solid #dce3eb
+  }
+  .metric::before{
+    content:"";position:absolute;left:0;top:0;right:0;height:5px;background:#94a3b8
+  }
+  .metric:nth-child(1)::before{background:#ef4444}
+  .metric:nth-child(2)::before{background:#f97316}
+  .metric:nth-child(3)::before{background:#b91c1c}
+  .metric .badge-top{
+    position:absolute;top:13px;right:13px;padding:.25rem .55rem;border-radius:6px;
+    background:#dc2626;color:#fff;font-size:.72rem;font-weight:900
+  }
+  .metric .fact-title{
+    display:block;font-size:clamp(1.25rem,2.4vw,1.75rem);
+    line-height:1.25;font-weight:900;color:#172033;margin-bottom:.45rem
+  }
+  .metric .fact-value{
+    display:block;font-size:clamp(2.15rem,5vw,3.55rem);
+    line-height:1;font-weight:950;color:#dc2626;letter-spacing:-.03em;margin:.15rem 0 .6rem
+  }
+  .metric .fact-detail{font-size:.9rem;color:#556070;line-height:1.55}
+  .metric .fact-date{
+    margin-top:.75rem;padding-top:.65rem;border-top:1px solid #dce3eb;
+    color:#7b8492;font-size:.76rem;font-weight:700
+  }
+
+  /* Make timeline event descriptions primary, dates secondary */
+  .timeline time{
+    color:#7b8492!important;font-size:.76rem!important;font-weight:750!important;
+    line-height:1.35!important
+  }
+  .timeline .title{font-size:1.08rem;font-weight:900}
+  .timeline .body>div:last-child{color:#5a6574}
+
+  /* Comparison: words first, times secondary */
+  .comparison .box small{font-size:.78rem;color:#6b7280}
+  .comparison .box strong{font-size:clamp(1.3rem,2.5vw,1.8rem);line-height:1.35}
+  .comparison .when{display:block;margin-top:.45rem;font-size:.78rem;color:#7b8492;font-weight:700}
+  .comparison .delta{font-size:clamp(1.5rem,3.2vw,2.2rem)}
+
+  .key-number{font-size:inherit!important;color:inherit!important;font-weight:inherit!important}
+
+  @media(max-width:760px){
+    .finding-banner{grid-template-columns:1fr;text-align:left}
+    .finding-banner .badge{width:max-content}
+    .grid{grid-template-columns:1fr}
+    .metric{min-height:160px}
+  }
+</style>
+
+
+<style id="message-first-v05">
+  /* Hero: no forced line breaks; message wraps naturally */
+  .hero-message .big{
+    max-width:980px;
+    margin:.2rem auto .8rem;
+    font-size:clamp(1.65rem,4vw,2.85rem);
+    line-height:1.42;
+    text-wrap:balance;
+    word-break:normal;
+    overflow-wrap:anywhere;
+  }
+  .hero-message .big br{display:none}
+
+  /* Summary cards: subject/message first, date/time secondary */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:1rem;
+    align-items:stretch;
+  }
+  .metric{
+    min-width:0;
+    min-height:215px;
+    padding:1.35rem 1.15rem 1.1rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    overflow:hidden;
+  }
+  .metric .badge-top{
+    position:static;
+    align-self:flex-start;
+    display:inline-flex;
+    max-width:100%;
+    margin:0 0 .7rem 0;
+    padding:.28rem .58rem;
+    white-space:normal;
+    line-height:1.25;
+    font-size:.72rem;
+  }
+  .metric .fact-title{
+    display:block;
+    font-size:clamp(1.35rem,2.6vw,1.9rem);
+    line-height:1.28;
+    font-weight:950;
+    color:#172033;
+    margin:0 0 .7rem;
+    text-wrap:balance;
+    overflow-wrap:anywhere;
+  }
+  .metric .fact-title.emphasis-orange{color:#c2410c}
+  .metric .fact-title.emphasis-red{color:#b91c1c}
+  .metric .fact-value{
+    display:block;
+    margin:.1rem 0 .65rem;
+    font-size:clamp(2.15rem,4.8vw,3.45rem);
+    line-height:1;
+    font-weight:950;
+    color:#dc2626;
+    letter-spacing:-.025em;
+    overflow-wrap:anywhere;
+  }
+  .metric .fact-message{
+    display:block;
+    margin:.05rem 0 .65rem;
+    font-size:clamp(1.05rem,1.8vw,1.22rem);
+    line-height:1.55;
+    font-weight:850;
+    color:#263244;
+  }
+  .metric .fact-detail{
+    font-size:.9rem;
+    line-height:1.6;
+    color:#556070;
+    flex:1;
+  }
+  .metric .fact-date{
+    margin-top:.8rem;
+    padding-top:.65rem;
+    border-top:1px solid #dce3eb;
+    color:#7b8492;
+    font-size:.76rem;
+    font-weight:700;
+    line-height:1.45;
+  }
+
+  /* Overview flow: event name is visually primary, clock secondary */
+  .event-step{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+  }
+  .event-step .label{
+    order:1;
+    font-size:1.08rem;
+    font-weight:900;
+    line-height:1.4;
+    text-wrap:balance;
+  }
+  .event-step .clock{
+    order:2;
+    margin:.65rem 0 .1rem;
+    font-size:.95rem;
+    font-weight:800;
+    color:#5f6b7a !important;
+  }
+  .event-step .date{
+    order:3;
+    font-size:.7rem;
+    color:#8a94a3;
+  }
+  .event-step.alert .label{color:#b42318}
+  .event-step.warning .label{color:#8a5200}
+
+  /* Detailed timeline: key facts use same visual language as summary */
+  .timeline .event.key-event .body{
+    border-width:2px;
+    box-shadow:0 6px 18px rgba(23,32,51,.07);
+  }
+  .timeline .event.key-rain .body{
+    border-color:#ef4444;
+    background:linear-gradient(90deg,#fff4f1 0,#fff 35%);
+  }
+  .timeline .event.key-band .body{
+    border-color:#f97316;
+    background:linear-gradient(90deg,#fff5ed 0,#fff 35%);
+  }
+  .timeline .event.key-special .body{
+    border-color:#b91c1c;
+    background:linear-gradient(90deg,#fff1f1 0,#fff 35%);
+  }
+  .timeline .event.key-damage .body{
+    border-color:#334155;
+    background:linear-gradient(90deg,#f2f5f8 0,#fff 35%);
+  }
+  .timeline .event.key-event .title{
+    font-size:clamp(1.08rem,2vw,1.28rem);
+    line-height:1.45;
+  }
+  .timeline .event.key-rain .title{color:#c62828}
+  .timeline .event.key-band .title{color:#c2410c}
+  .timeline .event.key-special .title{color:#991b1b}
+  .timeline .event.key-damage .title{color:#1e293b}
+  .timeline .event.key-event time{
+    color:#6b7280!important;
+    font-size:.74rem!important;
+    font-weight:700!important;
+  }
+  .timeline .event.key-event .body:before{
+    width:14px;height:14px;
+    left:-25px;top:18px;
+  }
+  .timeline .event.key-rain .body:before{background:#ef4444}
+  .timeline .event.key-band .body:before{background:#f97316}
+  .timeline .event.key-special .body:before{background:#b91c1c}
+  .timeline .event.key-damage .body:before{background:#334155}
+
+  @media(max-width:900px){
+    .grid{grid-template-columns:1fr}
+    .metric{min-height:0}
+  }
+  @media(max-width:760px){
+    .hero-message .big{
+      font-size:clamp(1.5rem,7vw,2.1rem);
+      line-height:1.45;
+    }
+    .metric .fact-title{font-size:1.45rem}
+    .metric .fact-value{font-size:2.75rem}
+    .event-flow{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:480px){
+    .event-flow{grid-template-columns:1fr}
+  }
+</style>
+
+
+<style id="hazard-application-v06">
+  .section-intro{font-size:1.03rem;color:#4b5563;max-width:900px;margin:-.3rem 0 1.2rem}
+  .hazard-visual{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;margin:1.2rem 0 1.5rem}
+  .map-card{min-height:245px;border-radius:16px;padding:1.25rem;position:relative;overflow:hidden;border:1px solid #d7dfe8;background:#f8fafc}
+  .map-card h4{margin:0 0 .35rem;font-size:1.15rem}.map-card p{margin:.15rem 0;color:#667085;font-size:.88rem}
+  .schematic{position:relative;height:155px;margin-top:.9rem;border-radius:12px;background:linear-gradient(35deg,transparent 35%,rgba(36,99,235,.07) 36% 38%,transparent 39%),linear-gradient(145deg,transparent 45%,rgba(36,99,235,.06) 46% 49%,transparent 50%),#edf3f8;overflow:hidden}
+  .zone{position:absolute;inset:18% 12% 16% 18%;border-radius:44% 56% 50% 45%/50% 45% 55% 50%;transform:rotate(-7deg)}
+  .zone.predicted{background:rgba(14,165,233,.30);border:3px solid rgba(2,132,199,.75)}
+  .zone.actual{inset:24% 17% 12% 23%;background:rgba(239,68,68,.30);border:3px solid rgba(220,38,38,.75);transform:rotate(5deg)}
+  .legend{display:flex;gap:1rem;flex-wrap:wrap;margin-top:.7rem;font-size:.78rem;color:#667085}
+  .legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.35rem;vertical-align:-1px}
+  .legend .pred::before{background:rgba(14,165,233,.6)} .legend .act::before{background:rgba(239,68,68,.6)}
+  .overlap-callout{text-align:center;min-width:150px}.overlap-callout .big{display:block;font-size:clamp(1.65rem,3.5vw,2.45rem);font-weight:950;color:#0f766e;line-height:1.15}
+  .overlap-callout small{display:block;margin-top:.45rem;color:#667085;line-height:1.5}
+  .evidence-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:1rem 0 1.5rem}
+  .evidence{padding:1rem 1.05rem;border-radius:12px;background:#fff;border:1px solid #dbe3ec}
+  .evidence b{display:block;font-size:1.08rem;margin-bottom:.3rem}.evidence.good b{color:#0f766e}.evidence.caution b{color:#9a6700}
+  .application-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.1rem 0}
+  .application-card{padding:1.25rem;border-radius:14px;border:1px solid #dbe3ec;background:#fff}
+  .application-card .num{font-size:.78rem;font-weight:900;color:#64748b;letter-spacing:.08em}
+  .application-card h4{margin:.35rem 0 .5rem;font-size:1.25rem}.application-card strong{color:#b42318}.application-card p{margin:.25rem 0;color:#556070}
+  .purpose-bridge{margin:1.2rem 0;padding:1.2rem 1.35rem;border-radius:12px;background:#0f172a;color:#fff}
+  .purpose-bridge strong{display:block;font-size:clamp(1.15rem,2vw,1.4rem);margin-bottom:.35rem}
+  @media(max-width:850px){.hazard-visual{grid-template-columns:1fr}.overlap-callout{padding:.2rem 0 .6rem}.evidence-row,.application-grid{grid-template-columns:1fr}}
+</style>
+
+
+<style id="tsunagubosai-integration">
+  .report-sitebar{background:#fff;border-bottom:1px solid #d8dee8}
+  .report-sitebar-inner{width:min(1080px,calc(100% - 32px));margin:auto;min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .report-brand,.report-back{color:#273642!important;font-weight:800;text-decoration:none!important}
+  .report-brand{display:inline-flex;align-items:center;gap:9px}
+  .report-brand img{width:32px;height:32px;object-fit:contain}
+  .report-back{font-size:.86rem;color:#2e7d32!important}
+  @media(max-width:760px){.report-sitebar-inner{width:min(100% - 22px,1080px)}}
+</style>
+
+</head>
+<body>
+
+<div class="report-sitebar">
+  <div class="report-sitebar-inner">
+    <a class="report-brand" href="../../../">
+      <img src="../../../assets/images/tsunagubosai-logo.png" alt="">
+      <span>つなぐ防災</span>
+    </a>
+    <a class="report-back" href="../../">災害検証一覧へ戻る</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">公式一次資料に基づく暫定検証</div>
+    <h1>2026年8月29日〜30日<br>福井県 記録的大雨</h1>
+    <p>大雨特別警報だけを起点にせず、警報、河川水位、避難対応、浸水・土砂災害、道路・交通の被害と復旧を、福井県、気象庁、各市町、国土交通省などの公開資料から時系列で整理します。</p>
+    <div class="meta">
+      <span class="pill">公開版 v0.1</span>
+      <span class="pill">最終確認：2026年9月4日</span>
+      <span class="pill">被害調査・事後検証継続中の暫定版</span>
+    </div>
+  </div>
+</header>
+<nav aria-label="ページ内ナビゲーション"><div class="wrap">
+  <a href="#summary">1. はじめに</a><a href="#purpose">2. 背景と目的</a><a href="#method">3. 調査概要</a><a href="#results">4. 調査結果</a><a href="#assessment">5. 考察・分析</a><a href="#conclusion">6. 結論と今後</a><a href="#appendix">7. 補足資料</a>
+</div></nav>
+<main class="wrap">
+  <section id="summary" class="card">
+    <h2>1. はじめに</h2>
+    <p class="lead">本レポートは、<strong>2026年8月29日から30日にかけて福井県で発生した記録的大雨について、「危険はいつから高まり、どの情報がどの段階で出され、実際の浸水・河川・土砂・道路被害がいつ顕在化したのか」を公式一次資料から検証する</strong>ものです。</p>
+
+    <div class="hero-message">
+      <div class="eyebrow">現時点で確認できた最重要事実</div>
+      <div class="finding-banner">
+        <div class="badge">重要</div>
+        <div class="message">大雨特別警報が発表された4時30分を「危険の始まり」とみなすだけでは、今回の福井県の実態を捉えられません。</div>
+      </div>
+      <span class="big"><span class="fact-red">大雨特別警報 4:30</span>より前から、<strong>土砂災害の危険度上昇、自治体の災害対応、河川の氾濫危険水位超過</strong>が進行していた</span>
+      <p>特別警報の発表時刻だけでなく、その時点で既に何が起きていたかを確認することが、今回の検証の中心です。</p>
+    </div>
+
+    <div class="notice key"><strong>現時点の最重要論点：</strong> 8月29日夜から30日4時30分までに、土砂災害危険警報、河川水位、雨量、自治体の避難・災害対応が、どの程度早く危険の進行を示していたかを確認することです。</div>
+
+    <div class="grid">
+      <div class="metric">
+        <span class="badge-top">5観測地点</span>
+        <span class="fact-title">24時間降水量が観測史上最大</span>
+        <span class="fact-value">最大350 mm</span>
+        <span class="fact-message">広い範囲で記録的な雨量</span>
+        <span class="fact-detail">県資料では春江314mm、福井233mm、美山318mm、勝山350mm、大野281mmが観測史上最大と整理されています。</span>
+        <span class="fact-date">福井県 9月3日13時時点資料</span>
+      </div>
+      <div class="metric">
+        <span class="fact-title emphasis-red">大雨特別警報</span>
+        <span class="fact-message">河川危険度上昇の後に発表</span>
+        <span class="fact-detail">赤根川・田島川では4時00分までに氾濫危険水位を上回っていました。特別警報は避難開始の合図ではありません。</span>
+        <span class="fact-date">発表：2026年8月30日04時30分</span>
+      </div>
+      <div class="metric">
+        <span class="fact-title">被害把握は数日間拡大</span>
+        <span class="fact-value">299 棟</span>
+        <span class="fact-message">警報解除後も被害調査は継続</span>
+        <span class="fact-detail">住家被害は一部損壊1棟、床上浸水46棟、床下浸水252棟。河川では溢水・越水・内水氾濫21カ所、護岸損傷等204カ所が整理されています。</span>
+        <span class="fact-date">2026年9月3日13時時点</span>
+      </div>
+    </div>
+
+    <div class="notice"><strong>本レポートの位置づけ：</strong> 2026年9月4日時点の暫定検証です。被害調査は継続しており、気象庁等の正式な事後検証資料も今後追加される可能性があります。責任追及や原因の断定ではなく、公開済み一次資料から事実関係と時間関係を整理します。</div>
+  </section>
+
+  <section id="purpose" class="card">
+    <h2>2. 調査の背景と目的</h2>
+    <p>2026年8月29日から30日にかけて福井県嶺北を中心に記録的な大雨となり、福井市、大野市、勝山市にはレベル5大雨特別警報が発表されました。県内では河川の溢水・越水・内水氾濫、住宅浸水、土砂流出、道路陥没・通行止め、鉄道運休などが広い範囲で発生しました。</p>
+    <p>今回の災害で重要なのは、<strong>大雨特別警報より前に複数の危険シグナルが現れていたこと</strong>と、<strong>警報が解除方向へ進んだ後も、現地調査によって被害地点・被害棟数が数日間増え続けたこと</strong>です。</p>
+    <div class="purpose-bridge">
+      <strong>検証の目的は「どの警報が早かったか」だけではありません。</strong>
+      気象・河川・避難・被害・道路復旧を別々の情報として扱いながら、住民が「今どの段階にいるか」を理解できる仕組みにどう統合するかを考えます。
+    </div>
+  </section>
+
+  <section id="method" class="card">
+    <h2>3. 調査概要（調査手法）</h2>
+    <table><tbody>
+      <tr><th>調査対象期間</th><td>2026年8月29日以降。特に8月29日19時00分〜8月30日12時00分を重点確認。</td></tr>
+      <tr><th>対象地域</th><td>福井県。特に大雨特別警報対象地域と、浸水・河川・土砂・道路被害が確認された嶺北・奥越地域。</td></tr>
+      <tr><th>主な情報源</th><td>気象庁、福井地方気象台、福井県、福井市、大野市、勝山市、国土交通省などの公式一次資料。</td></tr>
+      <tr><th>確認項目</th><td>警報・危険警報・特別警報、観測雨量、河川水位、避難情報、避難所、河川被害、住家被害、土砂災害、道路規制、公共交通、復旧状況。</td></tr>
+      <tr><th>調査方法</th><td>発表日時・観測日時・発生日時・対応日時を同一時間軸で照合。被害件数は資料の基準時点を明記し、異なる集計基準を単純合算しない。</td></tr>
+      <tr><th>基準日</th><td>2026年9月4日。県全体の被害集計は9月3日13時時点資料を基準とする。</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="results" class="card">
+    <h2>4. 調査結果</h2>
+    <h3>4.1 2026年8月29日夜〜30日の主要時系列</h3>
+
+    <div class="visual-title">危険の進行を4段階で見る</div>
+    <div class="event-flow">
+      <div class="event-step warning"><div class="label">土砂災害危険度が上昇</div><div class="clock">19:46〜</div><div class="date">8月29日</div></div>
+      <div class="event-step"><div class="label">河川水位が氾濫危険水位超過</div><div class="clock">〜04:00</div><div class="date">8月30日</div></div>
+      <div class="event-step alert"><div class="label">レベル5大雨特別警報</div><div class="clock">04:30</div><div class="date">8月30日</div></div>
+      <div class="event-step"><div class="label">レベル4へ切替・復旧段階へ</div><div class="clock">11:40〜</div><div class="date">8月30日以降</div></div>
+    </div>
+
+    <div class="timeline">
+      <div class="event"><time>2026年8月29日<br>19:36</time><div class="body"><div class="title">龍ヶ鼻ダムが洪水調整を開始 <span class="tag river">河川</span></div><div>県資料に記載。大雨特別警報の約9時間前から河川管理上の対応が始まっていました。</div></div></div>
+      <div class="event"><time>2026年8月29日<br>19:46</time><div class="body"><div class="title">勝山市でレベル4土砂災害危険警報／県が災害対策連絡室を設置 <span class="tag alert">気象・県</span></div><div>県はレベル4土砂災害危険警報の発表を受けて災害対策連絡室を設置しました。</div></div></div>
+      <div class="event"><time>2026年8月30日<br>00:00</time><div class="body"><div class="title">大野市が災害対策本部を設置 <span class="tag action">自治体</span></div><div>県の第1回災害対策本部資料に記録されています。</div></div></div>
+      <div class="event"><time>2026年8月30日<br>00:08</time><div class="body"><div class="title">福井市でレベル4土砂災害危険警報 <span class="tag alert">気象</span></div><div>特別警報より4時間以上前に土砂災害への最大級の警戒段階へ進んでいました。</div></div></div>
+      <div class="event key-event key-rain"><time>2026年8月30日<br>02:00まで</time><div class="body"><div class="title">時間雨量61.0mmなど強雨を観測 <span class="tag obs">観測</span></div><div>県資料の上位地点では、大野市奥越土木61.0mm、勝原58.0mm、福井市美山57.5mm。</div></div></div>
+      <div class="event key-event key-damage"><time>2026年8月30日<br>04:00まで</time><div class="body"><div class="title">赤根川・田島川が氾濫危険水位を超過 <span class="tag river">河川</span></div><div>赤根川3.07m（基準2.60m）、田島川4.70m（基準4.20m）。大雨特別警報より前に河川危険度が高い段階へ到達していました。</div></div></div>
+      <div class="event key-event key-special"><time>2026年8月30日<br>04:30</time><div class="body"><div class="title">福井市・大野市・勝山市にレベル5大雨特別警報 <span class="tag alert">特別警報</span></div><div>気象庁は「特別警報が発表されてから避難するのでは手遅れ」と明記。県も同時刻に災害対策本部へ移行しました。</div></div></div>
+      <div class="event key-event key-damage"><time>2026年8月30日<br>05:09</time><div class="body"><div class="title">福井市原目町・荒川で溢水 <span class="tag river">河川被害</span></div><div>県の河川被害一覧では農地浸水を確認。ほかにも羽生川、計石川、田島川、磯部川、兵庫川などで溢水・越水・内水氾濫が確認されました。</div></div></div>
+      <div class="event"><time>2026年8月30日<br>06:00</time><div class="body"><div class="title">複数河川で氾濫危険水位超過が継続 <span class="tag river">河川</span></div><div>荒川、底喰川、芳野川などで氾濫危険水位を上回る水位が県資料に記録されています。</div></div></div>
+      <div class="event"><time>2026年8月30日<br>08:00</time><div class="body"><div class="title">福井県 第1回災害対策本部会議 <span class="tag action">県</span></div><div>この時点で県内の避難指示・緊急安全確保対象は34万人超。避難所は6時時点で多数開設されていました。</div></div></div>
+      <div class="event"><time>2026年8月30日<br>11:40</time><div class="body"><div class="title">レベル5大雨特別警報をレベル4大雨危険警報へ切替 <span class="tag alert">気象</span></div><div>特別警報の解除方向への状態遷移。ただし河川増水、浸水、土砂災害への警戒は継続しました。</div></div></div>
+      <div class="event"><time>2026年8月30日<br>18:00</time><div class="body"><div class="title">福井市が全避難所を閉鎖 <span class="tag action">自治体</span></div><div>避難体制は段階的に縮小。勝山市でも22時23分に避難指示を解除し、避難所を閉鎖しました。</div></div></div>
+      <div class="event"><time>2026年9月3日<br>13:00</time><div class="body"><div class="title">被害調査はなお拡大 <span class="tag action">被害集計</span></div><div>県集計で住家299棟、非住家浸水75棟。河川は溢水・越水・内水氾濫18河川21カ所、護岸損傷等32河川204カ所。道路規制は最大56カ所から2カ所まで縮小しました。</div></div></div>
+    </div>
+  </section>
+
+  <section id="hazard" class="card">
+    <h3>4.2 ハザードマップと実被害の相関</h3>
+    <p class="section-intro">※下図は検証方法を示す模式図であり、実際の浸水区域図そのものではありません。</p>
+    <p class="section-intro">今回の検証では、県が整理した<strong>河川の溢水・越水・内水氾濫地点、住宅浸水地区、土砂流出地点</strong>を、市町が事前に公開していた洪水・土砂災害ハザードマップと地点単位で照合します。</p>
+    <div class="hazard-visual">
+      <div class="map-card">
+        <h4>事前の想定</h4><p>各市町の洪水浸水想定・土砂災害警戒区域</p>
+        <div class="schematic"><div class="zone predicted"></div></div>
+        <div class="legend"><span class="pred">浸水・土砂災害の想定区域</span></div>
+      </div>
+      <div class="overlap-callout"><span class="big">地点照合</span><small>実被害を<br>区域内・区域外で分類</small></div>
+      <div class="map-card">
+        <h4>今回の実被害</h4><p>河川溢水・内水氾濫・住宅浸水・土砂流出</p>
+        <div class="schematic"><div class="zone predicted"></div><div class="zone actual"></div></div>
+        <div class="legend"><span class="pred">想定区域</span><span class="act">確認された被害地点</span></div>
+      </div>
+    </div>
+    <div class="evidence-row">
+      <div class="evidence good"><b>地点データが充実</b>県の9月3日資料では、溢水・越水・内水氾濫21カ所について河川名・地係・発生時刻・被害内容が整理されています。実被害との地点照合に使える一次資料が揃い始めています。</div>
+      <div class="evidence good"><b>複数の災害種別を分けて確認</b>洪水だけでなく、内水氾濫、河岸侵食、護岸損傷、土石流、道路陥没などが同時発生しています。ハザード種別を混同せず評価します。</div>
+      <div class="evidence caution"><b>注意点</b>被害地点数が多く、9月2日まで現地調査で追加が続いています。「想定と一致した／外れた」という結論は、全地点の座標化と重ね合わせが完了するまで確定しません。</div>
+    </div>
+    <div class="notice" style="margin-top:1rem">
+      <strong>照合に使用する公式資料</strong><br>
+      ・福井市「洪水・土砂災害ハザードマップ」：洪水浸水想定区域、土砂災害警戒区域、避難情報を確認。<br>
+      ・大野市「総合防災マップ」：赤根川等の水位基準、想定最大規模の洪水・土砂災害リスクを確認。<br>
+      ・勝山市「防災ハザードマップ」：地区別の洪水・土砂災害リスクを確認。<br>
+      ・福井県「大雨による影響のとりまとめ」：河川名・地係・発生時刻・被害種別を確認。<br>
+      <small>※坂井市など他市町のハザードマップも、被害地点の座標化に合わせて順次照合します。</small>
+    </div>
+    <div class="takeaway"><strong>ここから得られる意味：</strong> ハザードマップの評価は「色が付いていたか」だけでなく、<strong>どの災害種別が、どの地点で、どの深さ・規模で発生したか</strong>まで区別して行う必要があります。</div>
+  </section>
+
+  <section id="assessment" class="card">
+    <h2>5. 考察・分析</h2>
+    <h3>5.1 大雨特別警報は「危険の始まり」ではない</h3>
+    <p>8月30日4時30分の大雨特別警報より前に、県は8月29日19時46分に災害対策連絡室を設置し、30日0時には大野市が災害対策本部を設置しています。さらに4時00分までに赤根川・田島川が氾濫危険水位を超えていました。今回も、特別警報は避難開始を判断する最初の情報ではありません。</p>
+
+    <h3>5.2 気象・河川・避難情報は別系列の「状態」として扱う必要がある</h3>
+    <p>同じ時間帯でも、土砂災害危険警報、河川水位、自治体の避難情報は別々に変化します。アプリ側で「福井県が危険」という単一状態にまとめてしまうと、どの危険が上がったのか、どの危険が下がったのかが分からなくなります。<strong>地域＋災害種別＋レベル＋発表時刻</strong>を持つイベントとして管理し、画面上で統合する設計が必要です。</p>
+
+    <h3>5.3 解除方向の更新も「重複」ではなく重要な状態遷移</h3>
+    <p>8月30日11時40分に大雨特別警報はレベル4大雨危険警報へ切り替わり、その後各市町で避難指示や避難所が段階的に解除・閉鎖されました。発表名が同じ地域に繰り返し届いても、<strong>L5→L4→L2、避難所開設→閉鎖</strong>という状態変化は、住民にとって重要です。単純な重複排除では捨ててはいけません。</p>
+
+    <h3>5.4 「災害が終わった」と「被害情報が確定した」は別</h3>
+    <p>警報・避難対応が縮小した後も、住家被害、河川護岸損傷、林道・農地被害などは現地調査によって数日間増え続けました。速報時点の「被害なし」「数件」という値は、<strong>その時点で確認できた件数</strong>であり、最終値ではありません。被害データには基準時刻・確認状況・情報源を必ず持たせる必要があります。</p>
+
+    <div class="notice good"><strong>暫定評価：</strong> 今回の福井県では「特別警報より前に複数の危険シグナルが進行していたこと」「特別警報解除後も被害把握が拡大したこと」は確認できます。一方、キキクルや降水短時間予報が各被害地点を何分・何時間先行して示していたかは、保存された予測履歴を用いた追加検証が必要です。</div>
+  </section>
+
+  <section id="conclusion" class="card">
+    <h2>6. 結論と今後の対策（今後の検証）</h2>
+    <div class="status-grid">
+      <div class="status ok"><b>確認できたこと</b>大雨特別警報より前から、土砂災害危険度、自治体対応、河川水位の上昇が進んでいた。</div>
+      <div class="status pending"><b>まだ確認が必要</b>キキクル、流域雨量指数、短時間予報が各被害地点をどの程度先行して捉えたか。</div>
+      <div class="status no"><b>現時点で断定しない</b>特定の警報・予測・自治体判断だけを単独原因とする評価。</div>
+    </div>
+    <p>今回の福井県の大雨は、<strong>「危険の上昇→レベル5→段階的解除→復旧→被害調査の拡大」</strong>という一連の状態遷移を確認できる事例です。警報だけでなく河川・避難・道路・被害確認を別系列で保持し、それぞれの最新状態と履歴を住民へ分かりやすく統合する必要があります。</p>
+
+    <h3>6.1 この検証をどう生かすか</h3>
+    <div class="application-grid">
+      <div class="application-card">
+        <div class="num">APPLICATION 01</div>
+        <h4>特別警報より前の「早いシグナル」を使う</h4>
+        <p>土砂災害危険警報、河川水位、実況雨量、ダム洪水調整など、<strong>特別警報より前に現れる情報</strong>を組み合わせ、避難準備・避難判断へつなげます。</p>
+      </div>
+      <div class="application-card">
+        <div class="num">APPLICATION 02</div>
+        <h4>災害種別ごとに状態遷移を保存する</h4>
+        <p><strong>大雨・土砂・河川・自治体避難情報</strong>を別イベントとして保持し、上昇・低下・再上昇を履歴として残します。単純な重複排除を避けます。</p>
+      </div>
+      <div class="application-card">
+        <div class="num">APPLICATION 03</div>
+        <h4>「開設中」と「指定避難所」を分ける</h4>
+        <p>県内では最大120カ所の避難所に592人が避難し、その後すべて閉鎖されました。静的な施設情報と<strong>現在開設中の避難所</strong>を分けて表示する必要があります。</p>
+      </div>
+      <div class="application-card">
+        <div class="num">APPLICATION 04</div>
+        <h4>被害速報には「確認時点」を必ず付ける</h4>
+        <p>被害数は数日間増加しました。<strong>災害ID・地点・種別・確認時刻・情報源・確認状態</strong>を持たせ、速報値を確定値のように扱わない仕組みにします。</p>
+      </div>
+    </div>
+    <div class="takeaway"><strong>最終的に目指すもの：</strong> 大雨特別警報の有無だけで危険を判断するのではなく、<strong>複数の情報を時間軸で統合し、「今どの危険が上がり、どの行動が必要か」を早く伝えること</strong>です。</div>
+
+    <h3>6.2 最終評価に必要な未解決項目</h3>
+    <table>
+      <thead><tr><th>未解決項目</th><th>なぜ重要か</th><th>現状</th></tr></thead>
+      <tbody>
+        <tr><td>8月29日夜〜30日4時30分のキキクル履歴</td><td>浸水・土砂・洪水危険度が実被害を何分・何時間先行したかを評価するため。</td><td class="status pending">履歴・事後資料待ち</td></tr>
+        <tr><td>流域雨量指数・予測値の時系列</td><td>赤根川など中小河川の危険度予測リードタイムを確認するため。</td><td class="status pending">詳細データ待ち</td></tr>
+        <tr><td>線状降水帯予測・直前予測の実績</td><td>2026年から運用された直前予測を含め、今回の福井県でどの段階まで捉えていたかを確認するため。</td><td class="status pending">気象庁の実績整理待ち</td></tr>
+        <tr><td>実被害地点とハザードマップの全件照合</td><td>想定区域内・区域外、洪水・内水・土砂の違いを地点単位で評価するため。</td><td class="status pending">座標化・照合継続</td></tr>
+        <tr><td>自治体の避難情報・通知ログの全時系列</td><td>どの地域へ、いつ、どの媒体で避難情報が届いたかを検証するため。</td><td class="status pending">主要時刻のみ確認済み</td></tr>
+        <tr><td>最終的な被害確定値</td><td>9月3日時点でも調査追加が続いており、暫定値と確定値を区別するため。</td><td class="status pending">県・市町の最終集計待ち</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="appendix" class="card sources">
+    <h2>7. 添付資料・補足</h2>
+    <h3>7.1 主な公式一次資料</h3>
+    <div class="notice">
+      <strong>ハザードマップ・被害照合の参考サイト</strong><br>
+      <a href="https://www.city.fukui.lg.jp/kurasi/koutu/kasen/p010331.html" target="_blank" rel="noopener">福井市 洪水・土砂災害ハザードマップ</a><br>
+      <a href="https://www.city.ono.fukui.jp/kurashi/bousai-anzen/bousai/sougoubousaimap/sougoubousaimap.html" target="_blank" rel="noopener">大野市 総合防災マップ（ハザードマップ）</a><br>
+      <a href="https://www.city.katsuyama.fukui.jp/soshiki/4/7194.html" target="_blank" rel="noopener">勝山市 防災ハザードマップ</a><br>
+      <a href="https://www.pref.fukui.lg.jp/doc/kikitaisaku/fuusuigai/20260829ooame.html" target="_blank" rel="noopener">福井県「令和8年8月29日からの大雨に係る対応について」</a>
+    </div>
+
+    <p class="small">リンク先の資料は更新・差し替えされる場合があります。公開日時・版数を確認して参照してください。</p>
+    <ol>
+      <li><a href="https://www.jma.go.jp/jma/press/2608/30a/20260830_ooame_tokukei.html" target="_blank" rel="noopener">気象庁「福井県にレベル5大雨特別警報発表」（2026年8月30日）</a></li>
+      <li><a href="https://www.pref.fukui.lg.jp/doc/kikitaisaku/fuusuigai/20260829ooame.html" target="_blank" rel="noopener">福井県「令和8年8月29日からの大雨に係る対応について」</a></li>
+      <li><a href="https://www.pref.fukui.lg.jp/doc/kikitaisaku/fuusuigai/20260829ooame_d/fil/2608300800.pdf" target="_blank" rel="noopener">福井県 第1回災害対策本部会議資料（2026年8月30日8時）</a></li>
+      <li><a href="https://www.pref.fukui.lg.jp/doc/kikitaisaku/fuusuigai/20260829ooame_d/fil/2609031300.pdf" target="_blank" rel="noopener">福井県「大雨による影響のとりまとめ」（2026年9月3日13時）</a></li>
+      <li><a href="https://www.city.fukui.lg.jp/kurasi/bosai/bosai/p073341.html" target="_blank" rel="noopener">福井市「被害状況・その他防災情報など」</a></li>
+      <li><a href="https://www.city.ono.fukui.jp/topics/higaijoukyo.html" target="_blank" rel="noopener">大野市「大雨による被害状況」</a></li>
+      <li><a href="https://www.city.katsuyama.fukui.jp/soshiki/4/38687.html" target="_blank" rel="noopener">勝山市「レベル4避難指示を解除します」（2026年8月30日22時23分）</a></li>
+      <li><a href="https://www.mlit.go.jp/saigai/saigai_260827.html" target="_blank" rel="noopener">国土交通省「令和8年8月27日からの大雨による被害状況等について」</a></li>
+      <li><a href="https://www.data.jma.go.jp/fukui/index.html" target="_blank" rel="noopener">福井地方気象台「令和8年8月の大雨に伴う気象支援資料」</a></li>
+    </ol>
+  </section>
+
+  <section id="policy" class="card">
+    <h2>7.2 更新方針</h2>
+    <p>このページは、気象庁・福井地方気象台・福井県・各市町・国土交通省などから、新しい事後検証、予測履歴、河川解析、被害確定値、避難情報整理が公開された場合に更新します。</p>
+    <p><strong>単なる被害件数の増減だけでは、検証結論を更新しません。</strong> 予測・警報・河川危険度・避難判断・被害発生の時間関係に新しい意味を与える一次資料が出た場合に、評価を見直します。</p>
+    <div class="notice danger"><strong>現時点の位置づけ：</strong> 暫定版です。被害地点の全件照合と、気象庁等による予測・警報の事後検証資料が揃った段階で最終評価へ更新します。</div>
+  </section>
+</main>
+<footer><div class="wrap">
+  <div><strong>2026年8月29日〜30日 福井県 記録的大雨 暫定検証</strong></div>
+  <div>作成日：2026年9月4日 ／ 本ページは公開済み公式資料の整理・検証を目的としています。</div>
+</div></footer>
+</body>
+</html>
