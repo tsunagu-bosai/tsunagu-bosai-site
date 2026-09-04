@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="2026年8月27日に富山県・氷見市で発生した記録的大雨について、公式一次資料をもとに予測・警報・河川水位・避難情報・被害発生タイミングを暫定検証します。" />
+  <title>2026年8月27日 富山県・氷見市 記録的大雨 暫定検証 | つなぐ防災</title>
+  <link rel="icon" href="../../../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../../assets/images/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/images/apple-touch-icon.png">
+  <link rel="canonical" href="https://tsunagubosai.jp/verification/toyama/himi-20260827/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="つなぐ防災">
+  <meta property="og:title" content="2026年8月27日 富山県・氷見市 記録的大雨 暫定検証">
+  <meta property="og:description" content="公式一次資料をもとに、予測・警報・河川水位・避難情報・被害発生の時間関係と、次の災害への生かし方を検証します。">
+  <meta property="og:url" content="https://tsunagubosai.jp/verification/toyama/himi-20260827/">
+  <meta property="og:image" content="https://tsunagubosai.jp/assets/images/tsunagubosai-ogp-20260831.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root{
+      --bg:#f5f7f9; --paper:#fff; --ink:#17202a; --muted:#5b6570; --line:#dbe2e8;
+      --accent:#0b5d7a; --accent-2:#113b52; --warn:#7a4c00; --warn-bg:#fff7df;
+      --danger:#8b1e24; --danger-bg:#fff0f0; --ok:#185c45; --ok-bg:#edf8f3;
+      --shadow:0 8px 28px rgba(20,35,50,.08); --radius:16px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.75}
+    a{color:var(--accent);text-decoration-thickness:.08em;text-underline-offset:.18em}
+    a:hover{text-decoration-thickness:.14em}
+    .wrap{width:min(1080px,calc(100% - 32px));margin:auto}
+    header{background:linear-gradient(135deg,#0c3a50,#0b5d7a);color:#fff;padding:64px 0 52px}
+    header .eyebrow{font-size:.88rem;letter-spacing:.08em;font-weight:700;opacity:.86}
+    h1{font-size:clamp(2rem,5vw,3.6rem);line-height:1.2;margin:.35em 0 .35em;letter-spacing:-.03em}
+    header p{max-width:780px;font-size:1.08rem;margin:0;opacity:.94}
+    .meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;font-size:.9rem}
+    .pill{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 11px;background:rgba(255,255,255,.08)}
+    nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav .wrap{display:flex;gap:22px;overflow:auto;padding:12px 0;white-space:nowrap;font-size:.9rem;font-weight:700}
+    nav a{text-decoration:none;color:#31414d}
+    main{padding:40px 0 72px}
+    section{margin:0 0 42px}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
+    h2{font-size:1.65rem;margin:0 0 18px;letter-spacing:-.02em}
+    h3{font-size:1.12rem;margin:1.8em 0 .5em}
+    .lead{font-size:1.08rem}
+    .notice{border-left:5px solid var(--warn);background:var(--warn-bg);padding:18px 20px;border-radius:10px;margin:18px 0}
+    .key{border-left-color:var(--accent);background:#edf7fb}
+    .danger{border-left-color:var(--danger);background:var(--danger-bg)}
+    .good{border-left-color:var(--ok);background:var(--ok-bg)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .metric{background:#f8fafb;border:1px solid var(--line);border-radius:12px;padding:16px}
+    .metric strong{display:block;font-size:1.65rem;line-height:1.1;color:var(--accent-2);margin-bottom:7px}
+    .metric span{font-size:.88rem;color:var(--muted)}
+    .timeline{position:relative;margin-top:18px}
+    .timeline:before{content:"";position:absolute;left:152px;top:8px;bottom:8px;width:2px;background:#ccd7df}
+    .event{display:grid;grid-template-columns:136px 1fr;gap:28px;position:relative;padding:0 0 22px}
+    .event time{font-weight:800;color:var(--accent-2);font-variant-numeric:tabular-nums;text-align:right}
+    .event .body{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+    .event .body:before{content:"";position:absolute;left:-23px;top:18px;width:11px;height:11px;background:var(--accent);border:3px solid var(--bg);border-radius:50%}
+    .event .title{font-weight:800;margin-bottom:2px}
+    .tag{display:inline-block;font-size:.72rem;font-weight:800;padding:2px 7px;border-radius:999px;background:#edf1f4;color:#42515c;margin-left:7px;vertical-align:.1em}
+    .tag.obs{background:#eaf4f8;color:#0b5d7a}.tag.river{background:#edf8f3;color:#185c45}.tag.alert{background:#fff1e6;color:#7d4300}.tag.action{background:#f2edfb;color:#57378b}
+    table{width:100%;border-collapse:collapse;font-size:.92rem}
+    th,td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+    th{background:#f7f9fa;color:#42515c}
+    .small{font-size:.88rem;color:var(--muted)}
+    .sources ol{padding-left:1.25em}.sources li{margin:.65em 0}
+    .status{font-weight:800}.status.pending{color:var(--warn)}
+    footer{border-top:1px solid var(--line);padding:30px 0 52px;color:var(--muted);font-size:.88rem}
+    code{background:#eef2f4;border-radius:5px;padding:.1em .35em}
+    @media(max-width:760px){header{padding:46px 0 40px}.grid{grid-template-columns:1fr}.card{padding:21px}.timeline:before{left:112px}.event{grid-template-columns:98px 1fr;gap:20px}.event .body:before{left:-18px}.wrap{width:min(100% - 22px,1080px)} table{font-size:.84rem} th,td{padding:9px 7px}}
+    @media print{nav{display:none}body{background:#fff}.card{box-shadow:none}header{background:#fff;color:#000;padding:20px 0;border-bottom:2px solid #000}.pill{border:1px solid #999}.event .body:before{border-color:#fff}}
+  </style>
+
+<style id="visual-upgrade-v03">
+  :root{
+    --ink:#172033; --muted:#5f6b7a; --paper:#ffffff; --soft:#f5f7fa;
+    --accent:#c44924; --accent-soft:#fff1eb; --warning:#9a6700; --warning-soft:#fff8db;
+    --info:#155e75; --info-soft:#ecfeff; --line:#d8dee8;
+  }
+  body{font-family:"Noto Sans JP","Yu Gothic","Meiryo",sans-serif;color:var(--ink);line-height:1.8}
+  h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.25;letter-spacing:.01em}
+  h2{font-size:clamp(1.55rem,3vw,2.15rem);margin-bottom:1.1rem}
+  h3{font-size:1.25rem}
+  .card{padding:clamp(1.4rem,4vw,2.5rem);margin-bottom:1.4rem}
+  .lead{font-size:clamp(1.15rem,2.4vw,1.45rem);line-height:1.8}
+  .hero-message{
+    margin:1.8rem 0;padding:1.5rem 1.7rem;border-left:7px solid var(--accent);
+    background:var(--accent-soft);border-radius:12px;
+  }
+  .hero-message .eyebrow{font-size:.82rem;font-weight:800;letter-spacing:.08em;color:var(--accent)}
+  .hero-message .big{display:block;font-size:clamp(1.55rem,4vw,2.5rem);font-weight:900;line-height:1.35;margin:.35rem 0}
+  .hero-message p{margin:.35rem 0 0;color:#4d342d}
+  .key-number{font-size:1.45em;font-weight:900;color:var(--accent);font-variant-numeric:tabular-nums}
+  .visual-title{font-size:.86rem;font-weight:800;color:var(--muted);letter-spacing:.05em;margin-bottom:.8rem}
+  .event-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem;margin:1.3rem 0 1.7rem}
+  .event-step{position:relative;padding:1rem .85rem;background:var(--soft);border:1px solid var(--line);border-radius:12px;min-height:125px}
+  .event-step:not(:last-child)::after{content:"→";position:absolute;right:-.62rem;top:42%;font-size:1.3rem;font-weight:900;color:#8792a2;z-index:2}
+  .event-step .date{font-size:.72rem;color:var(--muted);font-weight:700}
+  .event-step .clock{font-size:1.65rem;font-weight:900;line-height:1.15;margin:.15rem 0}
+  .event-step .label{font-weight:800;line-height:1.45}
+  .event-step.alert{background:var(--accent-soft);border:2px solid var(--accent)}
+  .event-step.alert .clock,.event-step.alert .label{color:var(--accent)}
+  .event-step.warning{background:var(--warning-soft);border-color:#e2bf5a}
+  .comparison{
+    display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:.8rem;margin:1.3rem 0
+  }
+  .comparison .box{padding:1.25rem;border-radius:14px;border:1px solid var(--line);background:var(--paper)}
+  .comparison .box strong{display:block;font-size:1.35rem}
+  .comparison .box.earlier{background:var(--accent-soft);border:2px solid var(--accent)}
+  .comparison .arrow{align-self:center;font-size:1.6rem;font-weight:900;color:var(--muted)}
+  .comparison .delta{font-size:clamp(1.5rem,3vw,2.15rem);font-weight:900;color:var(--accent)}
+  .takeaway{padding:1.2rem 1.35rem;border-radius:12px;background:var(--info-soft);border-left:6px solid var(--info);margin:1.2rem 0}
+  .takeaway strong{color:var(--info);font-size:1.12rem}
+  .status-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:1.1rem 0}
+  .status{padding:1rem;border-radius:12px;border:1px solid var(--line);background:var(--soft)}
+  .status b{display:block;margin-bottom:.25rem}
+  .status.ok b{color:#166534}.status.pending b{color:var(--warning)}.status.no b{color:#991b1b}
+  .timeline time{font-weight:900;font-variant-numeric:tabular-nums}
+  .timeline .item:nth-child(3) .body,
+  .timeline .item:nth-child(6) .body,
+  .timeline .item:nth-child(10) .body{border-left:4px solid var(--accent);padding-left:1rem}
+  table th{white-space:nowrap}
+  @media(max-width:760px){
+    .event-flow{grid-template-columns:1fr 1fr}
+    .event-step:not(:last-child)::after{display:none}
+    .comparison{grid-template-columns:1fr}.comparison .arrow{text-align:center;transform:rotate(90deg)}
+    .status-grid{grid-template-columns:1fr}
+  }
+</style>
+
+
+<style id="message-first-v04">
+  .hero-message{
+    background:linear-gradient(135deg,#fff6ef,#fff);
+    border-left:0;
+    border-top:1px solid #f0d5c8;
+    border-bottom:1px solid #f0d5c8;
+    padding:2rem clamp(1.2rem,4vw,2.4rem);
+    text-align:center;
+  }
+  .hero-message .eyebrow{
+    color:#6b7280;font-size:.78rem;letter-spacing:.12em;margin-bottom:.7rem
+  }
+  .hero-message .big{
+    max-width:950px;margin:.2rem auto .8rem;
+    font-size:clamp(1.7rem,4.4vw,3rem);
+    line-height:1.35;color:#172033
+  }
+  .hero-message .big .fact-red{color:#b42318}
+  .hero-message .big .fact-orange{color:#c2410c}
+  .hero-message p{max-width:820px;margin:auto;color:#596273;font-size:.95rem}
+
+  .finding-banner{
+    margin:1.4rem 0 1.8rem;padding:1.2rem 1.3rem;
+    background:#172033;color:#fff;border-radius:14px;
+    display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:center
+  }
+  .finding-banner .badge{
+    background:#ef4444;color:#fff;font-weight:900;border-radius:999px;
+    padding:.45rem .8rem;white-space:nowrap
+  }
+  .finding-banner .message{
+    font-size:clamp(1.08rem,2.2vw,1.45rem);font-weight:850;line-height:1.5
+  }
+
+  .grid{grid-template-columns:repeat(3,1fr);gap:1rem}
+  .metric{
+    position:relative;overflow:hidden;padding:1.25rem 1.1rem 1.1rem;
+    min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;
+    background:#f8fafc;border:1px solid #dce3eb
+  }
+  .metric::before{
+    content:"";position:absolute;left:0;top:0;right:0;height:5px;background:#94a3b8
+  }
+  .metric:nth-child(1)::before{background:#ef4444}
+  .metric:nth-child(2)::before{background:#f97316}
+  .metric:nth-child(3)::before{background:#b91c1c}
+  .metric .badge-top{
+    position:absolute;top:13px;right:13px;padding:.25rem .55rem;border-radius:6px;
+    background:#dc2626;color:#fff;font-size:.72rem;font-weight:900
+  }
+  .metric .fact-title{
+    display:block;font-size:clamp(1.25rem,2.4vw,1.75rem);
+    line-height:1.25;font-weight:900;color:#172033;margin-bottom:.45rem
+  }
+  .metric .fact-value{
+    display:block;font-size:clamp(2.15rem,5vw,3.55rem);
+    line-height:1;font-weight:950;color:#dc2626;letter-spacing:-.03em;margin:.15rem 0 .6rem
+  }
+  .metric .fact-detail{font-size:.9rem;color:#556070;line-height:1.55}
+  .metric .fact-date{
+    margin-top:.75rem;padding-top:.65rem;border-top:1px solid #dce3eb;
+    color:#7b8492;font-size:.76rem;font-weight:700
+  }
+
+  /* Make timeline event descriptions primary, dates secondary */
+  .timeline time{
+    color:#7b8492!important;font-size:.76rem!important;font-weight:750!important;
+    line-height:1.35!important
+  }
+  .timeline .title{font-size:1.08rem;font-weight:900}
+  .timeline .body>div:last-child{color:#5a6574}
+
+  /* Comparison: words first, times secondary */
+  .comparison .box small{font-size:.78rem;color:#6b7280}
+  .comparison .box strong{font-size:clamp(1.3rem,2.5vw,1.8rem);line-height:1.35}
+  .comparison .when{display:block;margin-top:.45rem;font-size:.78rem;color:#7b8492;font-weight:700}
+  .comparison .delta{font-size:clamp(1.5rem,3.2vw,2.2rem)}
+
+  .key-number{font-size:inherit!important;color:inherit!important;font-weight:inherit!important}
+
+  @media(max-width:760px){
+    .finding-banner{grid-template-columns:1fr;text-align:left}
+    .finding-banner .badge{width:max-content}
+    .grid{grid-template-columns:1fr}
+    .metric{min-height:160px}
+  }
+</style>
+
+
+<style id="message-first-v05">
+  /* Hero: no forced line breaks; message wraps naturally */
+  .hero-message .big{
+    max-width:980px;
+    margin:.2rem auto .8rem;
+    font-size:clamp(1.65rem,4vw,2.85rem);
+    line-height:1.42;
+    text-wrap:balance;
+    word-break:normal;
+    overflow-wrap:anywhere;
+  }
+  .hero-message .big br{display:none}
+
+  /* Summary cards: subject/message first, date/time secondary */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:1rem;
+    align-items:stretch;
+  }
+  .metric{
+    min-width:0;
+    min-height:215px;
+    padding:1.35rem 1.15rem 1.1rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    overflow:hidden;
+  }
+  .metric .badge-top{
+    position:static;
+    align-self:flex-start;
+    display:inline-flex;
+    max-width:100%;
+    margin:0 0 .7rem 0;
+    padding:.28rem .58rem;
+    white-space:normal;
+    line-height:1.25;
+    font-size:.72rem;
+  }
+  .metric .fact-title{
+    display:block;
+    font-size:clamp(1.35rem,2.6vw,1.9rem);
+    line-height:1.28;
+    font-weight:950;
+    color:#172033;
+    margin:0 0 .7rem;
+    text-wrap:balance;
+    overflow-wrap:anywhere;
+  }
+  .metric .fact-title.emphasis-orange{color:#c2410c}
+  .metric .fact-title.emphasis-red{color:#b91c1c}
+  .metric .fact-value{
+    display:block;
+    margin:.1rem 0 .65rem;
+    font-size:clamp(2.15rem,4.8vw,3.45rem);
+    line-height:1;
+    font-weight:950;
+    color:#dc2626;
+    letter-spacing:-.025em;
+    overflow-wrap:anywhere;
+  }
+  .metric .fact-message{
+    display:block;
+    margin:.05rem 0 .65rem;
+    font-size:clamp(1.05rem,1.8vw,1.22rem);
+    line-height:1.55;
+    font-weight:850;
+    color:#263244;
+  }
+  .metric .fact-detail{
+    font-size:.9rem;
+    line-height:1.6;
+    color:#556070;
+    flex:1;
+  }
+  .metric .fact-date{
+    margin-top:.8rem;
+    padding-top:.65rem;
+    border-top:1px solid #dce3eb;
+    color:#7b8492;
+    font-size:.76rem;
+    font-weight:700;
+    line-height:1.45;
+  }
+
+  /* Overview flow: event name is visually primary, clock secondary */
+  .event-step{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+  }
+  .event-step .label{
+    order:1;
+    font-size:1.08rem;
+    font-weight:900;
+    line-height:1.4;
+    text-wrap:balance;
+  }
+  .event-step .clock{
+    order:2;
+    margin:.65rem 0 .1rem;
+    font-size:.95rem;
+    font-weight:800;
+    color:#5f6b7a !important;
+  }
+  .event-step .date{
+    order:3;
+    font-size:.7rem;
+    color:#8a94a3;
+  }
+  .event-step.alert .label{color:#b42318}
+  .event-step.warning .label{color:#8a5200}
+
+  /* Detailed timeline: key facts use same visual language as summary */
+  .timeline .event.key-event .body{
+    border-width:2px;
+    box-shadow:0 6px 18px rgba(23,32,51,.07);
+  }
+  .timeline .event.key-rain .body{
+    border-color:#ef4444;
+    background:linear-gradient(90deg,#fff4f1 0,#fff 35%);
+  }
+  .timeline .event.key-band .body{
+    border-color:#f97316;
+    background:linear-gradient(90deg,#fff5ed 0,#fff 35%);
+  }
+  .timeline .event.key-special .body{
+    border-color:#b91c1c;
+    background:linear-gradient(90deg,#fff1f1 0,#fff 35%);
+  }
+  .timeline .event.key-damage .body{
+    border-color:#334155;
+    background:linear-gradient(90deg,#f2f5f8 0,#fff 35%);
+  }
+  .timeline .event.key-event .title{
+    font-size:clamp(1.08rem,2vw,1.28rem);
+    line-height:1.45;
+  }
+  .timeline .event.key-rain .title{color:#c62828}
+  .timeline .event.key-band .title{color:#c2410c}
+  .timeline .event.key-special .title{color:#991b1b}
+  .timeline .event.key-damage .title{color:#1e293b}
+  .timeline .event.key-event time{
+    color:#6b7280!important;
+    font-size:.74rem!important;
+    font-weight:700!important;
+  }
+  .timeline .event.key-event .body:before{
+    width:14px;height:14px;
+    left:-25px;top:18px;
+  }
+  .timeline .event.key-rain .body:before{background:#ef4444}
+  .timeline .event.key-band .body:before{background:#f97316}
+  .timeline .event.key-special .body:before{background:#b91c1c}
+  .timeline .event.key-damage .body:before{background:#334155}
+
+  @media(max-width:900px){
+    .grid{grid-template-columns:1fr}
+    .metric{min-height:0}
+  }
+  @media(max-width:760px){
+    .hero-message .big{
+      font-size:clamp(1.5rem,7vw,2.1rem);
+      line-height:1.45;
+    }
+    .metric .fact-title{font-size:1.45rem}
+    .metric .fact-value{font-size:2.75rem}
+    .event-flow{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:480px){
+    .event-flow{grid-template-columns:1fr}
+  }
+</style>
+
+
+<style id="hazard-application-v06">
+  .section-intro{font-size:1.03rem;color:#4b5563;max-width:900px;margin:-.3rem 0 1.2rem}
+  .hazard-visual{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;margin:1.2rem 0 1.5rem}
+  .map-card{min-height:245px;border-radius:16px;padding:1.25rem;position:relative;overflow:hidden;border:1px solid #d7dfe8;background:#f8fafc}
+  .map-card h4{margin:0 0 .35rem;font-size:1.15rem}.map-card p{margin:.15rem 0;color:#667085;font-size:.88rem}
+  .schematic{position:relative;height:155px;margin-top:.9rem;border-radius:12px;background:linear-gradient(35deg,transparent 35%,rgba(36,99,235,.07) 36% 38%,transparent 39%),linear-gradient(145deg,transparent 45%,rgba(36,99,235,.06) 46% 49%,transparent 50%),#edf3f8;overflow:hidden}
+  .zone{position:absolute;inset:18% 12% 16% 18%;border-radius:44% 56% 50% 45%/50% 45% 55% 50%;transform:rotate(-7deg)}
+  .zone.predicted{background:rgba(14,165,233,.30);border:3px solid rgba(2,132,199,.75)}
+  .zone.actual{inset:24% 17% 12% 23%;background:rgba(239,68,68,.30);border:3px solid rgba(220,38,38,.75);transform:rotate(5deg)}
+  .legend{display:flex;gap:1rem;flex-wrap:wrap;margin-top:.7rem;font-size:.78rem;color:#667085}
+  .legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.35rem;vertical-align:-1px}
+  .legend .pred::before{background:rgba(14,165,233,.6)} .legend .act::before{background:rgba(239,68,68,.6)}
+  .overlap-callout{text-align:center;min-width:150px}.overlap-callout .big{display:block;font-size:clamp(1.65rem,3.5vw,2.45rem);font-weight:950;color:#0f766e;line-height:1.15}
+  .overlap-callout small{display:block;margin-top:.45rem;color:#667085;line-height:1.5}
+  .evidence-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:1rem 0 1.5rem}
+  .evidence{padding:1rem 1.05rem;border-radius:12px;background:#fff;border:1px solid #dbe3ec}
+  .evidence b{display:block;font-size:1.08rem;margin-bottom:.3rem}.evidence.good b{color:#0f766e}.evidence.caution b{color:#9a6700}
+  .application-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.1rem 0}
+  .application-card{padding:1.25rem;border-radius:14px;border:1px solid #dbe3ec;background:#fff}
+  .application-card .num{font-size:.78rem;font-weight:900;color:#64748b;letter-spacing:.08em}
+  .application-card h4{margin:.35rem 0 .5rem;font-size:1.25rem}.application-card strong{color:#b42318}.application-card p{margin:.25rem 0;color:#556070}
+  .purpose-bridge{margin:1.2rem 0;padding:1.2rem 1.35rem;border-radius:12px;background:#0f172a;color:#fff}
+  .purpose-bridge strong{display:block;font-size:clamp(1.15rem,2vw,1.4rem);margin-bottom:.35rem}
+  @media(max-width:850px){.hazard-visual{grid-template-columns:1fr}.overlap-callout{padding:.2rem 0 .6rem}.evidence-row,.application-grid{grid-template-columns:1fr}}
+</style>
+
+
+<style id="tsunagubosai-integration">
+  .report-sitebar{background:#fff;border-bottom:1px solid #d8dee8}
+  .report-sitebar-inner{width:min(1080px,calc(100% - 32px));margin:auto;min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .report-brand,.report-back{color:#273642!important;font-weight:800;text-decoration:none!important}
+  .report-brand{display:inline-flex;align-items:center;gap:9px}
+  .report-brand img{width:32px;height:32px;object-fit:contain}
+  .report-back{font-size:.86rem;color:#2e7d32!important}
+  @media(max-width:760px){.report-sitebar-inner{width:min(100% - 22px,1080px)}}
+</style>
+
+</head>
+<body>
+
+<div class="report-sitebar">
+  <div class="report-sitebar-inner">
+    <a class="report-brand" href="../../../">
+      <img src="../../../assets/images/tsunagubosai-logo.png" alt="">
+      <span>つなぐ防災</span>
+    </a>
+    <a class="report-back" href="../../">災害検証一覧へ戻る</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">公式一次資料に基づく暫定検証</div>
+    <h1>2026年8月27日<br>富山県・氷見市 記録的大雨</h1>
+    <p>予測・警報・河川水位・避難情報・被害発生のタイミングを、気象庁、富山県、氷見市、国土交通省などの公開資料から時系列で整理します。</p>
+    <div class="meta">
+      <span class="pill">公開版 v0.1</span>
+      <span class="pill">最終確認：2026年9月4日</span>
+      <span class="pill">事後検証資料公開前の暫定版</span>
+    </div>
+  </div>
+</header>
+<nav aria-label="ページ内ナビゲーション"><div class="wrap">
+  <a href="#summary">1. はじめに</a><a href="#purpose">2. 背景と目的</a><a href="#method">3. 調査概要</a><a href="#results">4. 調査結果</a><a href="#assessment">5. 考察・分析</a><a href="#conclusion">6. 結論と今後</a><a href="#appendix">7. 補足資料</a>
+</div></nav>
+<main class="wrap">
+  <section id="summary" class="card"><h2>1. はじめに</h2><p class="lead">本レポートは、<strong>2026年8月26日以降に富山県、特に氷見市で発生した記録的大雨について、「何がいつ予測・発表され、実際の危険や被害がいつ顕在化し、自治体の避難対応がいつ行われたのか」を公式一次資料から検証する</strong>ものです。</p>
+    
+    <div class="hero-message">
+      <div class="eyebrow">現時点で確認できた最重要事実</div>
+    <div class="finding-banner">
+      <div class="badge">重要</div>
+      <div class="message">災害の起点を「線状降水帯発生情報」や「大雨特別警報」とみなすだけでは、今回の氷見市の実態を捉えられません。</div>
+    </div>
+
+      <span class="big"><span class="fact-orange">線状降水帯発生情報</span>・<span class="fact-red">大雨特別警報</span>より前から、氷見市では<strong>極端な降雨と河川の危険度上昇</strong>が進行していた</span>
+      <p>発表日時そのものではなく、「その情報が出た時点で実際の現象がどこまで進んでいたか」を検証します。</p>
+    </div>
+<div class="notice key"><strong>現時点の最重要論点：</strong> 2026年8月27日00時30分〜03時30分ごろに、キキクル、流域雨量指数、降水短時間予報などの予測情報が、その後の河川増水・浸水をどの程度先行して示していたかを確認することです。</div>
+<div class="grid">
+  <div class="metric">
+    <span class="badge-top">観測史上1位</span>
+    <span class="fact-title">氷見の3時間降水量</span>
+    <span class="fact-value">130.5 mm</span>
+    <span class="fact-message">極端な降雨がすでに進行</span>
+    <span class="fact-detail">3時間降水量の観測史上1位を更新しました。</span>
+    <span class="fact-date">2026年8月27日03時20分まで</span>
+  </div>
+  <div class="metric">
+    <span class="fact-title emphasis-orange">線状降水帯発生情報</span>
+    <span class="fact-message">発表より前から、氷見市では危険が顕在化</span>
+    <span class="fact-detail">線状降水帯発生情報は重要な実況情報ですが、今回の災害の最初の危険シグナルではありませんでした。</span>
+    <span class="fact-date">発表：2026年8月27日02時58分（富山県西部）</span>
+  </div>
+  <div class="metric">
+    <span class="fact-title emphasis-red">大雨特別警報</span>
+    <span class="fact-message">発表以前から、避難対応と河川危険度上昇が進行</span>
+    <span class="fact-detail">特別警報の発表を待って避難を始める状況ではありませんでした。</span>
+    <span class="fact-date">発表：2026年8月27日06時20分（氷見市）</span>
+  </div>
+</div>
+<div class="notice"><strong>本レポートの位置づけ：</strong> 2026年9月4日時点の暫定検証です。責任追及や原因の断定を目的とせず、公開済みの公式一次資料から事実関係と時間関係を整理します。正式な事後検証資料が公開された後、最終評価を行います。</div></section>
+  <section id="purpose" class="card"><h2>2. 調査の背景と目的</h2><p>2026年8月27日、富山県西部を中心に記録的な大雨となり、氷見市では河川増水、道路冠水、浸水、土砂災害などが発生しました。その後、線状降水帯発生情報、大雨特別警報、河川水位情報、避難情報など多数の情報が公表されています。</p><p>
+  <p>災害を検証するには「最終的にどの警報が出たか」だけでは不十分です。</p>
+
+  <ul class="verification-points">
+    <li><strong>予測情報が危険を示した日時</strong></li>
+    <li><strong>実況で危険が顕在化した日時</strong></li>
+    <li><strong>実被害が確認された日時</strong></li>
+    <li><strong>自治体が住民へ避難を呼びかけた日時</strong></li>
+  </ul>
+
+  <p class="verification-points-follow">
+    を同じ時間軸で比較する必要があります。
+  </p>
+  本調査の目的は、これらを公式一次資料に基づいて時系列化し、以下の観点で検証するための基礎資料を作ることです。</p>
+  ①危険をどこまで事前に予測できていたのか<br>
+  ②警報・危険度情報は実際の現象に対してどのタイミングで発表されたのか<br>
+  ③自治体の避難対応との時間関係はどうだったのか<br>
+<div class="purpose-bridge">
+  <strong>この調査の最終目的は、「次の大雨で、より早く安全に行動するために何を変えるべきか」を明らかにすることです。</strong>
+  予測・警報の評価だけでなく、ハザードマップ、避難判断、情報の伝え方、平時の備えへどう生かせるかまで検討します。
+</div>
+</section>
+  <section id="method" class="card"><h2>3. 調査概要（調査手法）</h2><table><tbody><tr><th>調査対象期間</th><td>2026年8月26日以降。特に2026年8月27日00時00分〜06時40分を重点確認。</td></tr><tr><th>対象地域</th><td>富山県。特に氷見市および氷見市内・周辺の河川流域。</td></tr><tr><th>主な情報源</th><td>気象庁、富山地方気象台、富山県、氷見市、国土交通省・北陸地方整備局などの公式一次資料。</td></tr><tr><th>確認項目</th><td>降雨観測、線状降水帯情報、警報・大雨特別警報、キキクル、河川水位、道路冠水、避難情報、災害対策本部資料、事後検証資料。</td></tr><tr><th>調査方法</th><td>発表日時・観測日時・対応日時を抽出し、同一時間軸で照合。前後関係だけから因果関係を断定しない。</td></tr><tr><th>基準日</th><td>2026年9月4日。</td></tr></tbody></table></section>
+  <section id="results" class="card">
+    <h2>4. 調査結果</h2>
+    <h3>4.1 2026年8月27日未明〜朝の主要時系列</h3>
+    <div class="visual-title">主要な転換点 ― 詳細時系列を読む前に</div>
+    <div class="event-flow">
+      <div class="event-step warning"><div class="label">極端な短時間降雨</div><div class="clock">00:30</div><div class="date">2026年8月27日</div></div>
+      <div class="event-step"><div class="label">道路冠水による通行止め</div><div class="clock">02:20</div><div class="date">2026年8月27日</div></div>
+      <div class="event-step alert"><div class="label">線状降水帯発生情報</div><div class="clock">02:58</div><div class="date">2026年8月27日</div></div>
+      <div class="event-step alert"><div class="label">大雨特別警報</div><div class="clock">06:20</div><div class="date">2026年8月27日</div></div>
+    </div>
+    <div class="comparison">
+      <div class="box earlier"><small>実被害の顕在化</small><strong>道路冠水による通行止め</strong><span class="when">2026年8月27日 02:20</span></div>
+      <div class="arrow">→</div>
+      <div class="box"><small>気象情報</small><strong>線状降水帯発生情報</strong><div class="delta">38分後</div><span class="when">2026年8月27日 02:58</span></div>
+    </div>
+    <div class="takeaway"><strong>重要：</strong> 少なくとも道路冠水は、線状降水帯発生情報より前に顕在化していました。したがって、今回の災害を「線状降水帯情報が出てから始まった」と整理することはできません。</div>
+
+    <p class="small">時刻は公開資料から確認できた主要事項を抜粋。情報体系・河川観測・自治体対応は別系統であるため、単純な前後関係だけで因果を断定しません。</p>
+    <div class="timeline">
+      <div class="event"><time>2026年8月27日<br>00:30</time><div class="body"><div class="title">氷見市にレベル4土砂災害危険警報 <span class="tag alert">警報</span></div><div>この時間帯から強雨が急激に顕在化。氷見市の事後整理でも主な対応時刻として記録されています。</div></div></div>
+      <div class="event"><time>2026年8月27日<br>01:22</time><div class="body"><div class="title">レベル4大雨危険警報・自主避難所の開設開始 <span class="tag action">自治体</span></div><div>氷見市は早い段階から避難対応を開始していました。</div></div></div>
+
+      <div class="event key-event key-damage"><time>2026年8月27日<br>02:20</time><div class="body"><div class="title">国道160号で道路冠水による通行止め <span class="tag river">実被害</span></div><div>少なくとも道路冠水による交通障害は、線状降水帯発生情報より38分前に顕在化していました。</div></div></div>
+      <div class="event key-event key-band"><time>2026年8月27日<br>02:58</time><div class="body"><div class="title">富山県西部で線状降水帯発生情報 <span class="tag alert">気象</span></div><div>重要な実況情報ですが、氷見ではこの時点より前から雨量・河川の危険度上昇が進んでいました。</div></div></div>
+      <div class="event key-event key-rain"><time>2026年8月27日<br>03:20</time><div class="body"><div class="title">氷見の3時間降水量 130.5mm <span class="tag obs">観測</span></div><div>気象庁の観測統計で、観測史上1位を更新。</div></div></div>
+      <div class="event"><time>2026年8月27日<br>03:42</time><div class="body"><div class="title">氷見市が線状降水帯に伴う大雨への警戒を案内 <span class="tag action">自治体</span></div><div>市の事後対応記録に掲載。</div></div></div>
+      <div class="event"><time>2026年8月27日<br>04:00</time><div class="body"><div class="title">国道160号の通行止め予告 <span class="tag river">道路</span></div><div>03:00時点で氷見市中波〜藪田区間の連続雨量が規制値160mmの70%（112mm）に到達したとして国交省が発表。</div></div></div>
+      <div class="event"><time>2026年8月27日<br>05:10</time><div class="body"><div class="title">仏生寺川周辺に垂直避難案内 <span class="tag action">自治体</span></div><div>この時点では、通常の立退き避難よりも屋内での安全確保が重視される局面に移りつつありました。</div></div></div>
+      <div class="event"><time>2026年8月27日<br>05:30</time><div class="body"><div class="title">市内全域に垂直避難案内 <span class="tag action">自治体</span></div><div>大雨特別警報より約50分前。</div></div></div>
+      <div class="event"><time>2026年8月27日<br>06:18</time><div class="body"><div class="title">市内全域に避難指示 <span class="tag action">自治体</span></div><div>大雨特別警報の2分前。</div></div></div>
+      <div class="event key-event key-special"><time>2026年8月27日<br>06:20</time><div class="body"><div class="title">氷見市にレベル5大雨特別警報 <span class="tag alert">特別警報</span></div><div>気象庁は「特別警報が発表されてから避難するのでは手遅れ」と明記し、既に発令されている避難情報に従うよう呼びかけました。</div></div></div>
+      <div class="event"><time>2026年8月27日<br>06:40</time><div class="body"><div class="title">緊急安全確保 <span class="tag action">自治体</span></div><div>市の事後対応記録に掲載。</div></div></div>
+    </div>
+  </section>
+
+  
+  <section id="hazard" class="card">
+    <h3>4.2 ハザードマップと実被害の相関</h3>
+    <p class="section-intro">※下図は検証方法を示す模式図であり、実際の浸水区域図そのものではありません。</p><p class="section-intro">今回の検証では、警報や時系列だけでなく、<strong>「事前に公開されていた浸水想定と、実際の浸水域がどの程度一致したか」</strong>も確認対象としました。これは、ハザードマップが平時の避難計画にどこまで使えるかを考えるうえで重要です。</p>
+    <div class="hazard-visual">
+      <div class="map-card">
+        <h4>事前の想定</h4><p>最新ハザードマップの浸水想定区域</p>
+        <div class="schematic"><div class="zone predicted"></div></div>
+        <div class="legend"><span class="pred">浸水想定区域</span></div>
+      </div>
+      <div class="overlap-callout"><span class="big">照合継続</span><small>地点ベースで<br>一致・不一致を検証</small></div>
+      <div class="map-card">
+        <h4>今回の実被害</h4><p>確認された浸水域・浸水被害</p>
+        <div class="schematic"><div class="zone predicted"></div><div class="zone actual"></div></div>
+        <div class="legend"><span class="pred">浸水想定区域</span><span class="act">実浸水域</span></div>
+      </div>
+    </div>
+    <div class="evidence-row">
+      <div class="evidence good"><b>重要な確認</b>氷見市の洪水・土砂災害ハザードマップには、主要河川流域の浸水想定区域が示されています。今回の実浸水地点・道路冠水地点を地点ベースで照合し、想定区域内・区域外を区別して評価します。「概ね一致」との結論は、この照合が完了するまで確定しません。</div>
+      <div class="evidence good"><b>人的被害の表現を限定</b>富山県全体では今回の大雨による人的被害が報告されています。氷見市については、確認した公式被害資料上、死者・行方不明者・負傷者の記載は確認されていません。「人的被害がなかった」とは断定せず、今後の更新資料も確認します。</div>
+      <div class="evidence caution"><b>注意点</b>「概ね一致」は、全地点・全浸水深が完全一致したという意味ではありません。内水氾濫、排水能力、局地的な河川氾濫など、ハザードマップだけでは表現しきれない要因も残ります。</div>
+    </div>
+    <div class="notice" style="margin-top:1rem">
+  <strong>照合に使用する公式資料</strong><br>
+  ・氷見市「洪水・土砂災害ハザードマップ（2021年11月更新）」：主要河川流域の浸水想定区域、土砂災害警戒区域、避難場所等を確認。<br>
+  ・氷見市「令和8年8月大雨に関する情報［まとめ］」および罹災証明・住家被害認定情報：今回の実被害情報を確認。<br>
+  ・富山県災害対策本部資料：市町村別の人的・住家・道路・河川等の被害状況を確認。<br>
+  <small>※実浸水域の面的な確定資料が公表された場合は、ハザードマップとの重ね合わせを更新します。</small>
+</div>
+<div class="takeaway"><strong>ここから得られる意味：</strong> ハザードマップと実被害の照合は、<strong>事前の浸水想定が実際の避難判断にどこまで使えたか、また想定から外れた場所がなかったか</strong>を検証するために行います。結果は、平時の避難計画やハザードマップの周知・改善に反映します。</div>
+  </section>
+<section id="assessment" class="card">
+    <h2>5. 考察・分析</h2>
+    <h3>5.1 線状降水帯発生情報は「災害の始まり」を示す時刻ではない</h3>
+    <p>氷見では00時台から強雨が始まり、2026年8月27日03時20分には3時間降水量が観測史上1位となりました。線状降水帯発生情報は非常に重要ですが、今回の検証では、それ以前に出ていた雨量・河川・危険度情報も同時に見る必要があります。</p>
+    <h3>5.2 大雨特別警報を避難開始の基準として評価してはいけない</h3>
+    <p>気象庁は2026年8月27日06時20分の発表資料で、特別警報発表時は重大な災害が既に発生している可能性が極めて高く、「特別警報を待つことなく」避難情報に従うよう説明しています。氷見市も特別警報より前に自主避難所開設、垂直避難案内、避難指示を行っています。</p>
+    <h3>5.3 「予測できなかった」とも「対応が遅れた」とも、まだ断定できない</h3>
+    <p>実況側の時間軸はかなり固まりましたが、予測側で最も重要な、2026年8月27日01〜03時台の洪水キキクル、流域雨量指数、解析雨量、降水短時間予報の保存値・履歴が十分公開されていません。最終評価にはこれらが必要です。</p>
+    <div class="notice good"><strong>暫定評価：</strong> 現時点では「特別警報が遅かった」「線状降水帯予測が失敗した」「自治体の避難判断が遅かった」のいずれも単独では断定しません。検証対象を2026年8月27日00時30分〜03時30分へ前倒しし、予測情報と実況のリードタイムを比較する必要があります。</div>
+  </section>
+
+  <section id="conclusion" class="card">
+    <h2>6. 結論と今後の対策（今後の検証）</h2>
+    <div class="status-grid">
+      <div class="status ok"><b>確認できたこと</b>危険の顕在化は、線状降水帯発生情報・大雨特別警報より前から進んでいた。</div>
+      <div class="status pending"><b>まだ確認が必要</b>キキクル・流域雨量指数などが河川増水を何分・何時間先行して示したか。</div>
+      <div class="status no"><b>現時点で断定しない</b>予測失敗、警報遅延、自治体判断遅延のいずれかを原因とする評価。</div>
+    </div>
+<p>現時点では、2026年8月27日02時58分の<strong>線状降水帯発生情報</strong>や同日06時20分の大雨特別警報より前から、氷見市で危険が段階的に顕在化していたことは確認できます。一方、予測情報がその危険を何分・何時間前に捉えていたかを示す資料が不足しているため、予測失敗・警報遅延・自治体判断遅延のいずれかを断定する段階ではありません。</p><p>今後は公式の事後検証資料が公開され次第、保存された予測値と実況値を照合し、暫定評価を更新します。</p>
+    <h3>6.1 この検証をどう生かすか</h3>
+    <div class="application-grid">
+      <div class="application-card">
+        <div class="num">APPLICATION 01</div>
+        <h4>平時にハザードマップを「行動計画」に変える</h4>
+        <p>自宅が浸水想定区域にあるかを見るだけでなく、<strong>避難先・避難経路・垂直避難の可否</strong>まで事前に決める。今回の実被害との地点別照合を進め、どの地域で事前想定が実際の避難判断に利用できたかを検証します。</p>
+      </div>
+      <div class="application-card">
+        <div class="num">APPLICATION 02</div>
+        <h4>「特別警報を待たない」判断基準を共有する</h4>
+        <p>今回、危険は線状降水帯発生情報や大雨特別警報より前から進行していました。住民側も自治体側も、<strong>キキクル・河川水位・実況雨量など複数の早いシグナル</strong>から行動できる仕組みが必要です。</p>
+      </div>
+      <div class="application-card">
+        <div class="num">APPLICATION 03</div>
+        <h4>情報を「発表」ではなく「行動」につなげる</h4>
+        <p>情報名やレベルだけではなく、<strong>今どの地域で何をすべきか</strong>を短く明確に伝える。今回の時系列は、情報が存在することと住民が安全行動を取れることは別問題だと示しています。</p>
+      </div>
+      <div class="application-card">
+        <div class="num">APPLICATION 04</div>
+        <h4>複合災害を前提に更新する</h4>
+        <p>河川氾濫だけでなく、<strong>内水、排水能力、土砂災害、道路冠水</strong>が同時に進む状況を想定し、ハザードマップや避難計画、訓練内容を見直す必要があります。</p>
+      </div>
+    </div>
+    <div class="takeaway"><strong>最終的に目指すもの：</strong> 「どの情報が何分早かったか」を評価するだけではなく、<strong>次に同じような豪雨が起きたとき、住民が危険になる前に安全行動へ移れる仕組みを作ること</strong>です。</div>
+    <h3>6.2 最終評価に必要な未解決項目</h3>
+
+    <table>
+      <thead><tr><th>未解決項目</th><th>なぜ重要か</th><th>現状</th></tr></thead>
+      <tbody>
+        <tr><td>2026年8月27日01時00分〜03時00分の洪水キキクル履歴</td><td>河川増水を何分〜何時間前に予測できていたかを直接評価できる。</td><td class="status pending">公開・整理資料待ち</td></tr>
+        <tr><td>流域雨量指数・予測値の時系列</td><td>上庄川など中小河川の危険度予測のリードタイム評価に必要。</td><td class="status pending">詳細データ待ち</td></tr>
+        <tr><td>線状降水帯予測の個別事後検証</td><td>最初の線状降水帯をどこまで事前に予測できていたかを正式評価するため。</td><td class="status pending">気象庁資料待ち</td></tr>
+        <tr><td>大雨特別警報の「予測と実際」</td><td>特別警報基準への到達予測がいつ成立したかを確認するため。</td><td class="status pending">事後検証資料待ち</td></tr>
+        <tr><td>自治体の全通知ログ</td><td>住民向けに何時・どの媒体で・どの地域へ情報が届いたかを検証するため。</td><td class="status pending">主な対応時刻のみ確認済み</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="appendix" class="card sources">
+    <h2>7. 添付資料・補足</h2><h3>7.1 主な公式一次資料</h3>
+    <div class="notice">
+      <strong>ハザードマップ・被害照合の参考サイト</strong><br>
+      <a href="https://www.city.himi.toyama.jp/gyosei/soshiki/furusato/1/1/1210.html" target="_blank" rel="noopener">氷見市 洪水・土砂災害ハザードマップ（2021年11月更新）</a><br>
+      <a href="https://www.city.himi.toyama.jp/emergency/15186.html" target="_blank" rel="noopener">氷見市 令和8年8月大雨に関する情報［まとめ］</a><br>
+      <a href="https://www.city.himi.toyama.jp/gyosei/soshiki/zeimu/1/1/9239.html" target="_blank" rel="noopener">氷見市 罹災証明書・被災届出証明書</a><br>
+      <a href="https://www.pref.toyama.jp/kensei/kouhou/houdou/index.html" target="_blank" rel="noopener">富山県 報道発表・災害対策本部資料</a>
+    </div>
+
+    <p class="small">リンク先の資料は更新・差し替えされる場合があります。公開日時・版数を確認して参照してください。</p>
+    <ol>
+      <li><a href="https://www.jma.go.jp/jma/press/2608/27a/20260827_tokukei.html" target="_blank" rel="noopener">気象庁「石川県、富山県にレベル5大雨特別警報発表」（2026年8月27日）</a></li>
+      <li><a href="https://www.data.jma.go.jp/stats/data/mdrr/periodstat/20260827a/20260827/24/pre3h_mxarea00.html" target="_blank" rel="noopener">気象庁「3時間降水量の期間最大値」— 氷見130.5mm、03:20まで</a></li>
+      <li><a href="https://www.city.himi.toyama.jp/material/files/group/2/R8_higai_0831_01.pdf" target="_blank" rel="noopener">氷見市 災害対策本部会議資料（8月31日時点の主な対応時刻）</a></li>
+      <li><a href="https://www.city.himi.toyama.jp/emergency/15186.html" target="_blank" rel="noopener">氷見市「令和8年8月大雨に関する情報［まとめ］」</a></li>
+      <li><a href="https://www.pref.toyama.jp/1900/bousaianzen/bousai/kikikanri/kiki20260827-1.html" target="_blank" rel="noopener">富山県「第1回災害対策本部員会議」（2026年8月27日 09:00）</a></li>
+      <li><a href="https://www.hrr.mlit.go.jp/toyama/topics_detail_25_250_9bea637dd6a93c42633f5d1cf93a6ddb.html" target="_blank" rel="noopener">国土交通省 富山河川国道事務所「国道160号氷見市中波～藪田の通行止め予告」（2026年8月27日 04:00）</a></li>
+      <li><a href="https://www.river.go.jp/portal/" target="_blank" rel="noopener">国土交通省「川の防災情報」</a> — 河川水位履歴の確認に使用。</li>
+      <li><a href="https://www.jma.go.jp/jma/kishou/know/bosai/riskmap_flood.html" target="_blank" rel="noopener">気象庁「洪水キキクル」解説</a> — 予測危険度の仕組み確認。</li>
+    </ol>
+  </section>
+
+  <section id="policy" class="card">
+    <h2>7.2 更新方針</h2>
+    <p>このページは、気象庁・富山地方気象台・富山県・氷見市・国土交通省などの公式情報に、新しい事後検証・降雨解析・キキクル履歴・河川水位解析・避難情報整理が公開された場合に更新します。</p>
+    <p><strong>単なる被害件数の増減だけでは、検証結論を更新しません。</strong> 予測・警報・危険度・被害発生・避難判断の時間関係に新しい意味を与える一次資料が出た場合に、評価を見直します。</p>
+    <div class="notice danger"><strong>現時点の位置づけ：</strong> 暫定版です。気象庁等による正式な事後検証資料の公開後、予測と実際の比較を追加して最終版へ更新します。</div>
+  </section>
+</main>
+<footer><div class="wrap">
+  <div><strong>2026年8月27日 富山県・氷見市 記録的大雨 暫定検証</strong></div>
+  <div>作成日：2026年9月4日 ／ 本ページは公開済み公式資料の整理・検証を目的としています。</div>
+</div></footer>
+</body>
+</html>
