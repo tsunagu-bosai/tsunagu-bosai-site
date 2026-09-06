@@ -133,9 +133,9 @@ a:hover {
 
 .hero-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 360px);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 500px);
   align-items: center;
-  gap: 72px;
+  gap: 48px;
 }
 
 .hero-copy {
@@ -191,30 +191,28 @@ a:hover {
 }
 
 .hero-screen-pair {
-  position: relative;
-  width: min(100%, 430px);
-  min-height: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  width: min(100%, 520px);
+  min-height: 0;
   margin-inline: auto;
-  align-items: center;
+  gap: 18px;
 }
 
 .hero-phone {
-  position: absolute;
-  width: min(72%, 260px);
+  position: static;
+  width: 100%;
+  max-width: none;
 }
 
 .hero-phone-primary {
-  left: 0;
-  top: 20px;
-  z-index: 2;
-  transform: rotate(-2deg);
+  transform: none;
 }
 
 .hero-phone-secondary {
-  right: 0;
-  top: 70px;
-  z-index: 1;
-  transform: rotate(2deg);
+  margin-top: 32px;
+  transform: none;
 }
 
 /* General sections */
@@ -730,8 +728,7 @@ figcaption {
   }
 
   .hero-screen-pair {
-    width: min(100%, 390px);
-    min-height: 470px;
+    width: min(100%, 480px);
   }
 
   .hero-copy {
@@ -770,24 +767,12 @@ figcaption {
   }
 
   .hero-screen-pair {
-    width: min(100%, 340px);
-    min-height: 410px;
-  }
-
-  .hero-phone {
-    width: min(72%, 230px);
-  }
-
-  .hero-phone-primary {
-    top: 10px;
+    width: min(100%, 360px);
+    gap: 10px;
   }
 
   .hero-phone-secondary {
-    top: 55px;
-  }
-
-  .section {
-    padding: 56px 0;
+    margin-top: 22px;
   }
 
   .news-section {
