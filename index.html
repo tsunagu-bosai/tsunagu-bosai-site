@@ -8,17 +8,17 @@
 
   <meta
     name="description"
-    content="つなぐ防災は、災害時に通信が不安定な状況でも利用できることを目指した防災アプリです。オフライン地図や避難支援、防災情報などをスマートフォンで利用できます。"
+    content="つなぐ防災は、災害時に通信が不安定な状況でも利用できることを目指した防災アプリです。オフライン地図や避難支援に加え、天気予報、警報・注意報、台風・大雨、地震・津波などの気象情報を確認できます。"
   >
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="つなぐ防災">
   <meta property="og:title" content="つなぐ防災 | ふだんの生活から、もしもの時まで">
   <meta
     property="og:description"
-    content="災害時に通信が不安定になったときでも、必要な情報をできるだけ端末の中だけで利用できることを目指した防災アプリです。"
+    content="オフラインで使える避難支援に加え、天気予報、警報・注意報、台風・大雨、地震・津波などの気象情報を確認できる防災アプリです。"
   >
   <meta property="og:url" content="https://tsunagubosai.jp/">
-  <meta property="og:image" content="https://tsunagubosai.jp/assets/images/tsunagubosai-ogp-20260831.png">
+  <meta property="og:image" content="https://tsunagubosai.jp/assets/images/tsunagubosai-ogp-20260906.png">
 
   <meta name="twitter:card" content="summary_large_image">
 
@@ -45,7 +45,7 @@
     href="./assets/images/apple-touch-icon.png"
   >
 
-  <link rel="stylesheet" href="./assets/css/style.css?ver=20260904r1">
+  <link rel="stylesheet" href="./assets/css/style.css?ver=20260906r1">
 </head>
 
 <body>
@@ -106,14 +106,14 @@
         </p>
 
         <div class="release-notice tester-active">
-          Android版 クローズドテスト実施中
+          Android版 v1.1.0 クローズドテスト中
         </div>
       </div>
 
       <div class="hero-screen">
         <img
-          src="./assets/images/tsunagubosai-top.png"
-          alt="つなぐ防災のトップ画面"
+          src="./assets/images/tsunagubosai-home-weather.jpg"
+          alt="気象情報を表示したつなぐ防災のトップ画面"
           class="phone-screenshot"
         >
       </div>
@@ -131,6 +131,19 @@
 
       <div class="news-list">
         <article class="news-item news-item-featured">
+          <time datetime="2026-09-06">2026年9月6日</time>
+          <div>
+            <h3>Android版 v1.1.0を公開しました</h3>
+            <p>
+              クローズドテスト版をv1.1.0に更新しました。
+              天気予報、警報・注意報、台風・大雨、地震・津波などの気象情報と、
+              気象警報・注意報の通知機能を追加しました。
+              #7119・#8000、171・web171の案内にも対応し、
+              避難場所や学校などのオープンデータも更新しています。
+            </p>
+          </div>
+        </article>
+        <article class="news-item">
           <time datetime="2026-09-04">2026年9月4日</time>
           <div>
             <h3>災害検証ページを公開しました</h3>
@@ -239,7 +252,7 @@
           <h3>身近な施設を探す</h3>
           <p>
             現在地や指定した場所の近くにある駅、学校、コンビニ、
-            スーパーなどを探すことができます。
+            病院・薬局、銀行・ATMなどを探すことができます。
           </p>
         </div>
 
@@ -256,10 +269,84 @@
           <figure>
             <img
               src="./assets/images/tsunagubosai-medical-institutions.png"
-              alt="医療機関を探す画面"
+              alt="病院・薬局を探す画面"
               class="phone-screenshot"
             >
-            <figcaption>医療機関を探す</figcaption>
+            <figcaption>病院・薬局を探す</figcaption>
+          </figure>
+        </div>
+      </article>
+
+
+      <article class="feature-showcase reverse">
+        <div class="feature-copy">
+          <p class="feature-kicker weather">気象情報</p>
+          <h3>最新の気象情報を確認</h3>
+          <p>
+            天気予報、警報・注意報、台風・大雨、地震・津波の情報を
+            アプリ内で確認できます。最新情報の取得には通信が必要です。
+          </p>
+        </div>
+
+        <div class="screenshot-trio">
+          <figure>
+            <img
+              src="./assets/images/tsunagubosai-weather2.png"
+              alt="警報・注意報を確認する気象情報画面"
+              class="phone-screenshot"
+            >
+            <figcaption>警報・注意報</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="./assets/images/tsunagbosai-weather3.png"
+              alt="台風・大雨情報を確認する画面"
+              class="phone-screenshot"
+            >
+            <figcaption>台風・大雨</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="./assets/images/tsunagubosai-weather4.png"
+              alt="地震・津波情報を確認する画面"
+              class="phone-screenshot"
+            >
+            <figcaption>地震・津波</figcaption>
+          </figure>
+        </div>
+      </article>
+
+
+      <article class="feature-showcase">
+        <div class="feature-copy">
+          <p class="feature-kicker notification">必要な地域だけ</p>
+          <h3>警報・注意報を通知</h3>
+          <p>
+            通知対象の地域を最大3か所まで登録できます。
+            通知は設定でON・OFFでき、受け取った通知やアプリで確認した
+            現在の警報・注意報は端末内の履歴で確認できます。
+          </p>
+        </div>
+
+        <div class="screenshot-pair">
+          <figure>
+            <img
+              src="./assets/images/tsunagubosai-setting2.png"
+              alt="気象情報の地域を設定する画面"
+              class="phone-screenshot"
+            >
+            <figcaption>通知対象地域の設定</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="./assets/images/tsunagubosai-setting3.png"
+              alt="気象警報・注意報の通知を設定する画面"
+              class="phone-screenshot"
+            >
+            <figcaption>警報・注意報の通知設定</figcaption>
           </figure>
         </div>
       </article>
@@ -271,7 +358,8 @@
           <h3>緊急時の行動を支援</h3>
           <p>
             近くの避難場所を探したり、現在地を共有したり、
-            消防・救急・警察へ電話するための機能をまとめています。
+            消防・救急・警察への連絡を支援します。
+            #7119・#8000の電話相談や、171・web171による安否確認の案内も利用できます。
           </p>
         </div>
 
@@ -301,8 +389,8 @@
         <div class="single-screen">
           <figure>
             <img
-              src="./assets/images/tsunagubosai-settings.png"
-              alt="表示設定の画面"
+              src="./assets/images/tsunagubosai-setting1.png"
+              alt="ふりがなと文字サイズを設定する画面"
               class="phone-screenshot"
             >
             <figcaption>ふりがな・文字サイズ設定</figcaption>
@@ -359,10 +447,21 @@
         <h2>通信・電話回線が必要な機能</h2>
 
         <p class="card-notice">
-          通信状況や電話回線の状況によって利用できない場合があります。
+          通信状況や電話回線、端末の状態によって利用できない場合や、
+          通知が遅れる場合があります。
         </p>
 
         <ul class="information-list">
+          <li>
+            <strong>気象情報の確認</strong>
+            <span>天気予報、警報・注意報、台風・大雨、地震・津波などの最新情報を取得するために通信を利用します。</span>
+          </li>
+
+          <li>
+            <strong>気象警報・注意報の通知</strong>
+            <span>登録した地域の最新情報を受け取るために通信を利用します。受け取った通知やアプリで確認した現在の警報・注意報は、端末内の履歴で確認できます。</span>
+          </li>
+
           <li>
             <strong>経路表示</strong>
             <span>地図アプリと連携します。</span>
@@ -371,6 +470,16 @@
           <li>
             <strong>現在地の共有</strong>
             <span>SMS、LINEなどの共有アプリと連携します。</span>
+          </li>
+
+          <li>
+            <strong>救急安心センター「#7119」・子ども医療電話相談「#8000」</strong>
+            <span>電話回線を利用します。</span>
+          </li>
+
+          <li>
+            <strong>災害用伝言ダイヤル「171」・web171</strong>
+            <span>171は電話回線、web171は通信を利用します。</span>
           </li>
 
           <li>
@@ -493,8 +602,22 @@
 
           <li>
             <strong>
-              つなぐ防災独自のサーバーへ位置情報を送信・保存することはありません。
+              つなぐ防災独自のサーバーへ現在位置を送信・保存することはありません。
             </strong>
+          </li>
+
+          <li>
+            <strong>
+              気象警報・注意報の通知対象地域は最大3か所まで登録できます。
+            </strong>
+            <span>現在地をバックグラウンドで追跡して、通知対象地域を自動的に変更することはありません。</span>
+          </li>
+
+          <li>
+            <strong>
+              気象警報・注意報の履歴は、この端末の中に保存します。
+            </strong>
+            <span>利用者ごとの通知履歴を、つなぐ防災独自のサーバーに保存することはありません。</span>
           </li>
 
           <li>
@@ -530,7 +653,7 @@
 
         <ul class="information-list">
           <li>
-            <strong>災害情報をリアルタイムで配信する機能</strong>
+            <strong>気象警報・注意報以外の災害情報をプッシュ通知で配信する機能</strong>
           </li>
 
           <li>

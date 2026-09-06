@@ -2,17 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tsunagubosai.jp/</loc>
+    <lastmod>2026-09-06</lastmod>
   </url>
   <url>
     <loc>https://tsunagubosai.jp/tester/</loc>
   </url>
   <url>
     <loc>https://tsunagubosai.jp/privacy/</loc>
+    <lastmod>2026-09-06</lastmod>
   </url>
   <url>
     <loc>https://tsunagubosai.jp/terms/</loc>
+    <lastmod>2026-09-06</lastmod>
   </url>
   <url>
     <loc>https://tsunagubosai.jp/contact/</loc>
+  </url>
+  <url>
+    <loc>https://tsunagubosai.jp/verification/</loc>
+    <lastmod>2026-09-05</lastmod>
+  </url>
+  <url>
+    <loc>https://tsunagubosai.jp/verification/toyama/himi-20260827/</loc>
+    <lastmod>2026-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://tsunagubosai.jp/verification/fukui/fukui-20260829/</loc>
+    <lastmod>2026-09-05</lastmod>
   </url>
 </urlset>

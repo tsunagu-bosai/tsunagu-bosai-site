@@ -330,10 +330,24 @@ a:hover {
   color: var(--color-blue);
 }
 
+.feature-kicker.weather {
+  color: #5b6fc7;
+}
+
+.feature-kicker.notification {
+  color: var(--color-orange);
+}
+
 .screenshot-pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
+}
+
+.screenshot-trio {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .single-screen {
@@ -732,7 +746,8 @@ figcaption {
     padding: 40px 0;
   }
 
-  .screenshot-pair {
+  .screenshot-pair,
+  .screenshot-trio {
     grid-template-columns: 1fr;
   }
 
