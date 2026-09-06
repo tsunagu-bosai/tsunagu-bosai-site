@@ -190,6 +190,32 @@ a:hover {
   justify-content: center;
 }
 
+.hero-screen-pair {
+  position: relative;
+  width: min(100%, 430px);
+  min-height: 500px;
+  margin-inline: auto;
+  align-items: center;
+}
+
+.hero-phone {
+  position: absolute;
+  width: min(72%, 260px);
+}
+
+.hero-phone-primary {
+  left: 0;
+  top: 20px;
+  z-index: 2;
+  transform: rotate(-2deg);
+}
+
+.hero-phone-secondary {
+  right: 0;
+  top: 70px;
+  z-index: 1;
+  transform: rotate(2deg);
+}
 
 /* General sections */
 
@@ -703,6 +729,11 @@ figcaption {
     gap: 48px;
   }
 
+  .hero-screen-pair {
+    width: min(100%, 390px);
+    min-height: 470px;
+  }
+
   .hero-copy {
     text-align: center;
   }
@@ -736,6 +767,23 @@ figcaption {
 
   .hero {
     padding: 52px 0;
+  }
+
+  .hero-screen-pair {
+    width: min(100%, 340px);
+    min-height: 410px;
+  }
+
+  .hero-phone {
+    width: min(72%, 230px);
+  }
+
+  .hero-phone-primary {
+    top: 10px;
+  }
+
+  .hero-phone-secondary {
+    top: 55px;
   }
 
   .section {
