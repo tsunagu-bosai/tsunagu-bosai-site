@@ -226,6 +226,11 @@ a:hover {
   padding: 56px 0;
 }
 
+.news-list {
+  display: grid;
+  gap: 28px;
+}
+
 .section-soft {
   background: var(--color-soft);
 }
