@@ -1,0 +1,1106 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="2026年8月13日から14日に千葉県で発生した令和8年8月千葉豪雨について、公式一次資料をもとに降雨、線状降水帯、避難情報、浸水被害の時間関係を暫定検証します。" />
+  <title>2026年8月13日〜14日 令和8年8月千葉豪雨 暫定検証 | つなぐ防災</title>
+  <link rel="icon" href="../../../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../../assets/images/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/images/apple-touch-icon.png">
+  <link rel="canonical" href="https://tsunagubosai.jp/verification/chiba/chiba-20260813/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="つなぐ防災">
+  <meta property="og:title" content="2026年8月13日〜14日 令和8年8月千葉豪雨 暫定検証">
+  <meta property="og:description" content="公式一次資料をもとに、記録的短時間大雨、線状降水帯、避難情報、都市型浸水、被害発生の時間関係と、次の災害への生かし方を検証します。">
+  <meta property="og:url" content="https://tsunagubosai.jp/verification/chiba/chiba-20260813/">
+  <meta property="og:image" content="https://tsunagubosai.jp/assets/images/tsunagubosai-ogp-20260906.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root{
+      --bg:#f5f7f9; --paper:#fff; --ink:#17202a; --muted:#5b6570; --line:#dbe2e8;
+      --accent:#0b5d7a; --accent-2:#113b52; --warn:#7a4c00; --warn-bg:#fff7df;
+      --danger:#8b1e24; --danger-bg:#fff0f0; --ok:#185c45; --ok-bg:#edf8f3;
+      --shadow:0 8px 28px rgba(20,35,50,.08); --radius:16px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.75}
+    a{color:var(--accent);text-decoration-thickness:.08em;text-underline-offset:.18em}
+    a:hover{text-decoration-thickness:.14em}
+    .wrap{width:min(1080px,calc(100% - 32px));margin:auto}
+    header{background:linear-gradient(135deg,#0c3a50,#0b5d7a);color:#fff;padding:64px 0 52px}
+    header .eyebrow{font-size:.88rem;letter-spacing:.08em;font-weight:700;opacity:.86}
+    h1{font-size:clamp(2rem,5vw,3.6rem);line-height:1.2;margin:.35em 0 .35em;letter-spacing:-.03em}
+    header p{max-width:780px;font-size:1.08rem;margin:0;opacity:.94}
+    .meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;font-size:.9rem}
+    .pill{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 11px;background:rgba(255,255,255,.08)}
+    nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav .wrap{display:flex;gap:22px;overflow:auto;padding:12px 0;white-space:nowrap;font-size:.9rem;font-weight:700}
+    nav a{text-decoration:none;color:#31414d}
+    main{padding:40px 0 72px}
+    section{margin:0 0 42px}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
+    h2{font-size:1.65rem;margin:0 0 18px;letter-spacing:-.02em}
+    h3{font-size:1.12rem;margin:1.8em 0 .5em}
+    .lead{font-size:1.08rem}
+    .notice{border-left:5px solid var(--warn);background:var(--warn-bg);padding:18px 20px;border-radius:10px;margin:18px 0}
+    .key{border-left-color:var(--accent);background:#edf7fb}
+    .danger{border-left-color:var(--danger);background:var(--danger-bg)}
+    .good{border-left-color:var(--ok);background:var(--ok-bg)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .metric{background:#f8fafb;border:1px solid var(--line);border-radius:12px;padding:16px}
+    .metric strong{display:block;font-size:1.65rem;line-height:1.1;color:var(--accent-2);margin-bottom:7px}
+    .metric span{font-size:.88rem;color:var(--muted)}
+    .timeline{position:relative;margin-top:18px}
+    .timeline:before{content:"";position:absolute;left:152px;top:8px;bottom:8px;width:2px;background:#ccd7df}
+    .event{display:grid;grid-template-columns:136px 1fr;gap:28px;position:relative;padding:0 0 22px}
+    .event time{font-weight:800;color:var(--accent-2);font-variant-numeric:tabular-nums;text-align:right}
+    .event .body{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+    .event .body:before{content:"";position:absolute;left:-23px;top:18px;width:11px;height:11px;background:var(--accent);border:3px solid var(--bg);border-radius:50%}
+    .event .title{font-weight:800;margin-bottom:2px}
+    .tag{display:inline-block;font-size:.72rem;font-weight:800;padding:2px 7px;border-radius:999px;background:#edf1f4;color:#42515c;margin-left:7px;vertical-align:.1em}
+    .tag.obs{background:#eaf4f8;color:#0b5d7a}.tag.river{background:#edf8f3;color:#185c45}.tag.alert{background:#fff1e6;color:#7d4300}.tag.action{background:#f2edfb;color:#57378b}
+    table{width:100%;border-collapse:collapse;font-size:.92rem}
+    th,td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+    th{background:#f7f9fa;color:#42515c}
+    .small{font-size:.88rem;color:var(--muted)}
+    .sources ol{padding-left:1.25em}.sources li{margin:.65em 0}
+    .status{font-weight:800}.status.pending{color:var(--warn)}
+    footer{border-top:1px solid var(--line);padding:30px 0 52px;color:var(--muted);font-size:.88rem}
+    code{background:#eef2f4;border-radius:5px;padding:.1em .35em}
+    @media(max-width:760px){header{padding:46px 0 40px}.grid{grid-template-columns:1fr}.card{padding:21px}.timeline:before{left:112px}.event{grid-template-columns:98px 1fr;gap:20px}.event .body:before{left:-18px}.wrap{width:min(100% - 22px,1080px)} table{font-size:.84rem} th,td{padding:9px 7px}}
+    @media print{nav{display:none}body{background:#fff}.card{box-shadow:none}header{background:#fff;color:#000;padding:20px 0;border-bottom:2px solid #000}.pill{border:1px solid #999}.event .body:before{border-color:#fff}}
+  </style>
+
+<style id="visual-upgrade-v03">
+  :root{
+    --ink:#172033; --muted:#5f6b7a; --paper:#ffffff; --soft:#f5f7fa;
+    --accent:#c44924; --accent-soft:#fff1eb; --warning:#9a6700; --warning-soft:#fff8db;
+    --info:#155e75; --info-soft:#ecfeff; --line:#d8dee8;
+  }
+  body{font-family:"Noto Sans JP","Yu Gothic","Meiryo",sans-serif;color:var(--ink);line-height:1.8}
+  h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.25;letter-spacing:.01em}
+  h2{font-size:clamp(1.55rem,3vw,2.15rem);margin-bottom:1.1rem}
+  h3{font-size:1.25rem}
+  .card{padding:clamp(1.4rem,4vw,2.5rem);margin-bottom:1.4rem}
+  .lead{font-size:clamp(1.15rem,2.4vw,1.45rem);line-height:1.8}
+  .hero-message{
+    margin:1.8rem 0;padding:1.5rem 1.7rem;border-left:7px solid var(--accent);
+    background:var(--accent-soft);border-radius:12px;
+  }
+  .hero-message .eyebrow{font-size:.82rem;font-weight:800;letter-spacing:.08em;color:var(--accent)}
+  .hero-message .big{display:block;font-size:clamp(1.55rem,4vw,2.5rem);font-weight:900;line-height:1.35;margin:.35rem 0}
+  .hero-message p{margin:.35rem 0 0;color:#4d342d}
+  .key-number{font-size:1.45em;font-weight:900;color:var(--accent);font-variant-numeric:tabular-nums}
+  .visual-title{font-size:.86rem;font-weight:800;color:var(--muted);letter-spacing:.05em;margin-bottom:.8rem}
+  .event-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem;margin:1.3rem 0 1.7rem}
+  .event-step{position:relative;padding:1rem .85rem;background:var(--soft);border:1px solid var(--line);border-radius:12px;min-height:125px}
+  .event-step:not(:last-child)::after{content:"→";position:absolute;right:-.62rem;top:42%;font-size:1.3rem;font-weight:900;color:#8792a2;z-index:2}
+  .event-step .date{font-size:.72rem;color:var(--muted);font-weight:700}
+  .event-step .clock{font-size:1.65rem;font-weight:900;line-height:1.15;margin:.15rem 0}
+  .event-step .label{font-weight:800;line-height:1.45}
+  .event-step.alert{background:var(--accent-soft);border:2px solid var(--accent)}
+  .event-step.alert .clock,.event-step.alert .label{color:var(--accent)}
+  .event-step.warning{background:var(--warning-soft);border-color:#e2bf5a}
+  .comparison{
+    display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:.8rem;margin:1.3rem 0
+  }
+  .comparison .box{padding:1.25rem;border-radius:14px;border:1px solid var(--line);background:var(--paper)}
+  .comparison .box strong{display:block;font-size:1.35rem}
+  .comparison .box.earlier{background:var(--accent-soft);border:2px solid var(--accent)}
+  .comparison .arrow{align-self:center;font-size:1.6rem;font-weight:900;color:var(--muted)}
+  .comparison .delta{font-size:clamp(1.5rem,3vw,2.15rem);font-weight:900;color:var(--accent)}
+  .takeaway{padding:1.2rem 1.35rem;border-radius:12px;background:var(--info-soft);border-left:6px solid var(--info);margin:1.2rem 0}
+  .takeaway strong{color:var(--info);font-size:1.12rem}
+  .status-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:1.1rem 0}
+  .status{padding:1rem;border-radius:12px;border:1px solid var(--line);background:var(--soft)}
+  .status b{display:block;margin-bottom:.25rem}
+  .status.ok b{color:#166534}.status.pending b{color:var(--warning)}.status.no b{color:#991b1b}
+  .timeline time{font-weight:900;font-variant-numeric:tabular-nums}
+  .timeline .item:nth-child(3) .body,
+  .timeline .item:nth-child(6) .body,
+  .timeline .item:nth-child(10) .body{border-left:4px solid var(--accent);padding-left:1rem}
+  table th{white-space:nowrap}
+  @media(max-width:760px){
+    .event-flow{grid-template-columns:1fr 1fr}
+    .event-step:not(:last-child)::after{display:none}
+    .comparison{grid-template-columns:1fr}.comparison .arrow{text-align:center;transform:rotate(90deg)}
+    .status-grid{grid-template-columns:1fr}
+  }
+</style>
+
+
+<style id="message-first-v04">
+  .hero-message{
+    background:linear-gradient(135deg,#fff6ef,#fff);
+    border-left:0;
+    border-top:1px solid #f0d5c8;
+    border-bottom:1px solid #f0d5c8;
+    padding:2rem clamp(1.2rem,4vw,2.4rem);
+    text-align:center;
+  }
+  .hero-message .eyebrow{
+    color:#6b7280;font-size:.78rem;letter-spacing:.12em;margin-bottom:.7rem
+  }
+  .hero-message .big{
+    max-width:950px;margin:.2rem auto .8rem;
+    font-size:clamp(1.7rem,4.4vw,3rem);
+    line-height:1.35;color:#172033
+  }
+  .hero-message .big .fact-red{color:#b42318}
+  .hero-message .big .fact-orange{color:#c2410c}
+  .hero-message p{max-width:820px;margin:auto;color:#596273;font-size:.95rem}
+
+  .finding-banner{
+    margin:1.4rem 0 1.8rem;padding:1.2rem 1.3rem;
+    background:#172033;color:#fff;border-radius:14px;
+    display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:center
+  }
+  .finding-banner .badge{
+    background:#ef4444;color:#fff;font-weight:900;border-radius:999px;
+    padding:.45rem .8rem;white-space:nowrap
+  }
+  .finding-banner .message{
+    font-size:clamp(1.08rem,2.2vw,1.45rem);font-weight:850;line-height:1.5
+  }
+
+  .grid{grid-template-columns:repeat(3,1fr);gap:1rem}
+  .metric{
+    position:relative;overflow:hidden;padding:1.25rem 1.1rem 1.1rem;
+    min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;
+    background:#f8fafc;border:1px solid #dce3eb
+  }
+  .metric::before{
+    content:"";position:absolute;left:0;top:0;right:0;height:5px;background:#94a3b8
+  }
+  .metric:nth-child(1)::before{background:#ef4444}
+  .metric:nth-child(2)::before{background:#f97316}
+  .metric:nth-child(3)::before{background:#b91c1c}
+  .metric .badge-top{
+    position:absolute;top:13px;right:13px;padding:.25rem .55rem;border-radius:6px;
+    background:#dc2626;color:#fff;font-size:.72rem;font-weight:900
+  }
+  .metric .fact-title{
+    display:block;font-size:clamp(1.25rem,2.4vw,1.75rem);
+    line-height:1.25;font-weight:900;color:#172033;margin-bottom:.45rem
+  }
+  .metric .fact-value{
+    display:block;font-size:clamp(2.15rem,5vw,3.55rem);
+    line-height:1;font-weight:950;color:#dc2626;letter-spacing:-.03em;margin:.15rem 0 .6rem
+  }
+  .metric .fact-detail{font-size:.9rem;color:#556070;line-height:1.55}
+  .metric .fact-date{
+    margin-top:.75rem;padding-top:.65rem;border-top:1px solid #dce3eb;
+    color:#7b8492;font-size:.76rem;font-weight:700
+  }
+
+  /* Make timeline event descriptions primary, dates secondary */
+  .timeline time{
+    color:#7b8492!important;font-size:.76rem!important;font-weight:750!important;
+    line-height:1.35!important
+  }
+  .timeline .title{font-size:1.08rem;font-weight:900}
+  .timeline .body>div:last-child{color:#5a6574}
+
+  /* Comparison: words first, times secondary */
+  .comparison .box small{font-size:.78rem;color:#6b7280}
+  .comparison .box strong{font-size:clamp(1.3rem,2.5vw,1.8rem);line-height:1.35}
+  .comparison .when{display:block;margin-top:.45rem;font-size:.78rem;color:#7b8492;font-weight:700}
+  .comparison .delta{font-size:clamp(1.5rem,3.2vw,2.2rem)}
+
+  .key-number{font-size:inherit!important;color:inherit!important;font-weight:inherit!important}
+
+  @media(max-width:760px){
+    .finding-banner{grid-template-columns:1fr;text-align:left}
+    .finding-banner .badge{width:max-content}
+    .grid{grid-template-columns:1fr}
+    .metric{min-height:160px}
+  }
+</style>
+
+
+<style id="message-first-v05">
+  /* Hero: no forced line breaks; message wraps naturally */
+  .hero-message .big{
+    max-width:980px;
+    margin:.2rem auto .8rem;
+    font-size:clamp(1.65rem,4vw,2.85rem);
+    line-height:1.42;
+    text-wrap:balance;
+    word-break:normal;
+    overflow-wrap:anywhere;
+  }
+  .hero-message .big br{display:none}
+
+  /* Summary cards: subject/message first, date/time secondary */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:1rem;
+    align-items:stretch;
+  }
+  .metric{
+    min-width:0;
+    min-height:215px;
+    padding:1.35rem 1.15rem 1.1rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    overflow:hidden;
+  }
+  .metric .badge-top{
+    position:static;
+    align-self:flex-start;
+    display:inline-flex;
+    max-width:100%;
+    margin:0 0 .7rem 0;
+    padding:.28rem .58rem;
+    white-space:normal;
+    line-height:1.25;
+    font-size:.72rem;
+  }
+  .metric .fact-title{
+    display:block;
+    font-size:clamp(1.35rem,2.6vw,1.9rem);
+    line-height:1.28;
+    font-weight:950;
+    color:#172033;
+    margin:0 0 .7rem;
+    text-wrap:balance;
+    overflow-wrap:anywhere;
+  }
+  .metric .fact-title.emphasis-orange{color:#c2410c}
+  .metric .fact-title.emphasis-red{color:#b91c1c}
+  .metric .fact-value{
+    display:block;
+    margin:.1rem 0 .65rem;
+    font-size:clamp(2.15rem,4.8vw,3.45rem);
+    line-height:1;
+    font-weight:950;
+    color:#dc2626;
+    letter-spacing:-.025em;
+    overflow-wrap:anywhere;
+  }
+  .metric .fact-message{
+    display:block;
+    margin:.05rem 0 .65rem;
+    font-size:clamp(1.05rem,1.8vw,1.22rem);
+    line-height:1.55;
+    font-weight:850;
+    color:#263244;
+  }
+  .metric .fact-detail{
+    font-size:.9rem;
+    line-height:1.6;
+    color:#556070;
+    flex:1;
+  }
+  .metric .fact-date{
+    margin-top:.8rem;
+    padding-top:.65rem;
+    border-top:1px solid #dce3eb;
+    color:#7b8492;
+    font-size:.76rem;
+    font-weight:700;
+    line-height:1.45;
+  }
+
+  /* Overview flow: event name is visually primary, clock secondary */
+  .event-step{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+  }
+  .event-step .label{
+    order:1;
+    font-size:1.08rem;
+    font-weight:900;
+    line-height:1.4;
+    text-wrap:balance;
+  }
+  .event-step .clock{
+    order:2;
+    margin:.65rem 0 .1rem;
+    font-size:.95rem;
+    font-weight:800;
+    color:#5f6b7a !important;
+  }
+  .event-step .date{
+    order:3;
+    font-size:.7rem;
+    color:#8a94a3;
+  }
+  .event-step.alert .label{color:#b42318}
+  .event-step.warning .label{color:#8a5200}
+
+  /* Detailed timeline: key facts use same visual language as summary */
+  .timeline .event.key-event .body{
+    border-width:2px;
+    box-shadow:0 6px 18px rgba(23,32,51,.07);
+  }
+  .timeline .event.key-rain .body{
+    border-color:#ef4444;
+    background:linear-gradient(90deg,#fff4f1 0,#fff 35%);
+  }
+  .timeline .event.key-band .body{
+    border-color:#f97316;
+    background:linear-gradient(90deg,#fff5ed 0,#fff 35%);
+  }
+  .timeline .event.key-special .body{
+    border-color:#b91c1c;
+    background:linear-gradient(90deg,#fff1f1 0,#fff 35%);
+  }
+  .timeline .event.key-damage .body{
+    border-color:#334155;
+    background:linear-gradient(90deg,#f2f5f8 0,#fff 35%);
+  }
+  .timeline .event.key-event .title{
+    font-size:clamp(1.08rem,2vw,1.28rem);
+    line-height:1.45;
+  }
+  .timeline .event.key-rain .title{color:#c62828}
+  .timeline .event.key-band .title{color:#c2410c}
+  .timeline .event.key-special .title{color:#991b1b}
+  .timeline .event.key-damage .title{color:#1e293b}
+  .timeline .event.key-event time{
+    color:#6b7280!important;
+    font-size:.74rem!important;
+    font-weight:700!important;
+  }
+  .timeline .event.key-event .body:before{
+    width:14px;height:14px;
+    left:-25px;top:18px;
+  }
+  .timeline .event.key-rain .body:before{background:#ef4444}
+  .timeline .event.key-band .body:before{background:#f97316}
+  .timeline .event.key-special .body:before{background:#b91c1c}
+  .timeline .event.key-damage .body:before{background:#334155}
+
+  @media(max-width:900px){
+    .grid{grid-template-columns:1fr}
+    .metric{min-height:0}
+  }
+  @media(max-width:760px){
+    .hero-message .big{
+      font-size:clamp(1.5rem,7vw,2.1rem);
+      line-height:1.45;
+    }
+    .metric .fact-title{font-size:1.45rem}
+    .metric .fact-value{font-size:2.75rem}
+    .event-flow{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:480px){
+    .event-flow{grid-template-columns:1fr}
+  }
+</style>
+
+
+<style id="hazard-application-v06">
+  .section-intro{font-size:1.03rem;color:#4b5563;max-width:900px;margin:-.3rem 0 1.2rem}
+  .hazard-visual{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;margin:1.2rem 0 1.5rem}
+  .map-card{min-height:245px;border-radius:16px;padding:1.25rem;position:relative;overflow:hidden;border:1px solid #d7dfe8;background:#f8fafc}
+  .map-card h4{margin:0 0 .35rem;font-size:1.15rem}.map-card p{margin:.15rem 0;color:#667085;font-size:.88rem}
+  .schematic{position:relative;height:155px;margin-top:.9rem;border-radius:12px;background:linear-gradient(35deg,transparent 35%,rgba(36,99,235,.07) 36% 38%,transparent 39%),linear-gradient(145deg,transparent 45%,rgba(36,99,235,.06) 46% 49%,transparent 50%),#edf3f8;overflow:hidden}
+  .zone{position:absolute;inset:18% 12% 16% 18%;border-radius:44% 56% 50% 45%/50% 45% 55% 50%;transform:rotate(-7deg)}
+  .zone.predicted{background:rgba(14,165,233,.30);border:3px solid rgba(2,132,199,.75)}
+  .zone.actual{inset:24% 17% 12% 23%;background:rgba(239,68,68,.30);border:3px solid rgba(220,38,38,.75);transform:rotate(5deg)}
+  .legend{display:flex;gap:1rem;flex-wrap:wrap;margin-top:.7rem;font-size:.78rem;color:#667085}
+  .legend span::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:.35rem;vertical-align:-1px}
+  .legend .pred::before{background:rgba(14,165,233,.6)} .legend .act::before{background:rgba(239,68,68,.6)}
+  .overlap-callout{text-align:center;min-width:150px}.overlap-callout .big{display:block;font-size:clamp(1.65rem,3.5vw,2.45rem);font-weight:950;color:#0f766e;line-height:1.15}
+  .overlap-callout small{display:block;margin-top:.45rem;color:#667085;line-height:1.5}
+  .evidence-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:1rem 0 1.5rem}
+  .evidence{padding:1rem 1.05rem;border-radius:12px;background:#fff;border:1px solid #dbe3ec}
+  .evidence b{display:block;font-size:1.08rem;margin-bottom:.3rem}.evidence.good b{color:#0f766e}.evidence.caution b{color:#9a6700}
+  .application-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.1rem 0}
+  .application-card{padding:1.25rem;border-radius:14px;border:1px solid #dbe3ec;background:#fff}
+  .application-card .num{font-size:.78rem;font-weight:900;color:#64748b;letter-spacing:.08em}
+  .application-card h4{margin:.35rem 0 .5rem;font-size:1.25rem}.application-card strong{color:#b42318}.application-card p{margin:.25rem 0;color:#556070}
+  .purpose-bridge{margin:1.2rem 0;padding:1.2rem 1.35rem;border-radius:12px;background:#0f172a;color:#fff}
+  .purpose-bridge strong{display:block;font-size:clamp(1.15rem,2vw,1.4rem);margin-bottom:.35rem}
+  @media(max-width:850px){.hazard-visual{grid-template-columns:1fr}.overlap-callout{padding:.2rem 0 .6rem}.evidence-row,.application-grid{grid-template-columns:1fr}}
+</style>
+
+
+<style id="tsunagubosai-integration">
+  .report-sitebar{background:#fff;border-bottom:1px solid #d8dee8}
+  .report-sitebar-inner{width:min(1080px,calc(100% - 32px));margin:auto;min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .report-brand,.report-back{color:#273642!important;font-weight:800;text-decoration:none!important}
+  .report-brand{display:inline-flex;align-items:center;gap:9px}
+  .report-brand img{width:32px;height:32px;object-fit:contain}
+  .report-back{font-size:.86rem;color:#2e7d32!important}
+  @media(max-width:760px){.report-sitebar-inner{width:min(100% - 22px,1080px)}}
+</style>
+
+
+<style id="rain-comparison-v06">
+  .rain-guide{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1rem;
+    margin:1.3rem 0 1.5rem;
+  }
+  .rain-guide-card{
+    position:relative;
+    padding:1.25rem 1.3rem 1.2rem;
+    border:1px solid #d8dee8;
+    border-radius:14px;
+    background:#f8fafc;
+    overflow:hidden;
+  }
+  .rain-guide-card::before{
+    content:"";
+    position:absolute;
+    left:0;top:0;bottom:0;
+    width:6px;
+  }
+  .rain-guide-card.hour1::before{background:#dc2626}
+  .rain-guide-card.hour3::before{background:#c2410c}
+  .rain-guide-card .guide-label{
+    display:block;
+    font-size:.78rem;
+    font-weight:900;
+    letter-spacing:.08em;
+    color:#6b7280;
+    margin-bottom:.25rem;
+  }
+  .rain-guide-card strong{
+    display:block;
+    font-size:clamp(1.25rem,2.5vw,1.7rem);
+    line-height:1.35;
+    margin-bottom:.45rem;
+    color:#172033;
+  }
+  .rain-guide-card p{margin:0;color:#596273;font-size:.92rem}
+
+  .rain-compare{
+    border:1px solid #d8dee8;
+    border-radius:16px;
+    overflow:hidden;
+    background:#fff;
+    margin:1rem 0 1.25rem;
+  }
+  .rain-columns{
+    display:grid;
+    grid-template-columns:150px 1fr 1fr;
+    background:#172033;
+    color:#fff;
+  }
+  .rain-columns > div{
+    padding:.8rem 1rem;
+    font-size:.82rem;
+    font-weight:900;
+    letter-spacing:.03em;
+  }
+  .rain-columns .col-one{border-left:1px solid rgba(255,255,255,.18)}
+  .rain-columns .col-three{border-left:1px solid rgba(255,255,255,.18)}
+
+  .rain-row{
+    display:grid;
+    grid-template-columns:150px 1fr 1fr;
+    border-top:1px solid #e2e7ee;
+    min-height:150px;
+  }
+  .rain-row:first-of-type{border-top:0}
+  .rain-place{
+    padding:1rem;
+    background:#f7f9fb;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .rain-place strong{
+    font-size:1.2rem;
+    line-height:1.25;
+    color:#172033;
+  }
+  .rain-place small{
+    margin-top:.35rem;
+    color:#7b8492;
+    line-height:1.45;
+  }
+  .rain-cell{
+    position:relative;
+    padding:1rem 1.1rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    border-left:1px solid #e2e7ee;
+  }
+  .rain-cell.one{background:#fffafa}
+  .rain-cell.three{background:#fffaf6}
+  .rain-cell .kind{
+    font-size:.75rem;
+    font-weight:850;
+    color:#6b7280;
+    margin-bottom:.15rem;
+  }
+  .rain-cell .value{
+    font-size:clamp(2rem,4vw,3.15rem);
+    font-weight:950;
+    line-height:1;
+    letter-spacing:-.035em;
+    font-variant-numeric:tabular-nums;
+  }
+  .rain-cell.one .value{color:#b91c1c}
+  .rain-cell.three .value{color:#c2410c}
+  .rain-cell .unit{
+    font-size:.88rem;
+    font-weight:850;
+    margin-left:.18rem;
+    letter-spacing:0;
+  }
+  .rain-cell .when{
+    margin-top:.5rem;
+    font-size:.76rem;
+    color:#7b8492;
+    font-weight:700;
+  }
+  .rain-max{
+    position:absolute;
+    right:.8rem;
+    top:.8rem;
+    padding:.26rem .52rem;
+    border-radius:999px;
+    font-size:.7rem;
+    font-weight:900;
+    line-height:1.2;
+  }
+  .rain-cell.one .rain-max{background:#fee2e2;color:#991b1b}
+  .rain-cell.three .rain-max{background:#ffedd5;color:#9a3412}
+  .rain-row-note{
+    grid-column:1 / -1;
+    padding:.72rem 1rem .82rem 150px;
+    border-top:1px dashed #d8dee8;
+    background:#fff;
+    color:#4f5a68;
+    font-size:.88rem;
+  }
+  .rain-row-note strong{color:#172033}
+
+  .rain-conclusion{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:.8rem;
+    margin:1.15rem 0;
+  }
+  .rain-conclusion .point{
+    padding:1.05rem 1.1rem;
+    border-radius:12px;
+    border:1px solid #d8dee8;
+    background:#f8fafc;
+  }
+  .rain-conclusion .point b{
+    display:block;
+    font-size:.82rem;
+    color:#6b7280;
+    margin-bottom:.2rem;
+  }
+  .rain-conclusion .point strong{
+    display:block;
+    font-size:1.15rem;
+    line-height:1.45;
+    color:#172033;
+  }
+
+  @media(max-width:760px){
+    .rain-guide{grid-template-columns:1fr}
+    .rain-columns{grid-template-columns:78px 1fr 1fr}
+    .rain-columns > div{padding:.7rem .55rem;font-size:.72rem}
+    .rain-row{grid-template-columns:78px 1fr 1fr;min-height:135px}
+    .rain-place{padding:.7rem .55rem}
+    .rain-place strong{font-size:1rem}
+    .rain-place small{display:none}
+    .rain-cell{padding:.85rem .65rem}
+    .rain-cell .value{font-size:clamp(1.55rem,8vw,2.25rem)}
+    .rain-cell .unit{font-size:.7rem}
+    .rain-max{position:static;align-self:flex-start;margin-bottom:.35rem}
+    .rain-row-note{padding:.7rem .75rem;grid-column:1 / -1}
+    .rain-conclusion{grid-template-columns:1fr}
+  }
+</style>
+
+
+<style id="rain-scale-v07">
+  .rain-scale{
+    margin:1.35rem 0 1.25rem;
+    border:1px solid #d8dee8;
+    border-radius:16px;
+    overflow:hidden;
+    background:#fff;
+  }
+  .rain-scale-head{
+    padding:1.15rem 1.3rem;
+    background:linear-gradient(135deg,#17324a,#244d68);
+    color:#fff;
+  }
+  .rain-scale-head .label{
+    display:block;
+    font-size:.76rem;
+    font-weight:900;
+    letter-spacing:.09em;
+    opacity:.76;
+    margin-bottom:.2rem;
+  }
+  .rain-scale-head strong{
+    display:block;
+    font-size:clamp(1.25rem,2.5vw,1.65rem);
+    line-height:1.4;
+  }
+  .rain-scale-head p{
+    margin:.4rem 0 0;
+    font-size:.88rem;
+    color:rgba(255,255,255,.82);
+  }
+  .rain-scale-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+  .rain-scale-place{
+    padding:1.2rem 1.25rem 1.3rem;
+  }
+  .rain-scale-place + .rain-scale-place{
+    border-left:1px solid #e2e7ee;
+  }
+  .rain-scale-place h4{
+    margin:0 0 .15rem;
+    color:#172033;
+    font-size:1.1rem;
+  }
+  .rain-scale-place .normal{
+    color:#6b7280;
+    font-size:.82rem;
+    margin-bottom:.85rem;
+  }
+  .scale-item{
+    padding:.78rem 0;
+    border-top:1px dashed #d9dfe7;
+  }
+  .scale-item:first-of-type{border-top:0}
+  .scale-item .actual{
+    font-size:.78rem;
+    color:#6b7280;
+    font-weight:800;
+  }
+  .scale-item .meaning{
+    display:block;
+    margin-top:.15rem;
+    font-size:1.04rem;
+    line-height:1.45;
+    font-weight:900;
+    color:#172033;
+  }
+  .scale-item .meaning em{
+    font-style:normal;
+    color:#b42318;
+    font-size:1.18em;
+  }
+  .scale-item .detail{
+    display:block;
+    margin-top:.18rem;
+    color:#687282;
+    font-size:.8rem;
+    line-height:1.5;
+  }
+  .rain-scale-summary{
+    padding:1rem 1.25rem 1.1rem;
+    border-top:1px solid #e2e7ee;
+    background:#f7fafc;
+    color:#394657;
+    font-size:.9rem;
+  }
+  .rain-scale-summary strong{color:#172033}
+  .rain-scale-note{
+    margin-top:.65rem;
+    font-size:.76rem;
+    color:#7b8492;
+    line-height:1.55;
+  }
+  @media(max-width:760px){
+    .rain-scale-grid{grid-template-columns:1fr}
+    .rain-scale-place + .rain-scale-place{
+      border-left:0;
+      border-top:1px solid #e2e7ee;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+<div class="report-sitebar">
+  <div class="report-sitebar-inner">
+    <a class="report-brand" href="../../../">
+      <img src="../../../assets/images/tsunagubosai-logo.png" alt="">
+      <span>つなぐ防災</span>
+    </a>
+    <a class="report-back" href="../../">災害検証一覧へ戻る</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">公式一次資料に基づく暫定検証</div>
+    <h1>2026年8月13日〜14日<br>令和8年8月千葉豪雨</h1>
+    <p>記録的短時間大雨、線状降水帯、避難情報、都市型浸水、人的・住家被害の時間関係を、気象庁、内閣府、千葉県、千葉市などの公開資料から整理します。</p>
+    <div class="meta">
+      <span class="pill">公開版 v0.1</span>
+      <span class="pill">最終確認：2026年9月21日</span>
+      <span class="pill">被害・事後検証を継続確認中の暫定版</span>
+    </div>
+  </div>
+</header>
+<nav aria-label="ページ内ナビゲーション"><div class="wrap">
+  <a href="#summary">1. はじめに</a><a href="#purpose">2. 背景と目的</a><a href="#method">3. 調査概要</a><a href="#results">4. 調査結果</a><a href="#assessment">5. 考察・分析</a><a href="#conclusion">6. 結論と今後</a><a href="#appendix">7. 補足資料</a>
+</div></nav>
+<main class="wrap">
+  <section id="summary" class="card">
+    <h2>1. はじめに</h2>
+    <p class="lead">本レポートは、<strong>2026年8月13日から14日に千葉県を中心に発生した「令和8年8月千葉豪雨」について、「危険がどの段階で急速に高まり、避難情報と実際の浸水・人的被害へどうつながったのか」を公式一次資料から検証する</strong>ものです。</p>
+
+    <div class="hero-message">
+      <div class="eyebrow">現時点で確認できた最重要事実</div>
+      <div class="finding-banner">
+        <div class="badge">重要</div>
+        <div class="message">レベル5大雨特別警報を「避難を始める合図」とみなすだけでは、今回の千葉豪雨の進行を捉えられません。</div>
+      </div>
+      <span class="big"><span class="fact-orange">線状降水帯</span>、自治体の<span class="fact-orange">避難指示</span>、<span class="fact-red">1時間115mm</span>の猛烈な雨が、レベル5大雨特別警報より前から短時間に連続していた</span>
+      <p>発表された情報名だけでなく、「その時点で実際の雨と浸水危険がどこまで進んでいたか」を同じ時間軸で確認します。</p>
+    </div>
+
+    <div class="notice key"><strong>現時点の最重要論点：</strong> 8月13日夕方、千葉県では線状降水帯が発生し、18時40分に千葉市が一部地域へ避難指示、18時48分までの1時間に千葉で115.0mmを観測しました。その後19時30分にレベル5大雨特別警報が発表されています。今回の検証では、この短い時間に危険がどう進んだかを重点的に見ます。</div>
+
+    <div class="grid">
+      <div class="metric">
+        <span class="badge-top">観測史上1位</span>
+        <span class="fact-title">千葉の1時間降水量</span>
+        <span class="fact-value">115.0 mm</span>
+        <span class="fact-message">都市部で猛烈な雨が急激に顕在化</span>
+        <span class="fact-detail">従来の観測史上1位を大きく更新しました。</span>
+        <span class="fact-date">2026年8月13日18時48分まで</span>
+      </div>
+      <div class="metric">
+        <span class="badge-top">観測史上1位</span>
+        <span class="fact-title">佐倉の3時間降水量</span>
+        <span class="fact-value">189.5 mm</span>
+        <span class="fact-message">猛烈な雨が一度で終わらず蓄積</span>
+        <span class="fact-detail">千葉でも3時間188.5mmを観測し、短時間の累積雨量が極めて大きくなりました。</span>
+        <span class="fact-date">2026年8月13日19時50分まで</span>
+      </div>
+      <div class="metric">
+        <span class="fact-title emphasis-red">人的・住家被害</span>
+        <span class="fact-value">13人</span>
+        <span class="fact-message">死者／住家被害6,220棟</span>
+        <span class="fact-detail">道路冠水や浸水など、都市部を含む広い範囲で大きな被害が発生しました。</span>
+        <span class="fact-date">内閣府 2026年9月9日12時時点・速報値</span>
+      </div>
+    </div>
+
+    <div class="notice"><strong>本レポートの位置づけ：</strong> 2026年9月21日時点の暫定検証です。気象庁が9月16日に公表した事後資料と、内閣府・自治体の被害資料を反映しています。被害件数や個別地点の原因は今後更新される可能性があるため、資料ごとの基準日時を付けて扱います。</div>
+  </section>
+
+  <section id="purpose" class="card">
+    <h2>2. 調査の背景と目的</h2>
+    <p>2026年8月13日夕方以降、千葉県では線状降水帯が発生し、記録的短時間大雨に関する情報が相次いで発表されました。複数地点で1時間・3時間降水量などが観測史上1位を更新し、13日から14日にかけて総降水量が300mmを超えた地点もありました。</p>
+    <p>今回の特徴は、河川だけでなく、<strong>道路、アンダーパス、低地、建物地下部など都市部の浸水危険が短時間に顕在化したこと</strong>です。千葉市は道路冠水などにより6人が死亡したと報告しています。</p>
+    <p>災害を検証するには「最終的にどの警報が出たか」だけでは不十分です。</p>
+    <ul class="verification-points">
+      <li><strong>猛烈な雨が観測された日時</strong></li>
+      <li><strong>線状降水帯・危険度情報が示された日時</strong></li>
+      <li><strong>自治体が避難情報を発令した日時</strong></li>
+      <li><strong>道路冠水・住家浸水・人的被害が顕在化した状況</strong></li>
+    </ul>
+    <p class="verification-points-follow">を同じ時間軸で比較する必要があります。</p>
+    <div class="purpose-bridge"><strong>この調査の最終目的は、「次の大雨で、同じ地域が再び危険になる前に何を見るべきか」を明らかにすることです。</strong> 1時間雨量だけでなく、3時間の累積、危険度、避難情報、道路冠水などを組み合わせて、平時の備えと避難判断へつなげます。</div>
+  </section>
+
+  <section id="method" class="card">
+    <h2>3. 調査概要（調査手法）</h2>
+    <table><tbody>
+      <tr><th>調査対象期間</th><td>2026年8月13日〜14日。特に8月13日夕方〜夜を重点確認。</td></tr>
+      <tr><th>対象地域</th><td>千葉県。特に千葉市、佐倉市、八千代市、市原市など浸水・住家被害が大きかった地域。</td></tr>
+      <tr><th>主な情報源</th><td>気象庁、内閣府、千葉県、千葉市などの公式一次資料。</td></tr>
+      <tr><th>確認項目</th><td>1時間・3時間・総降水量、線状降水帯、記録的短時間大雨、特別警報、避難情報、人的・住家被害、道路・交通・ライフライン影響。</td></tr>
+      <tr><th>調査方法</th><td>発表日時・観測日時・対応日時を抽出し、同一時間軸で照合。前後関係のみから原因や対応の適否を断定しない。</td></tr>
+      <tr><th>基準日</th><td>2026年9月21日。気象庁9月16日公表の速報資料、内閣府9月9日12時時点の被害資料等を反映。</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="results" class="card">
+    <h2>4. 調査結果</h2>
+    <h3>4.1 8月13日夕方〜夜の主要時系列</h3>
+    <div class="visual-title">主要な転換点 ― 詳細時系列を読む前に</div>
+    <div class="event-flow">
+      <div class="event-step warning"><div class="label">線状降水帯・強雨が顕在化</div><div class="clock">夕方</div><div class="date">2026年8月13日</div></div>
+      <div class="event-step"><div class="label">千葉市が避難指示</div><div class="clock">18:40</div><div class="date">2026年8月13日</div></div>
+      <div class="event-step alert"><div class="label">千葉で1時間115mm</div><div class="clock">18:48</div><div class="date">2026年8月13日</div></div>
+      <div class="event-step alert"><div class="label">レベル5大雨特別警報</div><div class="clock">19:30</div><div class="date">2026年8月13日</div></div>
+    </div>
+
+    <div class="comparison">
+      <div class="box earlier"><small>自治体対応</small><strong>土砂災害警戒区域へ避難指示</strong><span class="when">2026年8月13日 18:40</span></div>
+      <div class="arrow">→</div>
+      <div class="box"><small>気象警報</small><strong>レベル5大雨特別警報</strong><div class="delta">50分後</div><span class="when">2026年8月13日 19:30</span></div>
+    </div>
+    <div class="takeaway"><strong>重要：</strong> 千葉市では、レベル5大雨特別警報より前に避難指示が発令され、その間に1時間115mmという観測史上1位の猛烈な雨が記録されました。特別警報を待って行動を始めるのでは遅い局面があり得ます。</div>
+
+    <p class="small">時刻は公開資料で確認できた主要事項を抜粋。線状降水帯、観測雨量、自治体対応、実被害は別系統の情報であるため、単純な前後関係だけで因果を断定しません。</p>
+    <div class="timeline">
+      <div class="event key-event key-band"><time>2026年8月13日<br>夕方以降</time><div class="body"><div class="title">千葉県で線状降水帯が発生 <span class="tag alert">気象</span></div><div>気象庁の事後資料では、13日夕方以降に千葉県で線状降水帯が発生し、記録的短時間大雨に関する情報が相次いだと整理されています。</div></div></div>
+      <div class="event"><time>2026年8月13日<br>18:00</time><div class="body"><div class="title">千葉市が災害対策本部を設置 <span class="tag action">自治体</span></div><div>千葉市の行政報告では、レベル4土砂災害危険警報の発表と同時に災害対策本部を設置したとしています。</div></div></div>
+      <div class="event"><time>2026年8月13日<br>18:40</time><div class="body"><div class="title">千葉市が土砂災害警戒区域へ避難指示 <span class="tag action">避難</span></div><div>レベル5大雨特別警報より前の段階で、立退き避難を求める局面に入っていました。</div></div></div>
+      <div class="event key-event key-rain"><time>2026年8月13日<br>18:48</time><div class="body"><div class="title">千葉で1時間降水量115.0mm <span class="tag obs">観測史上1位</span></div><div>千葉市中央区の千葉観測所で、18時48分までの1時間に115.0mm。従来の観測史上1位を更新しました。</div></div></div>
+      <div class="event key-event key-special"><time>2026年8月13日<br>19:30</time><div class="body"><div class="title">千葉県の広い範囲にレベル5大雨特別警報 <span class="tag alert">特別警報</span></div><div>気象庁は命の危険が迫っているとして直ちに身の安全を確保するよう呼びかけました。千葉市も洪水浸水区域へ緊急安全確保を発令しています。</div></div></div>
+      <div class="event key-event key-rain"><time>2026年8月13日<br>19:31</time><div class="body"><div class="title">佐倉で1時間降水量97.0mm <span class="tag obs">観測史上1位</span></div><div>佐倉では19時50分までの3時間に189.5mmを観測。短時間強雨が継続・累積しました。</div></div></div>
+      <div class="event"><time>2026年8月13日<br>夜</time><div class="body"><div class="title">強雨域が県内を移動しながら継続 <span class="tag obs">観測</span></div><div>館山でも1時間94.5mmを観測するなど、県内の複数地点で観測史上1位を更新しました。</div></div></div>
+      <div class="event key-event key-damage"><time>8月13日〜14日</time><div class="body"><div class="title">道路冠水・住家浸水・交通障害などが広範囲で発生 <span class="tag river">実被害</span></div><div>千葉市では道路冠水などによる死亡事故、多数の被災車両、帰宅困難者、ライフラインへの影響が発生しました。</div></div></div>
+      <div class="event"><time>2026年8月14日<br>05:15まで</time><div class="body"><div class="title">レベル5大雨・土砂災害特別警報の発表が継続 <span class="tag alert">警報</span></div><div>内閣府の9月9日資料では、13日19時30分から14日05時15分にかけて、千葉県の広い範囲へレベル5大雨特別警報・土砂災害特別警報が発表されたと整理されています。</div></div></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>4.2 降雨の規模 ― 「1時間のピーク」と「3時間の累積」を分けて見る</h3>
+    <p class="section-intro">1時間雨量と3時間雨量は、単純に大小を比べるための数字ではありません。<strong>1時間雨量は「一気にどれだけ降ったか」</strong>、<strong>3時間雨量は「強い雨がどれだけ続いた・繰り返したか」</strong>を見る指標です。今回の豪雨では、この2つがともに極端な水準になりました。</p>
+
+    <div class="rain-guide">
+      <div class="rain-guide-card hour1">
+        <span class="guide-label">1時間雨量で見ること</span>
+        <strong>瞬間的な雨のピーク</strong>
+        <p>道路・側溝・下水などの排水能力を短時間で上回り、道路冠水や内水浸水が急速に進む危険を見ます。</p>
+      </div>
+      <div class="rain-guide-card hour3">
+        <span class="guide-label">3時間雨量で見ること</span>
+        <strong>強雨の継続・反復による累積</strong>
+        <p>同じ地域に強い雨が続いたり繰り返しかかったりして、河川・地盤・排水系への負荷が積み上がる状況を見ます。</p>
+      </div>
+    </div>
+
+    <div class="rain-compare" aria-label="1時間雨量と3時間雨量の地点別比較">
+      <div class="rain-columns">
+        <div>地点</div>
+        <div class="col-one">1時間最大<br>＝ ピーク</div>
+        <div class="col-three">3時間最大<br>＝ 累積</div>
+      </div>
+
+      <div class="rain-row">
+        <div class="rain-place"><strong>千葉</strong><small>千葉市中央区</small></div>
+        <div class="rain-cell one">
+          <span class="rain-max">3地点で最大</span>
+          <span class="kind">1時間最大</span>
+          <div><span class="value">115.0</span><span class="unit">mm</span></div>
+          <span class="when">18:48まで</span>
+        </div>
+        <div class="rain-cell three">
+          <span class="kind">3時間最大</span>
+          <div><span class="value">188.5</span><span class="unit">mm</span></div>
+          <span class="when">19:30まで</span>
+        </div>
+        <div class="rain-row-note"><strong>読み取り：</strong> 3地点の中で<strong>1時間のピークが最も強い</strong>一方、3時間累積も約190mmに達しています。急激な都市型浸水と、数時間の累積負荷が重なった地点です。</div>
+      </div>
+
+      <div class="rain-row">
+        <div class="rain-place"><strong>佐倉</strong><small>佐倉市</small></div>
+        <div class="rain-cell one">
+          <span class="kind">1時間最大</span>
+          <div><span class="value">97.0</span><span class="unit">mm</span></div>
+          <span class="when">19:31まで</span>
+        </div>
+        <div class="rain-cell three">
+          <span class="rain-max">3地点で最大</span>
+          <span class="kind">3時間最大</span>
+          <div><span class="value">189.5</span><span class="unit">mm</span></div>
+          <span class="when">19:50まで</span>
+        </div>
+        <div class="rain-row-note"><strong>読み取り：</strong> 1時間のピークは千葉より小さいものの、<strong>3時間累積は3地点で最大</strong>です。「一度の猛烈な雨」だけでなく、強雨の継続・反復を見る必要があることが分かります。</div>
+      </div>
+
+      <div class="rain-row">
+        <div class="rain-place"><strong>館山</strong><small>館山市</small></div>
+        <div class="rain-cell one">
+          <span class="kind">1時間最大</span>
+          <div><span class="value">94.5</span><span class="unit">mm</span></div>
+          <span class="when">21:53まで</span>
+        </div>
+        <div class="rain-cell three">
+          <span class="kind">3時間最大</span>
+          <div><span class="value">183.0</span><span class="unit">mm</span></div>
+          <span class="when">22:10まで</span>
+        </div>
+        <div class="rain-row-note"><strong>読み取り：</strong> 千葉・佐倉より遅い時間帯にも、1時間約95mm・3時間183mmの強雨となりました。危険な雨域が県内を移動しながら夜まで続いたことを示します。</div>
+      </div>
+    </div>
+
+    <div class="rain-conclusion">
+      <div class="point"><b>瞬間的な強さで見ると</b><strong>千葉の1時間115.0mmが最大</strong></div>
+      <div class="point"><b>数時間の累積で見ると</b><strong>佐倉の3時間189.5mmが最大</strong></div>
+    </div>
+
+    <div class="rain-scale">
+      <div class="rain-scale-head">
+        <span class="label">では、どのくらい多かったのか？</span>
+        <strong>普段の「1か月の雨」と比べると、異常さが見えます</strong>
+        <p>気象庁の平年値（1991〜2020年）と、同じ観測地点どうしで比較しています。</p>
+      </div>
+
+      <div class="rain-scale-grid">
+        <div class="rain-scale-place">
+          <h4>千葉（千葉市中央区）</h4>
+          <div class="normal">平年：8月 115.7mm ／ 9月 204.7mm ／ 10月 225.7mm</div>
+
+          <div class="scale-item">
+            <span class="actual">1時間で 115.0mm</span>
+            <span class="meaning">8月の<em>ほぼ1か月分</em>が、1時間で降った</span>
+            <span class="detail">8月平年値115.7mmの約99%。</span>
+          </div>
+
+          <div class="scale-item">
+            <span class="actual">3時間で 188.5mm</span>
+            <span class="meaning">雨の多い9月1か月分の<em>約92%</em>が、3時間で降った</span>
+            <span class="detail">8月平年値の約1.6倍。10月平年値と比べても約84%。</span>
+          </div>
+
+          <div class="scale-item">
+            <span class="actual">8月13〜14日の2日間で 386.0mm</span>
+            <span class="meaning">平年で最も雨の多い10月の<em>約1.7か月分</em>が、2日で降った</span>
+            <span class="detail">8月の平年値の約3.3倍。8月＋9月の平年値合計320.4mmも上回ります。</span>
+          </div>
+        </div>
+
+        <div class="rain-scale-place">
+          <h4>佐倉</h4>
+          <div class="normal">平年：8月 109.1mm ／ 9月 206.5mm ／ 10月 223.3mm</div>
+
+          <div class="scale-item">
+            <span class="actual">1時間で 97.0mm</span>
+            <span class="meaning">8月1か月分の<em>約9割</em>が、1時間で降った</span>
+            <span class="detail">8月平年値109.1mmの約89%。</span>
+          </div>
+
+          <div class="scale-item">
+            <span class="actual">3時間で 189.5mm</span>
+            <span class="meaning">雨の多い9月1か月分の<em>約92%</em>が、3時間で降った</span>
+            <span class="detail">8月平年値の約1.7倍。10月平年値と比べても約85%。</span>
+          </div>
+
+          <div class="scale-item">
+            <span class="actual">8月13〜14日の2日間で 309.0mm</span>
+            <span class="meaning">平年で最も雨の多い10月の<em>約1.4か月分</em>が、2日で降った</span>
+            <span class="detail">8月平年値の約2.8倍。9月平年値と比べても約1.5倍です。</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rain-scale-summary">
+        <strong>一般向けに重要なのは「mmの数字」ではなく時間の圧縮です。</strong>
+        千葉では、ふだんなら1か月かけて降る程度の雨が1時間に集中し、雨の多い月に1か月かけて降る量に近い雨がわずか3時間に集中しました。排水や河川にとっては、「同じ雨量でも1か月かけて降る」のと「数時間で降る」のでは負荷がまったく違います。
+        <div class="rain-scale-note">※平年値は1991〜2020年の30年間平均。毎年この量になるという意味ではありません。雨量の比較は、地域差を避けるため同じ観測地点の平年値を使用しています。</div>
+      </div>
+    </div>
+
+    <div class="takeaway"><strong>この章のポイント：</strong> 「最大1時間雨量だけ」で今回の豪雨を表すと、佐倉のような<strong>強雨の継続・累積</strong>を見落とします。逆に3時間雨量だけでは、千葉で起きた<strong>短時間の急激なピーク</strong>が見えにくくなります。今後の台風・前線との比較でも、この2つをセットで確認します。</div>
+  </section>
+
+  <section id="hazard" class="card">
+    <h3>4.3 都市型浸水とハザードマップの照合</h3>
+    <p class="section-intro">今回の千葉豪雨は、河川氾濫だけでなく道路冠水、アンダーパス、低地、地下設備など、都市部特有の浸水危険を検証する事例です。今後は、実際の浸水地点を洪水・内水ハザードマップと地点単位で照合します。</p>
+    <div class="hazard-visual">
+      <div class="map-card">
+        <h4>事前の想定</h4><p>洪水・内水ハザードマップ</p>
+        <div class="schematic"><div class="zone predicted"></div></div>
+        <div class="legend"><span class="pred">浸水想定区域</span></div>
+      </div>
+      <div class="overlap-callout"><span class="big">照合継続</span><small>道路・住宅の<br>実被害地点を確認</small></div>
+      <div class="map-card">
+        <h4>今回の実被害</h4><p>道路冠水・住家浸水・地下浸水等</p>
+        <div class="schematic"><div class="zone predicted"></div><div class="zone actual"></div></div>
+        <div class="legend"><span class="pred">浸水想定区域</span><span class="act">実被害地点</span></div>
+      </div>
+    </div>
+    <div class="evidence-row">
+      <div class="evidence good"><b>確認できていること</b>千葉市は道路冠水などにより6人が死亡し、アンダーパスや道路の冠水、車両浸水、地下電気設備への浸水など都市部特有の課題が顕在化したと報告しています。</div>
+      <div class="evidence good"><b>比較に使えること</b>洪水だけでなく、内水・道路地形・地下空間まで含めた「都市型浸水」の基準ケースとして、今後の大雨と比較できます。</div>
+      <div class="evidence caution"><b>まだ断定しないこと</b>個々の浸水地点が河川氾濫、内水、排水設備、地形のどれを主因としたかは、地点ごとの追加資料が必要です。</div>
+    </div>
+    <div class="takeaway"><strong>ここから得られる意味：</strong> ハザードマップの照合は「想定区域に入っていたか」だけで終わらせず、<strong>道路移動中の危険、低地への進入、車避難の限界、地下設備への浸水</strong>まで次の行動ルールへつなげる必要があります。</div>
+  </section>
+
+  <section id="assessment" class="card">
+    <h2>5. 考察・分析</h2>
+    <h3>5.1 特別警報は避難開始の基準ではない</h3>
+    <p>千葉市では18時40分に避難指示が発令され、その8分後までの1時間に115.0mmを観測し、19時30分にレベル5大雨特別警報へ進みました。特別警報が出た時点で初めて危険になったのではなく、危険はその前から段階的に高まっていました。</p>
+
+    <h3>5.2 都市型浸水では「1時間雨量」と「数時間の累積」を同時に見る</h3>
+    <p>千葉では平年の8月1か月分（115.7mm）にほぼ相当する115.0mmが1時間に集中しました。さらに3時間188.5mmは、雨の多い9月1か月分（204.7mm）の約92%です。佐倉でも3時間189.5mmに達しており、短時間の排水能力超過と、河川・地盤・排水系への累積負荷が重なった事例として見る必要があります。</p>
+
+    <h3>5.3 車での移動が安全とは限らない</h3>
+    <p>内閣府・国土交通省の資料では、多数の被災車両への対応や、道路上の車両撤去支援が行われています。千葉市も道路冠水などによる死亡事故を報告しており、大雨時に「車なら安全」という前提は成り立ちません。</p>
+
+    <h3>5.4 被害件数は調査の進展とともに変わる</h3>
+    <p>内閣府の9月9日12時時点資料では、千葉県の死者13人、住家被害6,220棟と整理されていますが、速報値であり今後変わる可能性があると明記されています。異なる時点の資料を比較するときは、基準日時と集計区分をそろえる必要があります。</p>
+
+    <div class="notice good"><strong>暫定評価：</strong> 今回の千葉豪雨は、都市部で1時間100mm前後の猛烈な雨が発生し、数時間の累積雨量も急増する中で、避難情報、レベル5警報、道路冠水・車両浸水などが短時間に連続した事例です。「特別警報が出たか」だけでなく、雨量の急増、危険度、自治体避難情報を組み合わせて早い段階から判断する必要があります。</div>
+  </section>
+
+  <section id="conclusion" class="card">
+    <h2>6. 結論と今後の対策（今後の検証）</h2>
+    <div class="status-grid">
+      <div class="status ok"><b>確認できたこと</b>レベル5大雨特別警報より前から、線状降水帯、避難指示、猛烈な短時間雨量が連続していた。</div>
+      <div class="status pending"><b>まだ確認が必要</b>キキクルや降水短時間予報が、個々の浸水地点を何分先行して示していたか。</div>
+      <div class="status no"><b>現時点で断定しない</b>個々の浸水地点について、河川氾濫・内水・排水設備・地形のどれが主因だったか。</div>
+    </div>
+
+    <h3>6.1 この検証をどう生かすか</h3>
+    <div class="application-grid">
+      <div class="application-card"><div class="num">APPLICATION 01</div><h4>1時間雨量の急増を「行動情報」に変える</h4><p>80〜100mm/h級の実況を単なる数値で終わらせず、<strong>道路冠水・内水浸水が短時間で進む可能性</strong>として伝える。</p></div>
+      <div class="application-card"><div class="num">APPLICATION 02</div><h4>1時間・3時間・6時間を並べて見る</h4><p>瞬間的な猛烈さと、同じ地域への雨の蓄積を同時に確認する。佐倉の1時間97.0mm・3時間189.5mmは重要な比較基準になります。</p></div>
+      <div class="application-card"><div class="num">APPLICATION 03</div><h4>避難情報の「状態遷移」を見せる</h4><p>避難指示から緊急安全確保まで、同じ地域の危険がどう進んだかを履歴として示し、最新の情報名だけではなく<strong>悪化の速度</strong>を伝える。</p></div>
+      <div class="application-card"><div class="num">APPLICATION 04</div><h4>車避難・道路冠水を独立した危険として扱う</h4><p>河川の警戒だけでなく、アンダーパス、低地、道路冠水、被災車両の発生を踏まえ、<strong>移動しない方が安全になる段階</strong>も想定する。</p></div>
+    </div>
+    <div class="takeaway"><strong>今後の比較に使う：</strong> このレポートを基準ケースとして残しておけば、台風25号など後続の大雨について、最大1時間雨量、3時間累積、線状降水帯、危険度、避難情報、実被害を同じ項目で比較できます。</div>
+
+    <h3>6.2 最終評価に必要な未解決項目</h3>
+    <table>
+      <thead><tr><th>未解決項目</th><th>なぜ重要か</th><th>現状</th></tr></thead>
+      <tbody>
+        <tr><td>8月13日夕方〜夜のキキクル詳細履歴</td><td>浸水・洪水・土砂危険度が実被害を何分先行したかを見るため。</td><td class="status pending">追加照合</td></tr>
+        <tr><td>実浸水地点の座標化</td><td>洪水・内水ハザードマップとの一致／不一致を地点単位で評価するため。</td><td class="status pending">自治体資料を確認中</td></tr>
+        <tr><td>人的被害の発生場所・状況</td><td>道路冠水時の車移動・徒歩移動など、具体的な行動上の教訓につなげるため。</td><td class="status pending">事後検証資料待ち</td></tr>
+        <tr><td>住家被害の確定値</td><td>被害認定調査の進展で半壊・床上浸水などの分類が変わる可能性があるため。</td><td class="status pending">速報値を使用</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="appendix" class="card sources">
+    <h2>7. 添付資料・補足</h2>
+    <h3>7.1 主な公式一次資料</h3>
+    <div class="notice"><strong>基準資料</strong><br>
+      <a href="https://www.data.jma.go.jp/stats/data/bosai/report/2026/20260916/20260916.html" target="_blank" rel="noopener">気象庁「令和8年8月千葉豪雨 令和8年（2026年）8月13日〜8月14日（速報）」</a><br>
+      <a href="https://www.bousai.go.jp/updates/r8chiba_ooame/" target="_blank" rel="noopener">内閣府「令和8年8月千葉豪雨による被害状況等について」</a><br>
+      <a href="https://www.city.chiba.jp/somu/somu/somu/08-3_teirei_gyouseihoukoku.html" target="_blank" rel="noopener">千葉市「令和8年第3回定例会行政報告」</a>
+    </div>
+    <p class="small">リンク先の資料は更新・差し替えされる場合があります。公開日時・版数・基準時点を確認して参照してください。</p>
+    <ol>
+      <li><a href="https://www.data.jma.go.jp/stats/data/bosai/report/2026/20260916/20260916.html" target="_blank" rel="noopener">気象庁「令和8年8月千葉豪雨」速報（2026年9月16日）</a> ― 気象概要、線状降水帯、観測値、警報発表状況。</li>
+      <li><a href="https://www.jma.go.jp/jma/press/2608/14a/20260814_R8chibagouu.html" target="_blank" rel="noopener">気象庁「令和8年8月13日からの千葉県の豪雨の名称について」</a> ― 「令和8年8月千葉豪雨」の命名。</li>
+      <li><a href="https://www.jma.go.jp/jma/press/2608/13a/20260813_tokukei.html" target="_blank" rel="noopener">気象庁「千葉県にレベル5大雨特別警報発表」</a> ― 8月13日19時30分のレベル5大雨特別警報。</li>
+      <li><a href="https://www.bousai.go.jp/updates/r8chiba_ooame/" target="_blank" rel="noopener">内閣府「令和8年8月千葉豪雨による被害状況等について」</a> ― 人的・住家被害、ライフライン、交通、復旧支援。</li>
+      <li><a href="https://www.city.chiba.jp/somu/somu/somu/08-3_teirei_gyouseihoukoku.html" target="_blank" rel="noopener">千葉市「令和8年第3回定例会行政報告」</a> ― 市内の被害、避難対応、道路冠水、帰宅困難者等。</li>
+      <li><a href="https://www.data.jma.go.jp/stats/mdrr/periodstat/20260814a/20260825/24/rank_period.html" target="_blank" rel="noopener">気象庁「観測史上1位の値 更新状況」</a> ― 千葉115.0mm、佐倉97.0mm、館山94.5mmなどの1時間降水量。</li>
+      <li><a href="https://www.data.jma.go.jp/stats/data/mdrr/periodstat/20260814a/20260820/24/pre3h_mxarea00.html" target="_blank" rel="noopener">気象庁「3時間降水量の期間最大値」</a> ― 佐倉189.5mm、千葉188.5mm、館山183.0mm。</li>
+    </ol>
+  </section>
+
+  <section id="policy" class="card">
+    <h2>7.2 更新方針</h2>
+    <p>このページは、気象庁、内閣府、千葉県、千葉市などから、新しい事後検証、キキクル履歴、実浸水域、人的・住家被害の確定資料が公開された場合に更新します。</p>
+    <p><strong>単なる被害件数の増減だけでは、検証結論を更新しません。</strong> 気象・危険度・避難判断・被害発生の時間関係に新しい意味を与える一次資料が出た場合に評価を見直します。</p>
+    <div class="notice danger"><strong>現時点の位置づけ：</strong> 暫定版です。気象経過は9月16日の気象庁速報で整理されていますが、浸水地点とハザードマップの地点別照合、キキクルの詳細履歴、人的被害の個別事後検証は今後の課題です。</div>
+  </section>
+</main>
+<footer><div class="wrap">
+  <div><strong>2026年8月13日〜14日 令和8年8月千葉豪雨 暫定検証</strong></div>
+  <div>作成日：2026年9月21日 ／ 本ページは公開済み公式資料の整理・検証を目的としています。</div>
+</div></footer>
+</body>
+</html>
