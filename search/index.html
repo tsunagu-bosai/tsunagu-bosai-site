@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>施設検索 | つなぐ防災</title>
+
+  <meta
+    name="description"
+    content="全国の公衆トイレ・バリアフリー関連施設を、自治体などが公開するオープンデータから検索できます。"
+  >
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="つなぐ防災">
+  <meta property="og:title" content="施設検索 | つなぐ防災">
+  <meta
+    property="og:description"
+    content="全国の公衆トイレ・バリアフリー関連施設を検索できます。"
+  >
+  <meta property="og:url" content="https://tsunagubosai.jp/search/">
+
+  <link rel="canonical" href="https://tsunagubosai.jp/search/">
+
+  <link rel="icon" href="../assets/images/favicon.ico">
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="../assets/images/favicon-32x32.png"
+  >
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="../assets/images/favicon-192x192.png"
+  >
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="../assets/images/apple-touch-icon.png"
+  >
+
+  <link rel="stylesheet" href="../assets/css/style.css?ver=20261005r1">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="site-title" href="../">
+      <img
+        src="../assets/images/tsunagubosai-logo.png"
+        alt=""
+        class="header-logo"
+      >
+      <span>つなぐ防災</span>
+    </a>
+
+    <nav class="site-nav" aria-label="メインメニュー">
+      <a href="../">トップ</a>
+      <a href="../#data">データについて</a>
+      <a href="../verification/">災害検証</a>
+      <a
+        href="https://x.com/tsunagubosai"
+        target="_blank"
+        rel="noopener noreferrer"
+      >公式X</a>
+    </nav>
+  </div>
+</header>
+
+
+<main class="facility-search-page">
+
+  <section class="facility-search-hero">
+    <div class="container narrow">
+      <p class="facility-search-eyebrow">OPEN DATA SEARCH</p>
+      <h1>公衆トイレ・<br class="search-mobile-break">バリアフリー施設検索</h1>
+
+      <p class="facility-search-lead">
+        自治体・公的機関が公開しているオープンデータをもとに、
+        全国の公衆トイレやバリアフリー関連施設を検索できます。
+      </p>
+    </div>
+  </section>
+
+
+  <section class="section facility-search-section">
+    <div class="container">
+
+      <div class="facility-search-summary">
+        <div>
+          <strong>23,221</strong>
+          <span>公衆トイレ</span>
+        </div>
+
+        <div>
+          <strong>11,308</strong>
+          <span>バリアフリー関連施設</span>
+        </div>
+
+        <div>
+          <strong>34,529</strong>
+          <span>合計</span>
+        </div>
+      </div>
+
+
+      <form
+        id="facility-search-form"
+        class="facility-search-form"
+        role="search"
+      >
+
+        <div class="facility-search-field facility-search-keyword">
+          <label for="search-keyword">
+            施設名・住所・自治体名
+          </label>
+
+          <input
+            id="search-keyword"
+            name="keyword"
+            type="search"
+            placeholder="例：函館市、駅前、公園"
+            autocomplete="off"
+          >
+        </div>
+
+
+        <div class="facility-search-field">
+          <label for="search-prefecture">
+            都道府県
+          </label>
+
+          <select id="search-prefecture" name="prefecture">
+            <option value="">すべての都道府県</option>
+          </select>
+        </div>
+
+
+        <div class="facility-search-field">
+          <label for="search-category">
+            種別
+          </label>
+
+          <select id="search-category" name="category">
+            <option value="">すべて</option>
+            <option value="public_toilet">公衆トイレ</option>
+            <option value="facility_with_toilet">
+              バリアフリー関連施設
+            </option>
+          </select>
+        </div>
+
+
+        <div class="facility-search-actions">
+          <button
+            type="submit"
+            class="facility-search-button primary"
+          >
+            検索する
+          </button>
+
+          <button
+            type="button"
+            id="facility-search-reset"
+            class="facility-search-button secondary"
+          >
+            条件をクリア
+          </button>
+        </div>
+
+      </form>
+
+
+      <div
+        id="facility-search-status"
+        class="facility-search-status"
+        aria-live="polite"
+      >
+        検索条件を入力してください。
+      </div>
+
+
+      <div
+        id="facility-search-results"
+        class="facility-search-results"
+      ></div>
+
+
+      <noscript>
+        <p class="important-notice">
+          この検索機能を利用するにはJavaScriptを有効にしてください。
+        </p>
+      </noscript>
+
+
+      <div class="facility-search-about">
+
+        <h2>掲載データについて</h2>
+
+        <p>
+          この検索では、Open Infra Japanで整理・正規化した
+          自治体・公的機関由来のオープンデータを使用しています。
+        </p>
+
+        <p>
+          設備情報が空欄の場合は、「設備がない」という意味ではなく、
+          元データから確認できない場合があります。
+        </p>
+
+        <p>
+          施設の移転・閉鎖・設備変更などが、
+          最新の状態に反映されていない場合があります。
+          利用前に必要に応じて施設や公開元の最新情報も確認してください。
+        </p>
+
+        <p>
+          データセットごとの出典・ライセンス情報は、
+          検索結果から公開元を確認できます。
+        </p>
+
+        <p>
+          <a
+            href="https://github.com/tsunagu-bosai/open-infra-japan"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open Infra Japan をGitHubで見る
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div>
+      <strong>つなぐ防災</strong>
+      <p>
+        ふだんの生活から、もしもの時まで。
+      </p>
+    </div>
+
+    <nav class="footer-nav" aria-label="フッターメニュー">
+      <a href="../privacy/">プライバシーポリシー</a>
+      <a href="../terms/">利用規約</a>
+      <a href="../verification/">災害検証</a>
+      <a
+        href="https://x.com/tsunagubosai"
+        target="_blank"
+        rel="noopener noreferrer"
+      >公式X</a>
+      <a href="../contact/">お問い合わせ</a>
+    </nav>
+
+    <p class="copyright">
+      &copy; 2026 つなぐ防災
+    </p>
+
+  </div>
+</footer>
+
+
+<script src="../assets/js/search.js?ver=20261005r1"></script>
+
+</body>
+</html>
