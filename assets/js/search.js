@@ -8,6 +8,7 @@
   const keywordInput = document.getElementById("search-keyword");
   const prefectureSelect = document.getElementById("search-prefecture");
   const categorySelect = document.getElementById("search-category");
+  const nearbyButton = document.getElementById("facility-search-nearby");
   const resetButton = document.getElementById("facility-search-reset");
   const status = document.getElementById("facility-search-status");
   const results = document.getElementById("facility-search-results");
@@ -110,6 +111,55 @@
       .trim();
   }
 
+  function getCoordinates(item) {
+    const latitude = Number(String(item.latitude || "").trim());
+    const longitude = Number(String(item.longitude || "").trim());
+
+    if (
+      !Number.isFinite(latitude) ||
+      !Number.isFinite(longitude) ||
+      latitude < -90 ||
+      latitude > 90 ||
+      longitude < -180 ||
+      longitude > 180 ||
+      (latitude === 0 && longitude === 0)
+    ) {
+      return null;
+    }
+
+    return { latitude, longitude };
+  }
+
+  function getDistanceMeters(latitude1, longitude1, latitude2, longitude2) {
+    const earthRadiusMeters = 6371000;
+    const toRadians = (degrees) => degrees * Math.PI / 180;
+
+    const latitudeDelta = toRadians(latitude2 - latitude1);
+    const longitudeDelta = toRadians(longitude2 - longitude1);
+    const startLatitude = toRadians(latitude1);
+    const endLatitude = toRadians(latitude2);
+
+    const haversine =
+      Math.sin(latitudeDelta / 2) ** 2 +
+      Math.cos(startLatitude) *
+        Math.cos(endLatitude) *
+        Math.sin(longitudeDelta / 2) ** 2;
+
+    return 2 * earthRadiusMeters * Math.asin(Math.sqrt(haversine));
+  }
+
+  function formatDistance(distanceMeters) {
+    if (distanceMeters < 1000) {
+      return `現在地から約${Math.max(1, Math.round(distanceMeters))}m`;
+    }
+
+    if (distanceMeters < 10000) {
+      return `現在地から約${(distanceMeters / 1000).toFixed(1)}km`;
+    }
+
+    return `現在地から約${Math.round(distanceMeters / 1000)}km`;
+  }
+
   function loadPrefectures() {
     const prefectures = new Map();
 
@@ -193,20 +243,11 @@
     const lngRaw = String(item.longitude || "").trim();
 
     if (latRaw && lngRaw) {
-      const lat = Number(latRaw);
-      const lng = Number(lngRaw);
+      const coordinates = getCoordinates(item);
 
-      if (
-        Number.isFinite(lat) &&
-        Number.isFinite(lng) &&
-        lat >= -90 &&
-        lat <= 90 &&
-        lng >= -180 &&
-        lng <= 180 &&
-        !(lat === 0 && lng === 0)
-      ) {
+      if (coordinates) {
         return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-          `${lat},${lng}`
+          `${coordinates.latitude},${coordinates.longitude}`
         )}`;
       }
     }
@@ -243,7 +284,7 @@
     return [prefecture, municipality].filter(Boolean).join(" ");
   }
 
-  function renderResult(item) {
+  function renderResult(item, distanceMeters = null) {
     const sourceUrl = safeUrl(item.source_urls);
     const licenseUrl = safeUrl(item.license_urls);
     const mapUrl = getMapUrl(item);
@@ -271,6 +312,12 @@
           ${
             item.address
               ? `<p class="facility-result-address">${escapeHtml(item.address)}</p>`
+              : ""
+          }
+
+          ${
+            Number.isFinite(distanceMeters)
+              ? `<p class="facility-result-distance">${escapeHtml(formatDistance(distanceMeters))}</p>`
               : ""
           }
 
@@ -368,51 +415,94 @@
     `;
   }
 
-  function runSearch() {
+  function runSearch({ currentLocation = null } = {}) {
     const keyword = normalize(keywordInput.value);
     const prefecture = prefectureSelect.value;
     const category = categorySelect.value;
+    const isNearbySearch = currentLocation !== null;
 
-    if (!keyword && !prefecture && !category) {
+    if (!isNearbySearch && !keyword && !prefecture && !category) {
       status.textContent = "検索条件を入力してください。";
       results.innerHTML = "";
       return;
     }
 
-    const matches = facilities.filter((item) => {
-      if (prefecture && item.prefecture_name !== prefecture) {
-        return false;
-      }
-
-      if (category && item.facility_category !== category) {
-        return false;
-      }
-
-      if (keyword) {
-        const target = normalize([
-          item.name,
-          item.prefecture_name,
-          item.municipality_name,
-          item.address,
-        ].join(" "));
-
-        if (!target.includes(keyword)) {
+    const matches = facilities
+      .filter((item) => {
+        if (prefecture && item.prefecture_name !== prefecture) {
           return false;
         }
-      }
 
-      return true;
-    });
+        if (category && item.facility_category !== category) {
+          return false;
+        }
+
+        if (keyword) {
+          const target = normalize([
+            item.name,
+            item.prefecture_name,
+            item.municipality_name,
+            item.address,
+          ].join(" "));
+
+          if (!target.includes(keyword)) {
+            return false;
+          }
+        }
+
+        return true;
+      })
+      .map((item) => {
+        if (!isNearbySearch) {
+          return { item, distanceMeters: null };
+        }
+
+        const coordinates = getCoordinates(item);
+        if (!coordinates) {
+          return null;
+        }
+
+        return {
+          item,
+          distanceMeters: getDistanceMeters(
+            currentLocation.latitude,
+            currentLocation.longitude,
+            coordinates.latitude,
+            coordinates.longitude,
+          ),
+        };
+      })
+      .filter(Boolean);
+
+    if (isNearbySearch) {
+      matches.sort((a, b) => a.distanceMeters - b.distanceMeters);
+    }
 
     if (matches.length === 0) {
-      status.textContent = "該当する施設は見つかりませんでした。";
+      status.textContent = isNearbySearch
+        ? "現在地から距離を計算できる施設は見つかりませんでした。"
+        : "該当する施設は見つかりませんでした。";
       results.innerHTML = "";
       return;
     }
 
     const shown = matches.slice(0, MAX_RESULTS);
 
-    if (matches.length > MAX_RESULTS) {
+    if (isNearbySearch) {
+      const conditionText = keyword || prefecture || category
+        ? "指定した条件に合う施設を"
+        : "施設を";
+
+      if (matches.length > MAX_RESULTS) {
+        status.textContent =
+          `${conditionText}現在地から近い順に${MAX_RESULTS}件表示しています。` +
+          `（距離を計算できた施設：${matches.length.toLocaleString("ja-JP")}件）`;
+      } else {
+        status.textContent =
+          `${conditionText}現在地から近い順に表示しています。` +
+          `（${matches.length.toLocaleString("ja-JP")}件）`;
+      }
+    } else if (matches.length > MAX_RESULTS) {
       status.textContent =
         `${matches.length.toLocaleString("ja-JP")}件見つかりました。` +
         `先頭${MAX_RESULTS}件を表示しています。条件を追加すると絞り込めます。`;
@@ -421,7 +511,49 @@
         `${matches.length.toLocaleString("ja-JP")}件見つかりました。`;
     }
 
-    results.innerHTML = shown.map(renderResult).join("");
+    results.innerHTML = shown
+      .map(({ item, distanceMeters }) => renderResult(item, distanceMeters))
+      .join("");
+  }
+
+  function getCurrentLocation() {
+    return new Promise((resolve, reject) => {
+      if (!navigator.geolocation) {
+        reject(new Error("Geolocation is not supported"));
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          resolve({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+          });
+        },
+        reject,
+        {
+          enableHighAccuracy: true,
+          timeout: 10000,
+          maximumAge: 60000,
+        },
+      );
+    });
+  }
+
+  function getLocationErrorMessage(error) {
+    if (error && error.code === 1) {
+      return "位置情報の利用が許可されていません。ブラウザの設定を確認してください。";
+    }
+
+    if (error && error.code === 2) {
+      return "現在地を取得できませんでした。電波状況や端末の位置情報設定を確認してください。";
+    }
+
+    if (error && error.code === 3) {
+      return "現在地の取得に時間がかかっています。もう一度お試しください。";
+    }
+
+    return "現在地を取得できませんでした。このブラウザでは位置情報を利用できない可能性があります。";
   }
 
   async function loadData() {
@@ -456,6 +588,27 @@
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     runSearch();
+  });
+
+  nearbyButton.addEventListener("click", async () => {
+    if (facilities.length === 0) {
+      status.textContent = "施設データの読み込み完了後にお試しください。";
+      return;
+    }
+
+    nearbyButton.disabled = true;
+    status.textContent = "現在地を取得しています…";
+
+    try {
+      const currentLocation = await getCurrentLocation();
+      runSearch({ currentLocation });
+    } catch (error) {
+      console.error(error);
+      status.textContent = getLocationErrorMessage(error);
+      results.innerHTML = "";
+    } finally {
+      nearbyButton.disabled = false;
+    }
   });
 
   resetButton.addEventListener("click", () => {

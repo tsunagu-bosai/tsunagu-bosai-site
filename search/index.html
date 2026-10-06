@@ -41,7 +41,7 @@
     href="../assets/images/apple-touch-icon.png"
   >
 
-  <link rel="stylesheet" href="../assets/css/style.css?ver=20261005r1">
+  <link rel="stylesheet" href="../assets/css/style.css?ver=20261006r1">
 </head>
 
 <body>
@@ -164,12 +164,25 @@
 
           <button
             type="button"
+            id="facility-search-nearby"
+            class="facility-search-button location"
+          >
+            現在地から探す
+          </button>
+
+          <button
+            type="button"
             id="facility-search-reset"
             class="facility-search-button secondary"
           >
             条件をクリア
           </button>
         </div>
+
+        <p class="facility-search-location-note">
+          「現在地から探す」を押したときだけ位置情報を取得します。
+          位置情報はブラウザ内で施設との距離計算にのみ利用し、サーバーには送信しません。
+        </p>
 
       </form>
 
@@ -269,7 +282,7 @@
 </footer>
 
 
-<script src="../assets/js/search.js?ver=20261005r1"></script>
+<script src="../assets/js/search.js?ver=20261006r1"></script>
 
 </body>
 </html>

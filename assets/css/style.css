@@ -1398,6 +1398,25 @@ figcaption {
   border: 1px solid var(--color-border);
 }
 
+.facility-search-button.location {
+  color: var(--color-green);
+  background: var(--color-green-soft);
+  border: 1px solid rgba(46, 125, 50, 0.28);
+}
+
+.facility-search-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.facility-search-location-note {
+  grid-column: 1 / -1;
+  margin: -2px 0 0;
+  color: var(--color-muted);
+  font-size: 0.86rem;
+  line-height: 1.65;
+}
+
 .facility-search-status {
   margin: 24px 0 18px;
   padding: 14px 16px;
@@ -1452,6 +1471,17 @@ figcaption {
 .facility-result-address {
   margin-bottom: 18px;
   color: var(--color-muted);
+}
+
+.facility-result-distance {
+  display: inline-flex;
+  margin: 2px 0 14px;
+  padding: 5px 10px;
+  color: var(--color-green);
+  background: var(--color-green-soft);
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 800;
 }
 
 .facility-equipment {
