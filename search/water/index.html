@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>給水スポット・マイボトル割引検索 | つなぐ防災</title>
+  <meta name="description" content="全国の給水スポットと、マイボトル持参に対応する割引サービスを検索できます。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="つなぐ防災">
+  <meta property="og:title" content="給水スポット・マイボトル割引検索 | つなぐ防災">
+  <meta property="og:description" content="全国の給水スポットとマイボトル割引サービスを検索できます。">
+  <meta property="og:url" content="https://tsunagubosai.jp/search/water/">
+  <link rel="canonical" href="https://tsunagubosai.jp/search/water/">
+  <link rel="icon" href="../../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../assets/images/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="../../assets/css/style.css?ver=20261107-breadcrumbs">
+  <link rel="stylesheet" href="../../assets/css/breadcrumbs.css?ver=20261107r1">
+  <link rel="stylesheet" href="../../assets/css/water-search.css?ver=20261107r2">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="site-title" href="../../"><img src="../../assets/images/tsunagubosai-logo.png" alt="" class="header-logo"><span>つなぐ防災</span></a>
+    <nav class="site-nav" aria-label="メインメニュー">
+      <a href="../../#about">このアプリについて</a>
+      <a href="../../#features">主な機能</a>
+      <a href="../../#data">データについて</a>
+      <a href="../../search/">施設検索</a>
+      <a href="../../verification/">災害検証</a>
+      <a href="https://x.com/tsunagubosai" target="_blank" rel="noopener noreferrer">公式X</a>
+      <a href="../../#status">公開状況</a>
+    </nav>
+  </div>
+</header>
+<main class="facility-search-page">
+  <section class="facility-search-hero">
+    <div class="container narrow">
+      <nav class="site-breadcrumb" aria-label="パンくずリスト">
+        <ol><li><a href="../../">トップ</a></li><li><a href="../">施設検索</a></li><li aria-current="page">給水スポット・マイボトル割引</li></ol>
+      </nav>
+      <p class="facility-search-eyebrow">OPEN DATA SEARCH</p>
+      <h1>給水スポット・<br class="search-mobile-break">マイボトル割引検索</h1>
+      <p class="facility-search-lead">全国の給水スポットや、マイボトル持参に対応する割引サービスを検索できます。</p>
+    </div>
+  </section>
+  <section class="section facility-search-section">
+    <div class="container">
+      <div class="facility-search-summary water-search-summary" id="water-search-summary" aria-live="polite"></div>
+      <aside class="my-bottle-intro" aria-labelledby="my-bottle-intro-title">
+        <h2 id="my-bottle-intro-title">マイボトルで、環境にも防災にもやさしい習慣を。</h2>
+        <p>マイボトルの利用は、使い捨てプラスチックの削減につながります。普段から飲み物を持ち歩き、給水できる場所を知っておくことは、災害時の水分確保を考えるきっかけにもなります。</p>
+        <p>全国の給水スポットやマイボトル割引サービスを活用してみませんか？</p>
+        <a href="../../my-bottle/">マイボトルの取り組みについて詳しく見る</a>
+      </aside>
+      <form id="water-search-form" class="facility-search-form" role="search">
+        <div class="facility-search-field facility-search-keyword">
+          <label for="water-keyword">施設名・住所</label>
+          <input id="water-keyword" name="keyword" type="search" placeholder="例：札幌、スターバックス、公園" autocomplete="off">
+        </div>
+        <fieldset class="water-categories">
+          <legend>サービスの種類（複数選択可）</legend>
+          <div class="water-category-options">
+            <label><input type="checkbox" name="category" value="water" checked><span>給水スポット</span></label>
+            <label><input type="checkbox" name="category" value="discount" checked><span>マイボトル割引サービス</span></label>
+          </div>
+        </fieldset>
+        <div class="facility-search-actions">
+          <button type="submit" class="facility-search-button primary">検索する</button>
+          <button type="button" id="water-search-nearby" class="facility-search-button location">現在地から探す</button>
+          <button type="button" id="water-search-reset" class="facility-search-button secondary">条件をクリア</button>
+        </div>
+        <p class="facility-search-location-note">
+          「現在地から探す」を押したときだけ位置情報を取得します。位置情報はブラウザ内で施設との距離計算にのみ利用し、サーバーには送信しません。
+        </p>
+      </form>
+      <div id="water-search-status" class="facility-search-status" aria-live="polite">施設データを読み込んでいます…</div>
+      <div id="water-search-results" class="facility-search-results"></div>
+      <noscript><p class="important-notice">この検索機能を利用するにはJavaScriptを有効にしてください。</p></noscript>
+      <div class="facility-search-about">
+        <h2>掲載データについて</h2>
+        <p>給水スポットは公開データをもとに整理し、公共・民間を区別せず「給水スポット」として掲載しています。</p>
+        <p>住所・座標は施設の代表位置で、給水設備そのものの位置を示さない場合があります。住所のないチェーン店舗も座標を掲載しています。</p>
+        <p>チェーンの割引内容・条件・適用範囲は共通制度情報と公式案内を参照しています。店舗ごとの営業状況は未確認です。近接候補は距離だけで自動統合していません。</p>
+        <p>OpenStreetMap由来データ © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>。Open Database License (ODbL) 1.0に基づく派生データです。<a href="../../assets/data/mybottle-discount-OSM-ATTRIBUTION.md">OSMの帰属・ライセンス情報</a>をご覧ください。</p>
+        <p>施設の移転・閉鎖・サービス変更などが最新の状態に反映されていない場合があります。利用前に公開元の最新情報も確認してください。</p>
+        <p><a href="https://github.com/tsunagu-bosai/open-infra-japan" target="_blank" rel="noopener noreferrer">Open Infra Japan をGitHubで見る</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div><strong>つなぐ防災</strong><p>ふだんの生活から、もしもの時まで。</p></div>
+    <nav class="footer-nav" aria-label="フッターメニュー"><a href="../../privacy/">プライバシーポリシー</a><a href="../../terms/">利用規約</a><a href="../../verification/">災害検証</a><a href="../../contact/">お問い合わせ</a></nav>
+    <p class="copyright">&copy; 2026 つなぐ防災</p>
+  </div>
+</footer>
+<script src="../../assets/js/search-common.js?ver=20261107"></script>
+<script src="../../assets/js/water-search.js?ver=20261107r2"></script>
+</body>
+</html>

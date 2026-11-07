@@ -1656,12 +1656,21 @@ figcaption {
   text-align: center;
 }
 
+.data-search-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
 .data-search-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 52px;
-  padding: 12px 24px;
+  flex: 1 1 320px;
+  gap: 10px;
+  padding: 12px 18px;
   color: #ffffff;
   background: var(--color-green);
   border-radius: 999px;
@@ -1673,4 +1682,9 @@ figcaption {
   color: #ffffff;
   text-decoration: none;
   filter: brightness(.96);
+}
+
+@media (max-width: 600px) {
+  .data-search-actions { flex-direction: column; }
+  .data-search-actions .data-search-button { width: 100%; }
 }

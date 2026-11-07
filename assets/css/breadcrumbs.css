@@ -1,0 +1,61 @@
+.site-breadcrumb {
+  margin: 0 0 24px;
+  color: #66717b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.site-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-breadcrumb li + li::before {
+  content: "›";
+  margin-right: 7px;
+  color: #66717b;
+}
+
+.site-breadcrumb a {
+  color: #2e7d32;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.site-breadcrumb [aria-current="page"] {
+  color: #333;
+  font-weight: 700;
+}
+
+.report-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.2vw, 16px);
+  min-width: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.report-nav a {
+  color: #273642;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .report-sitebar-inner,
+  .report-top .wrap {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding-block: 10px;
+  }
+
+  .report-nav { width: 100%; }
+}

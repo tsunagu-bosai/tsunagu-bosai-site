@@ -9,13 +9,13 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="../../../assets/images/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/images/apple-touch-icon.png">
-  
+
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="つなぐ防災">
   <meta property="og:title" content="令和8年台風第25号 千葉県大雨災害 暫定検証">
   <meta property="og:description" content="8月豪雨との違い、河川・ダム・堤防・避難情報の連鎖、Offline Supportで見えた情報と見えなかった情報を検証します。">
-  
-  
+
+
   <meta name="twitter:card" content="summary_large_image">
   <style>
     :root{
@@ -485,10 +485,12 @@
   @media(max-width:850px){.hazard-chain{grid-template-columns:1fr}.chain-step:not(:last-child):after{content:"↓";right:auto;left:50%;top:auto;bottom:-.7rem;transform:translate(-50%,50%)}.limit-grid{grid-template-columns:1fr}}
   @media(max-width:760px){.hazard-compare,.compare-bottom,.visibility-grid{grid-template-columns:1fr}}
 </style>
+  <link rel="stylesheet" href="../../../assets/css/breadcrumbs.css?ver=20261107r1">
 </head>
 <body>
-<div class="report-sitebar"><div class="report-sitebar-inner"><a class="report-brand" href="../../../"><img src="../../../assets/images/tsunagubosai-logo.png" alt=""><span>つなぐ防災</span></a><a class="report-back" href="../../">災害検証一覧へ戻る</a></div></div>
-<header><div class="wrap"><div class="eyebrow">公式一次資料に基づく暫定検証</div><h1>令和8年台風第25号<br>千葉県 大雨災害</h1><p>8月の記録的豪雨とは何が違ったのか。河川・ダム・土砂災害・避難情報・堤防決壊まで危険が連鎖した今回の災害を、Offline Supportから見えた情報と見えなかった情報の両面から検証します。</p><div class="meta"><span class="pill">公開版 v0.1（案）</span><span class="pill">最終確認：2026年9月26日</span><span class="pill">被害調査・復旧継続中の暫定版</span></div></div></header>
+<div class="report-sitebar"><div class="report-sitebar-inner"><a class="report-brand" href="../../../"><img src="../../../assets/images/tsunagubosai-logo.png" alt=""><span>つなぐ防災</span></a><nav class="report-nav" aria-label="メインメニュー"><a href="../../../#about">このアプリについて</a><a href="../../../#features">主な機能</a><a href="../../../#data">データについて</a><a href="../../../search/">施設検索</a><a href="../../../verification/">災害検証</a><a href="https://x.com/tsunagubosai" target="_blank" rel="noopener noreferrer">公式X</a><a href="../../../#status">公開状況</a></nav></div></div>
+<header><div class="wrap"><nav class="site-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../../">トップ</a></li><li><a href="../../">災害検証</a></li><li aria-current="page">台風第25号 千葉県大雨災害</li></ol></nav><div class="eyebrow">公式一次資料に基づく暫定検証</div>
+<h1>令和8年台風第25号<br>千葉県 大雨災害</h1><p>8月の記録的豪雨とは何が違ったのか。河川・ダム・土砂災害・避難情報・堤防決壊まで危険が連鎖した今回の災害を、Offline Supportから見えた情報と見えなかった情報の両面から検証します。</p><div class="meta"><span class="pill">公開版 v0.1（案）</span><span class="pill">最終確認：2026年9月26日</span><span class="pill">被害調査・復旧継続中の暫定版</span></div></div></header>
 <nav aria-label="ページ内ナビゲーション"><div class="wrap"><a href="#summary">1. はじめに</a><a href="#compare">2. 8月豪雨との比較</a><a href="#chain">3. 災害の連鎖</a><a href="#visibility">4. 見えた／見えなかった情報</a><a href="#limits">5. 既知の制約</a><a href="#conclusion">6. 結論と今後</a></div></nav>
 <main class="wrap">
 <section id="summary" class="card"><h2>1. はじめに</h2><p class="lead">本レポートは、<strong>台風第25号による千葉県の大雨災害について、8月の千葉豪雨と比較しながら「危険がどのように広がり、Offline Supportから何が見え、何が見えなかったのか」を検証する</strong>ものです。</p><div class="hero-message"><div class="eyebrow">現時点で確認できた最重要事実</div><div class="finding-banner"><div class="badge">重要</div><div class="message">「前回ほど猛烈な雨ではない」ことと、「前回より安全である」ことは同じではありません。</div></div><span class="big">台風25号では、<span class="fact-red">雨量だけでは見えない危険</span>が、河川・ダム・浸水・土砂災害・避難・堤防決壊へ連鎖しました。</span><p>今回の中心課題は、雨の強さだけでなく、その後に起きている現象を複数の情報源から把握できるかどうかです。</p></div><div class="grid"><div class="metric"><span class="badge-top">重大事象</span><span class="fact-title emphasis-red">北印旛沼</span><span class="fact-message">堤防が約100mにわたり決壊</span><span class="fact-detail">周辺で大規模な浸水が発生し、緊急復旧が進められました。</span></div><div class="metric"><span class="badge-top">警戒段階</span><span class="fact-title">高滝ダム</span><span class="fact-message">緊急放流の可能性</span><span class="fact-detail">実施の可能性が発表されましたが、その後の状況変化により実施されませんでした。</span></div><div class="metric"><span class="badge-top">避難</span><span class="fact-title emphasis-red">養老川周辺</span><span class="fact-message">警戒レベル5</span><span class="fact-detail">市原市で緊急安全確保が発令され、対象区域も拡大しました。</span></div></div><div class="notice"><strong>本レポートの位置づけ：</strong> 2026年9月26日時点の暫定検証です。被害調査・復旧は継続中であり、被害件数などは確定値として扱いません。責任追及や原因の断定ではなく、公開済み一次資料と実際の情報取得状況から事実関係を整理します。</div></section>

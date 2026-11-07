@@ -1,0 +1,70 @@
+/* Water-specific controls reuse the public-toilet search page's layout and components. */
+.water-search-summary { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.water-categories {
+  grid-column: 2 / 4;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.water-categories legend { margin-bottom: 8px; font-weight: 700; }
+.water-category-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.water-category-options label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 8px 11px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  font-weight: 600;
+  line-height: 1.45;
+  cursor: pointer;
+}
+.water-category-options input { width: 20px; height: 20px; flex: 0 0 auto; margin: 0; accent-color: var(--color-green); }
+.water-category-options label:focus-within { outline: 3px solid rgba(46, 125, 50, 0.15); border-color: var(--color-green); }
+.water-service-details { margin-top: 18px; }
+.water-service-details > strong { display: block; margin-bottom: 7px; }
+.water-service-details p { margin: 5px 0; }
+.water-no-address { margin: 0 0 14px; color: var(--color-muted); }
+.water-unverified { color: var(--color-muted); font-size: .9rem; }
+.water-review-note { color: #765c11; }
+.my-bottle-intro {
+  margin: 0 0 28px;
+  padding: 20px 22px;
+  background: #f2f7f1;
+  border: 1px solid #d7e6d5;
+  border-left: 4px solid var(--color-green);
+  border-radius: 12px;
+}
+.my-bottle-intro h2 { margin: 0 0 10px; color: #245f2b; font-size: 1.15rem; line-height: 1.5; }
+.my-bottle-intro p { margin: 7px 0; line-height: 1.75; }
+.my-bottle-intro a { display: inline-block; margin-top: 5px; color: #246b2d; font-weight: 700; text-underline-offset: 3px; }
+.my-bottle-page .facility-search-hero { padding-bottom: 38px; }
+.my-bottle-content { max-width: 900px; }
+.my-bottle-content > p { margin: 0 0 20px; line-height: 1.9; }
+.my-bottle-callout {
+  margin: 28px 0;
+  padding: 20px 22px;
+  background: #f2f7f1;
+  border: 1px solid #d7e6d5;
+  border-radius: 12px;
+}
+.my-bottle-callout h2 { margin: 0 0 10px; font-size: 1.2rem; color: #245f2b; }
+.my-bottle-callout p { margin: 8px 0; line-height: 1.8; }
+.my-bottle-cta { margin-top: 32px; text-align: center; }
+.my-bottle-cta a { display: inline-block; padding: 14px 24px; color: #fff; background: var(--color-green); border-radius: 999px; font-weight: 700; text-decoration: none; }
+.my-bottle-cta a:hover { filter: brightness(.93); }
+
+@media (max-width: 820px) {
+  .water-categories { grid-column: auto; }
+}
+
+@media (max-width: 600px) {
+  .water-search-summary { grid-template-columns: 1fr; }
+  .water-category-options { grid-template-columns: 1fr; }
+  .my-bottle-intro, .my-bottle-callout { padding: 16px; }
+  .my-bottle-intro h2 { font-size: 1.05rem; }
+  .my-bottle-page .facility-search-hero h1 { font-size: 1.7rem; line-height: 1.45; }
+}

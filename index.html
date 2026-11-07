@@ -45,7 +45,7 @@
     href="./assets/images/apple-touch-icon.png"
   >
 
-  <link rel="stylesheet" href="./assets/css/style.css?ver=20261005r1">
+  <link rel="stylesheet" href="./assets/css/style.css?ver=20261107r2">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9ZEECGQ4N"></script>
   <script>
@@ -71,16 +71,13 @@
     </a>
 
     <nav class="site-nav" aria-label="メインメニュー">
-      <a href="#about">このアプリについて</a>
-      <a href="#features">主な機能</a>
-      <a href="#data">データについて</a>
+      <a href="./#about">このアプリについて</a>
+      <a href="./#features">主な機能</a>
+      <a href="./#data">データについて</a>
       <a href="./search/">施設検索</a>
       <a href="./verification/">災害検証</a>
-      <a href="https://x.com/tsunagubosai"
-        target="_blank"
-        rel="noopener noreferrer"
-      >公式X</a>
-      <a href="#status">公開状況</a>
+      <a href="https://x.com/tsunagubosai" target="_blank" rel="noopener noreferrer">公式X</a>
+      <a href="./#status">公開状況</a>
     </nav>
   </div>
 </header>
@@ -161,6 +158,18 @@
 
       <div class="news-list">
         <article class="news-item news-item-featured">
+          <time datetime="2026-11-07">2026年11月7日</time>
+          <div>
+            <h3>マイボトルから始める、環境と防災への取り組み</h3>
+            <p>
+              全国の自治体や企業で、給水スポットの設置やマイボトル持参による割引サービスなど、マイボトルの利用を後押しする取り組みが進められています。
+              環境にやさしい毎日の習慣を、もしもの備えにも。
+              つなぐ防災では、全国の給水スポットやマイボトル割引サービスを紹介し、日常生活と防災の両面からマイボトルの活用を応援しています。
+            </p>
+            <a href="./search/water/">給水スポット・マイボトル割引検索</a>
+          </div>
+        </article>
+        <article class="news-item news-item-featured">
           <time datetime="2026-10-27">2026年10月27日</time>
           <div>
             <h3>Android版「つなぐ防災」v1.1.4+10をリリースしました</h3>
@@ -201,22 +210,6 @@
             </p>
             <a href="./search/">
               施設を検索する
-            </a>
-          </div>
-        </article>
-        <article class="news-item news-item-featured">
-          <time datetime="2026-10-02">2026年10月2日</time>
-          <div>
-            <h3>Android版「つなぐ防災」をGoogle Playで正式公開しました</h3>
-            <p>
-              防災アプリ「つなぐ防災」のAndroid版をGoogle Playで正式公開しました。
-              オフラインでの避難支援や施設検索に加え、
-              天気予報、警報・注意報、台風・大雨、地震・津波などの情報を確認できます。
-            </p>
-            <a href="https://play.google.com/store/apps/details?id=jp.tsunagubosai.app"
-              target="_blank"
-              rel="noopener noreferrer">
-              Google Playで見る
             </a>
           </div>
         </article>
@@ -581,9 +574,12 @@
 
       </div>
 
-      <div class="data-search-action">
-        <a href="./search/" class="data-search-button">
-          公衆トイレ・バリアフリー施設を検索する
+      <div class="data-search-action data-search-actions">
+        <a href="./search/toilet/" class="data-search-button">
+          <span aria-hidden="true">🚻</span> 公衆トイレ・バリアフリー施設を検索する <span aria-hidden="true">›</span>
+        </a>
+        <a href="./search/water/" class="data-search-button">
+          <span aria-hidden="true">💧</span> 給水スポット・マイボトル割引を検索する <span aria-hidden="true">›</span>
         </a>
       </div>
 
@@ -747,7 +743,7 @@
                   class="google-play-badge"
                 >
               </a>
-            </div>  
+            </div>
           </dd>
         </div>
 
