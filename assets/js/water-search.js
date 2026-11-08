@@ -47,7 +47,7 @@
   }
 
   function getCategoryLabel(item) {
-    return item.record_type === "water" ? "給水スポット" : "マイボトル割引サービス";
+    return item.record_type === "water" ? "給水・給茶スポット" : "マイボトル割引サービス";
   }
 
   function matchesSelectedService(item, selected) {
@@ -83,13 +83,14 @@
       `;
     }
 
-    const serviceText = item.service_type === "free_refill"
-      ? "無料給水の案内があります。"
-      : "料金・利用条件は公開元をご確認ください。";
+    const feeLabels = { free_refill: "無料", paid_refill: "有料", unknown: "料金未確認" };
+    const hasFeeLabel = Object.prototype.hasOwnProperty.call(feeLabels, item.service_type);
+    const feeLabel = hasFeeLabel ? feeLabels[item.service_type] : "料金・利用条件は公開元をご確認ください。";
     return `
       <div class="facility-equipment water-service-details">
-        <strong>給水サービス</strong>
-        <p>${escapeHtml(serviceText)}</p>
+        <strong>料金区分</strong>
+        <p>${escapeHtml(feeLabel)}</p>
+        <p class="water-unverified">掲載元資料に基づく区分です。現在の料金や営業状況を保証するものではありません。利用前に公開元をご確認ください。</p>
         ${item.seasonal === "true" ? `<p>季節利用：${escapeHtml(item.season_note || "季節による利用制限があります。")}</p>` : ""}
       </div>
     `;
@@ -199,7 +200,7 @@
   function runSearch({ currentLocation = null } = {}) {
     const categories = getSelectedCategories();
     if (categories.size === 0) {
-      status.textContent = "検索対象が選択されていません。給水スポットまたはマイボトル割引サービスを選択してください。";
+      status.textContent = "検索対象が選択されていません。給水・給茶スポットまたはマイボトル割引サービスを選択してください。";
       results.innerHTML = "";
       return;
     }
@@ -242,7 +243,7 @@
       };
       const discounts = counts.existing + counts.chain;
       summary.innerHTML = `
-        <div><strong>${counts.water.toLocaleString("ja-JP")}</strong><span>給水スポット</span></div>
+        <div><strong>${counts.water.toLocaleString("ja-JP")}</strong><span>給水・給茶スポット</span></div>
         <div><strong>${discounts.toLocaleString("ja-JP")}</strong><span>割引サービス</span></div>
         <div><strong>${records.length.toLocaleString("ja-JP")}</strong><span>合計</span></div>
       `;
