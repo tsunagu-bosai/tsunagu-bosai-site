@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tsunagubosai.jp/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-11-24</lastmod>
   </url>
   <url>
     <loc>https://tsunagubosai.jp/tester/</loc>
@@ -49,5 +49,13 @@
   <url>
     <loc>https://tsunagubosai.jp/verification/fukui/fukui-20260829/</loc>
     <lastmod>2026-09-05</lastmod>
+  </url>
+  <url>
+    <loc>https://tsunagubosai.jp/open-data-proposal/</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://tsunagubosai.jp/news/</loc>
+    <lastmod>2026-11-24</lastmod>
   </url>
 </urlset>
